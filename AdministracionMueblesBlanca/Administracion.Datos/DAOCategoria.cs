@@ -44,7 +44,8 @@ namespace Administracion.Datos
                     while (dr.Read())
                     {
                         Categoria c = new Categoria((int)dr["IdCategoria"],
-                            (string)dr["NombreCategoria"], (DateTime)dr["FechaCreacionCategoria"],
+                            (string)dr["NombreCategoria"],
+                            (DateTime)dr["FechaCreacionCategoria"],
                             (string)dr["UsuarioCreacionCategoria"], (DateTime)dr["FechaModificacionCategoria"],
                             (string)dr["UsuarioModificacionCategoria"], (int)dr["EstadoCategoria"]);
                         lista.Add(c);
@@ -84,11 +85,10 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarCategoria", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdCategoria", Categoria.IdCategoria);
                 cmd.Parameters.AddWithValue("@NombreCategoria", Categoria.NombreCategoria);
                 cmd.Parameters.AddWithValue("@FechaCreacionCategoria", DateTime.Now);
                 cmd.Parameters.AddWithValue("@UsuarioCreacionCategoria", "");
-                cmd.Parameters.AddWithValue("@EstadoCategoria", 1);
+                cmd.Parameters.AddWithValue("@EstadoCategoria", Categoria.EstadoCategoria);
 
                 n = cmd.ExecuteNonQuery();
             }

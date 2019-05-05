@@ -79,6 +79,38 @@ namespace Administracion.Entidades
 
         }
 
+
+        //Constructor para insertar nueva Categoria
+
+        public Categoria(
+            string pNombreCategoria,
+            DateTime pFechaCreacionCategoria,
+            string pUsuarioCreacionCategoria,
+            int pEstadoCategoria)
+        {
+            this.NombreCategoria = pNombreCategoria;
+            this.FechaCreacionCategoria = pFechaCreacionCategoria;
+            this.UsuarioCreacionCategoria = pUsuarioCreacionCategoria;
+            this.EstadoCategoria = pEstadoCategoria;
+
+        }
+
+        //Constructor para actualizar Categoria 
+        public Categoria(
+            int pIdCategoria,
+            string pNombreCategoria,
+            DateTime pFechaModificacionCategoria,
+            string pUsuarioModificacionCategoria,
+            int pEstadoCategoria)
+        {
+            this.IdCategoria = pIdCategoria;
+            this.NombreCategoria = pNombreCategoria;
+            this.FechaModificacionCategoria = pFechaModificacionCategoria;
+            this.UsuarioModificacionCategoria = pUsuarioModificacionCategoria;
+            this.EstadoCategoria = pEstadoCategoria;
+
+        }
+
         public Categoria()
         {
         }

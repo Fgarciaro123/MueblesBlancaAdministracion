@@ -14,7 +14,7 @@ namespace Administracion.Categorias
 {
     public partial class FrmCategorias : Form
     {
-
+        Validaciones validacion = new Validaciones();
         List<Categoria> lista = null;
         BLCategoria blCategoria = new BLCategoria();
         Categoria c;
@@ -33,6 +33,8 @@ namespace Administracion.Categorias
             cmbEstadoCategoria.Items.Clear();
             cmbEstadoCategoria.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
             cmbEstadoCategoria.SelectedIndex = 0;
+
+            btnGrabar.Enabled = false;
 
 
         }
@@ -78,6 +80,7 @@ namespace Administracion.Categorias
 
         private void CargarDatos()
         {
+            string _fechaModificacion;
             if (lista == null)
             {
                 lista = blCategoria.Listar();
@@ -87,9 +90,24 @@ namespace Administracion.Categorias
                 dgvCategoria.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dgvCategoria.Rows.Add(lista[i].IdCategoria, lista[i].NombreCategoria,
-                       (EnumEstados.Estados)lista[i].EstadoCategoria, lista[i].FechaCreacionCategoria, lista[i].UsuarioCreacionCategoria,
-                        lista[i].FechaModificacionCategoria, lista[i].UsuarioModificacionCategoria);
+                    if (lista[i].FechaModificacionCategoria.Year <= 2000)
+                    {
+                        _fechaModificacion = "";
+                    }
+                    else
+                    {
+                        _fechaModificacion = lista[i].FechaModificacionCategoria.ToString();
+                    }
+
+                    dgvCategoria.Rows.Add(
+                       
+                        lista[i].IdCategoria,
+                        lista[i].NombreCategoria,
+                        (EnumEstados.Estados)lista[i].EstadoCategoria,
+                        lista[i].FechaCreacionCategoria,
+                        lista[i].UsuarioCreacionCategoria,
+                        _fechaModificacion, 
+                        lista[i].UsuarioModificacionCategoria);
                 }
             }
         }
@@ -101,42 +119,61 @@ namespace Administracion.Categorias
             btnEditar.Text = "Cancelar";
             ActivarButton(false);
             LimpiarControl(gbDatos);
-            txtIdCategoria.Focus();
+            txtNombreCategoria.Focus();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            int n = -1;
-            if (_nuevo)
+            if (txtNombreCategoria.Text.Trim() != "")
             {
-                //c = new Categoria(0, txtIdCategoria.Text,
-                //    txtNombreCategoria.Text, );
-                //n = blCategoria.Insertar(c);
+                int n = -1;
+                if (_nuevo)
+                {
+                    c = new Categoria(
+                        txtNombreCategoria.Text.Trim(),
+                        DateTime.Now,
+                        "",
+                        cmbEstadoCategoria.SelectedIndex);
+                    n = blCategoria.Insertar(c);
+                }
+                else
+                {
+                    c = new Categoria(
+                        Convert.ToInt32(txtIdCategoria.Text),
+                        txtNombreCategoria.Text.Trim(),
+                        DateTime.Now,
+                        "",
+                        cmbEstadoCategoria.SelectedIndex);
+
+                    n = blCategoria.Actualizar(c);
+                }
+                if (n > 0)
+                {
+                    MessageBox.Show("Datos grabados correctamente", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ActivarControlDatos(gbDatos, false);
+                    ActivarButton(true);
+                    dgvCategoria.Enabled = true;
+                    LimpiarControl(gbDatos);
+                    btnEditar.Text = "Editar";
+                    lista = blCategoria.Listar();
+                    CargarDatos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al grabar", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
-                //c.Codigo = txtCodigo.Text;
-                //c.Nombre = txtNombre.Text;
-                //c.Observacion = txtObservacion.Text;
-                //n = blCategoria.Actualizar(c);
+                MessageBox.Show("Ingrese el nombre de Categoria", "Aviso",
+                           MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (n > 0)
-            {
-                MessageBox.Show("Datos grabados correctamente", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ActivarControlDatos(gbDatos, false);
-                ActivarButton(true);
-                dgvCategoria.Enabled = true;
-                LimpiarControl(gbDatos);
-                btnEditar.Text = "Editar";
-                lista = blCategoria.Listar();
-                CargarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Error al grabar", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+
+          
         }
 
 
@@ -201,6 +238,5 @@ namespace Administracion.Categorias
         {
             Close();
         }
-
     }
 }
