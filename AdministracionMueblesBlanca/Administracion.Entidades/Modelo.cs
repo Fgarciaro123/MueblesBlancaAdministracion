@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Administracion.Entidades
 {
-    class Modelo
+    public class Modelo
     {
         int _IdModelo;
         int _IdProductoModelo;

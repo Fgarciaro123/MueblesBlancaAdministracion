@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCategoria.cs" />
+    <Compile Include="BLImagen.cs" />
+    <Compile Include="BLModelo.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
