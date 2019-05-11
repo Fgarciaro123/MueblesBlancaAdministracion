@@ -29,5 +29,13 @@ namespace Administracion.Categorias
             fProductos.Show();
             this.Hide();
         }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            FrmRoles frmRoles = new FrmRoles();
+            frmRoles.Show();
+            this.Hide();
+
+        }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="BLImagen.cs" />
     <Compile Include="BLModelo.cs" />
     <Compile Include="BLProducto.cs" />
+    <Compile Include="BLRol.cs" />
     <Compile Include="BLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

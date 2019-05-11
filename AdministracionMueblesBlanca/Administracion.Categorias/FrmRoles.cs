@@ -9,33 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Administracion.Entidades;
 using Administracion.Negocio;
-
 namespace Administracion.Categorias
 {
-    public partial class FrmCategorias : Form
+    public partial class FrmRoles : Form
     {
+
         Validaciones validacion = new Validaciones();
-        List<Categoria> lista = null;
-        BLCategoria blCategoria = new BLCategoria();
-        Categoria c;
+        List<Rol> lista = null;
+        BLRol bLRol = new BLRol();
+        Rol rol;
         bool _nuevo = false;
 
-        public FrmCategorias()
+        public FrmRoles()
         {
             InitializeComponent();
             ActivarControlDatos(gbDatos, false);
             CargarDatos();
         }
 
-        private void FrmCategorias_Load(object sender, EventArgs e)
+        private void FrmRoles_Load(object sender, EventArgs e)
         {
-            //Carga Combobox Estado Categoria
-            cmbEstadoCategoria.Items.Clear();
-            cmbEstadoCategoria.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
-            cmbEstadoCategoria.SelectedIndex = 0;
+            //Carga Combobox Estado Roles
+            cmbEstadoRol.Items.Clear();
+            cmbEstadoRol.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
+            cmbEstadoRol.SelectedIndex = 0;
 
             btnGrabar.Enabled = false;
-
 
         }
 
@@ -56,7 +55,6 @@ namespace Administracion.Categorias
 
             }
         }
-
         private void LimpiarControl(Control Contenedor)
         {
             foreach (var item in Contenedor.Controls)
@@ -77,39 +75,40 @@ namespace Administracion.Categorias
             btnSalir.Enabled = Estado;
         }
 
-
         private void CargarDatos()
         {
             string _fechaModificacion;
             if (lista == null)
             {
-                lista = blCategoria.Listar();
+                lista = bLRol.Listar();
             }
             if (lista.Count > 0)
             {
-                dgvCategoria.Rows.Clear();
+                dgvRol.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    if (lista[i].FechaModificacionCategoria.Year <= 2000)
+                    if (lista[i].FechaModificacionRol.Year <= 2000)
                     {
                         _fechaModificacion = "";
                     }
                     else
                     {
-                        _fechaModificacion = lista[i].FechaModificacionCategoria.ToString();
+                        _fechaModificacion = lista[i].FechaModificacionRol.ToString();
                     }
 
-                    dgvCategoria.Rows.Add(
-                       
-                        lista[i].IdCategoria,
-                        lista[i].NombreCategoria,
-                        (EnumEstados.Estados)lista[i].EstadoCategoria,
-                        lista[i].FechaCreacionCategoria,
-                        lista[i].UsuarioCreacionCategoria,
-                        _fechaModificacion, 
-                        lista[i].UsuarioModificacionCategoria);
+                    dgvRol.Rows.Add(
+
+                        lista[i].IdRol,
+                        lista[i].NombreRol,
+                        (EnumEstados.Estados)lista[i].EstadoRol,
+                        lista[i].FechaCreacionRol,
+                        lista[i].UsuarioCreacionRol,
+                        _fechaModificacion,
+                        lista[i].UsuarioModificacionRol);
                 }
             }
+
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -119,31 +118,31 @@ namespace Administracion.Categorias
             btnEditar.Text = "Cancelar";
             ActivarButton(false);
             LimpiarControl(gbDatos);
-            txtNombreCategoria.Focus();
+            txtNombreRol.Focus();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (txtNombreCategoria.Text.Trim() != "")
+            if (txtNombreRol.Text.Trim() != "")
             {
                 int n = -1;
                 if (_nuevo)
                 {
-                    c = new Categoria(0,
-                        txtNombreCategoria.Text.Trim(),
+                    rol = new Rol(0,
+                        txtNombreRol.Text.Trim(),
                         DateTime.Now,
-                        cmbEstadoCategoria.SelectedIndex);
-                    n = blCategoria.Insertar(c);
+                        cmbEstadoRol.SelectedIndex);
+                    n = bLRol.Insertar(rol);
                 }
                 else
                 {
-                    c = new Categoria(
-                        Convert.ToInt32(txtIdCategoria.Text),
-                        txtNombreCategoria.Text.Trim(),
+                    rol = new Rol(
+                        Convert.ToInt32(txtIdRol.Text),
+                        txtNombreRol.Text.Trim(),
                         DateTime.Now,
-                       cmbEstadoCategoria.SelectedIndex);
+                       cmbEstadoRol.SelectedIndex);
 
-                    n = blCategoria.Actualizar(c);
+                    n = bLRol.Actualizar(rol);
                 }
                 if (n > 0)
                 {
@@ -151,10 +150,10 @@ namespace Administracion.Categorias
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ActivarControlDatos(gbDatos, false);
                     ActivarButton(true);
-                    dgvCategoria.Enabled = true;
+                    dgvRol.Enabled = true;
                     LimpiarControl(gbDatos);
                     btnEditar.Text = "Editar";
-                    lista = blCategoria.Listar();
+                    lista = bLRol.Listar();
                     CargarDatos();
                 }
                 else
@@ -166,14 +165,10 @@ namespace Administracion.Categorias
             }
             else
             {
-                MessageBox.Show("Ingrese el nombre de Categoria", "Aviso",
+                MessageBox.Show("Ingrese el nombre de Rol", "Aviso",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-          
         }
-
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -183,42 +178,43 @@ namespace Administracion.Categorias
                 LimpiarControl(gbDatos);
                 ActivarControlDatos(gbDatos, false);
                 ActivarButton(true);
-                dgvCategoria.Enabled = true;
+                dgvRol.Enabled = true;
                 btnEditar.Text = "Editar";
             }
             else
             {
-                if (dgvCategoria.RowCount > 0)
+                if (dgvRol.RowCount > 0)
                 {
-                    c = blCategoria.TraerPorId((int)dgvCategoria[0, dgvCategoria.
+                    rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
                         CurrentRow.Index].Value);
-                    txtIdCategoria.Text = c.IdCategoria.ToString();
-                    txtNombreCategoria.Text = c.NombreCategoria;
+                    txtIdRol.Text = rol.IdRol.ToString();
+                    txtNombreRol.Text = rol.NombreRol;
 
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);
-                    dgvCategoria.Enabled = false;
+                    dgvRol.Enabled = false;
                     btnEditar.Text = "Cancelar";
                 }
             }
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvCategoria.RowCount > 0)
+            if (dgvRol.RowCount > 0)
             {
-                c = blCategoria.TraerPorId((int)dgvCategoria[0, dgvCategoria.
+                rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
                     CurrentRow.Index].Value);
                 DialogResult rpta =
                     MessageBox.Show("Desea eliminar el registro", "Eliminar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rpta == System.Windows.Forms.DialogResult.Yes)
                 {
-                    int n = blCategoria.Eliminar(c.IdCategoria);
+                    int n = bLRol.Eliminar(rol.IdRol);
                     if (n > 0)
                     {
                         MessageBox.Show("Registro eliminado", "Aviso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lista = blCategoria.Listar();
+                        lista = bLRol.Listar();
                         CargarDatos();
                     }
                     else
@@ -230,13 +226,12 @@ namespace Administracion.Categorias
 
             }
         }
-
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             FrmBienvenida frmInicio = new FrmBienvenida();
             frmInicio.Show();
             this.Hide();
         }
+
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBienvenida));
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
+            this.btnRoles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
@@ -57,11 +58,22 @@
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
+            // btnRoles
+            // 
+            this.btnRoles.Location = new System.Drawing.Point(516, 60);
+            this.btnRoles.Name = "btnRoles";
+            this.btnRoles.Size = new System.Drawing.Size(75, 23);
+            this.btnRoles.TabIndex = 3;
+            this.btnRoles.Text = "Roles";
+            this.btnRoles.UseVisualStyleBackColor = true;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
+            // 
             // FrmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 328);
+            this.ClientSize = new System.Drawing.Size(786, 343);
+            this.Controls.Add(this.btnRoles);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnProductos);
             this.MaximizeBox = false;
@@ -76,5 +88,6 @@
 
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnProducto;
+        private System.Windows.Forms.Button btnRoles;
     }
 }

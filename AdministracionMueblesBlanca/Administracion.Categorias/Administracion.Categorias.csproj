@@ -7,7 +7,7 @@
     <ProjectGuid>{137A6A0D-57D5-46A4-8F21-E8BDE631179B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Administracion.Categorias</RootNamespace>
-    <AssemblyName>Administracion.Categorias</AssemblyName>
+    <AssemblyName>Administracion</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -62,6 +62,12 @@
     <Compile Include="FrmProductos.Designer.cs">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoles.Designer.cs">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoles.resx">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
