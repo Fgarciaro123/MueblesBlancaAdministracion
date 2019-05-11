@@ -45,7 +45,7 @@
             this.dgvRol = new System.Windows.Forms.DataGridView();
             this.dgvIdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNombreRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEstadoRol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgvEstadoRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaCreacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioCreacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +88,7 @@
             // 
             this.txtIdRol.Location = new System.Drawing.Point(178, 36);
             this.txtIdRol.Name = "txtIdRol";
+            this.txtIdRol.ReadOnly = true;
             this.txtIdRol.Size = new System.Drawing.Size(188, 20);
             this.txtIdRol.TabIndex = 3;
             // 
@@ -143,7 +144,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-
             // 
             // btnEliminar
             // 
@@ -154,7 +154,6 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-
             // 
             // btnEditar
             // 
@@ -165,7 +164,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-
             // 
             // btnGrabar
             // 
@@ -236,7 +234,6 @@
             this.dgvEstadoRol.Name = "dgvEstadoRol";
             this.dgvEstadoRol.ReadOnly = true;
             this.dgvEstadoRol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEstadoRol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dgvFechaCreacionRol
             // 
@@ -304,7 +301,7 @@
         private System.Windows.Forms.DataGridView dgvRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvIdRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvNombreRol;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgvEstadoRol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvEstadoRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaCreacionRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioCreacionRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaModificacionRol;
