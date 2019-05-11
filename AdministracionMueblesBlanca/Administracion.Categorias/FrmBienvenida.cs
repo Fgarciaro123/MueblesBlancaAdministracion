@@ -37,5 +37,12 @@ namespace Administracion.Categorias
             this.Hide();
 
         }
+
+        private void btnTipoDocumento_Click(object sender, EventArgs e)
+        {
+            FrmTipoDocumento frmTipoDocumento = new FrmTipoDocumento();
+            frmTipoDocumento.Show();
+            this.Hide();
+        }
     }
 }

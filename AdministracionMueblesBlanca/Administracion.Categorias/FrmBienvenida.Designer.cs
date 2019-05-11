@@ -32,6 +32,7 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnRoles = new System.Windows.Forms.Button();
+            this.btnTipoDocumento = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
@@ -60,19 +61,34 @@
             // 
             // btnRoles
             // 
-            this.btnRoles.Location = new System.Drawing.Point(516, 60);
+            this.btnRoles.Image = ((System.Drawing.Image)(resources.GetObject("btnRoles.Image")));
+            this.btnRoles.Location = new System.Drawing.Point(456, 27);
             this.btnRoles.Name = "btnRoles";
-            this.btnRoles.Size = new System.Drawing.Size(75, 23);
+            this.btnRoles.Size = new System.Drawing.Size(211, 255);
             this.btnRoles.TabIndex = 3;
             this.btnRoles.Text = "Roles";
+            this.btnRoles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRoles.UseVisualStyleBackColor = true;
             this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
+            // 
+            // btnTipoDocumento
+            // 
+            this.btnTipoDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoDocumento.Image")));
+            this.btnTipoDocumento.Location = new System.Drawing.Point(692, 27);
+            this.btnTipoDocumento.Name = "btnTipoDocumento";
+            this.btnTipoDocumento.Size = new System.Drawing.Size(216, 255);
+            this.btnTipoDocumento.TabIndex = 4;
+            this.btnTipoDocumento.Text = "Tipo documento";
+            this.btnTipoDocumento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTipoDocumento.UseVisualStyleBackColor = true;
+            this.btnTipoDocumento.Click += new System.EventHandler(this.btnTipoDocumento_Click);
             // 
             // FrmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 343);
+            this.ClientSize = new System.Drawing.Size(938, 468);
+            this.Controls.Add(this.btnTipoDocumento);
             this.Controls.Add(this.btnRoles);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnProductos);
@@ -89,5 +105,6 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnRoles;
+        private System.Windows.Forms.Button btnTipoDocumento;
     }
 }

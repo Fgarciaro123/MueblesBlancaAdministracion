@@ -55,8 +55,6 @@ namespace Administracion.Datos
                             (string)dr["MaterialProducto"],
                             (int)dr["GarantiaMesesProducto"],
                             (long)dr["ValorUnitarioProducto"],
-                            (int)dr["IdImagenProducto"],
-                            (int)dr["IdModeloProducto"],
                             (int)dr["IdCategoriaProducto"],
                             (DateTime)dr["FechaCreacionProducto"],
                             (string)dr["UsuarioCreacionProducto"],
@@ -95,8 +93,6 @@ namespace Administracion.Datos
                         (string)dr["MaterialProducto"],
                         (int)dr["GarantiaMesesProducto"],
                         (long)dr["ValorUnitarioProducto"],
-                        (int)dr["IdImagenProducto"],
-                        (int)dr["IdModeloProducto"],
                         (int)dr["IdCategoriaProducto"],
                         (DateTime)dr["FechaCreacionProducto"],
                         (string)dr["UsuarioCreacionProducto"],
@@ -125,8 +121,6 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@MaterialProducto", producto.MaterialProducto);
                 cmd.Parameters.AddWithValue("@GarantiaMesesProducto", producto.GarantiaMesesProducto);
                 cmd.Parameters.AddWithValue("@ValorUnitarioProducto", producto.ValorUnitarioProducto);
-                cmd.Parameters.AddWithValue("@IdImagenProducto", producto.ImagenProducto);
-                cmd.Parameters.AddWithValue("@IdModeloProducto", producto.ModeloProducto);
                 cmd.Parameters.AddWithValue("@IdCategoriaProducto", producto.CategoriaProducto);
                 cmd.Parameters.AddWithValue("@FechaCreacionProducto", DateTime.Now);
                 cmd.Parameters.AddWithValue("@UsuarioCreacionProducto", producto.UsuarioCreacionProducto);
@@ -154,8 +148,6 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@MaterialProducto", producto.MaterialProducto);
                 cmd.Parameters.AddWithValue("@GarantiaMesesProducto", producto.GarantiaMesesProducto);
                 cmd.Parameters.AddWithValue("@ValorUnitarioProducto", producto.ValorUnitarioProducto);
-                cmd.Parameters.AddWithValue("@IdImagenProducto", producto.ImagenProducto);
-                cmd.Parameters.AddWithValue("@IdModeloProducto", producto.ModeloProducto);
                 cmd.Parameters.AddWithValue("@IdCategoriaProducto", producto.CategoriaProducto);
                 cmd.Parameters.AddWithValue("@FechaCreacionProducto", DateTime.Now);
                 cmd.Parameters.AddWithValue("@UsuarioCreacionProducto", producto.UsuarioCreacionProducto);
@@ -208,8 +200,6 @@ namespace Administracion.Datos
                         (string)dr["MaterialProducto"],
                         (int)dr["GarantiaMesesProducto"],
                         (long)dr["ValorUnitarioProducto"],
-                        (int)dr["IdImagenProducto"],
-                        (int)dr["IdModeloProducto"],
                         (int)dr["IdCategoriaProducto"],
                         (DateTime)dr["FechaCreacionProducto"],
                         (string)dr["UsuarioCreacionProducto"],

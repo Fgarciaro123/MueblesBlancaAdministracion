@@ -46,6 +46,7 @@
     <Compile Include="DAOModelo.cs" />
     <Compile Include="DAOProducto.cs" />
     <Compile Include="DAORol.cs" />
+    <Compile Include="DAOTipoDocumento.cs" />
     <Compile Include="DAOUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

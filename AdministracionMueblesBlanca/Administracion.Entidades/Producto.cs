@@ -12,14 +12,12 @@ namespace Administracion.Entidades
         int _IdProducto;
         string _NombreProducto;
         string _DescripcionProducto;
-        string _AnchoProducto;
         string _AltoProducto;
+        string _AnchoProducto;
         string _ColorProducto;
         string _MaterialProducto;
         int _GarantiaMesesProducto;
         long _ValorUnitarioProducto;
-        int _imagenProducto;
-        int _modeloProducto;
         int _CategoriaProducto;
         DateTime _FechaCreacionProducto;
         string _UsuarioCreacionProducto;
@@ -42,8 +40,6 @@ namespace Administracion.Entidades
         public DateTime FechaModificacionProducto { get => _FechaModificacionProducto; set => _FechaModificacionProducto = value; }
         public string UsuarioModificacionProducto { get => _UsuarioModificacionProducto; set => _UsuarioModificacionProducto = value; }
         public int EstadoProducto { get => _EstadoProducto; set => _EstadoProducto = value; }
-        public int ImagenProducto { get => _imagenProducto; set => _imagenProducto = value; }
-        public int ModeloProducto { get => _modeloProducto; set => _modeloProducto = value; }
 
         public Producto()
         {
@@ -60,8 +56,6 @@ namespace Administracion.Entidades
             string MaterialProducto, 
             int GarantiaMesesProducto, 
             long ValorUnitarioProducto,
-            int imagenProducto,
-            int modeloProducto,
             int CategoriaProducto, 
             DateTime FechaCreacionProducto, 
             string UsuarioCreacionProducto, 
@@ -78,8 +72,6 @@ namespace Administracion.Entidades
             this.MaterialProducto = MaterialProducto;
             this.GarantiaMesesProducto = GarantiaMesesProducto;
             this.ValorUnitarioProducto = ValorUnitarioProducto;
-            this.ImagenProducto = imagenProducto;
-            this.ModeloProducto = modeloProducto;
             this.CategoriaProducto = CategoriaProducto;
             this.FechaCreacionProducto = FechaCreacionProducto;
             this.UsuarioCreacionProducto = UsuarioCreacionProducto;

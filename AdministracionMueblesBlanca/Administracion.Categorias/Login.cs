@@ -41,8 +41,14 @@ namespace Administracion.Categorias
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+            txtClave.MaxLength = 8;
+            txtClave.PasswordChar = '*';
+            txtClave.CharacterCasing = CharacterCasing.Lower;
+        }
     }
 }
