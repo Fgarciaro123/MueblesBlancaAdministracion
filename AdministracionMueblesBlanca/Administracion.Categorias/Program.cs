@@ -18,7 +18,7 @@ namespace Administracion.Categorias
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCategorias());
+            Application.Run(new Login());
         }
     }
 }

@@ -80,7 +80,7 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("TraerProductoPorId", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdProducto", Id);
+                cmd.Parameters.AddWithValue("@ID", Id);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
@@ -182,7 +182,46 @@ namespace Administracion.Datos
             return n;
         }
 
+        public List<Producto> BuscarProducto(string campo, string valor)
+        {
+            List<Producto> lista = new List<Producto>();
 
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("TraerProductoPorCampo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@campo", campo);
+                cmd.Parameters.AddWithValue("@valor", valor);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {// IdProducto, Referencia, Nombre, Marca, Modelo, Color, Precio, Cantidad, Observacion, IdCategoria
+                        Producto producto = new Producto(
+                          (int)dr["IdProducto"],
+                        (string)dr["NombreProducto"],
+                        (string)dr["DescripcionProducto"],
+                        (string)dr["AnchoProducto"],
+                        (string)dr["AltoProducto"],
+                        (string)dr["ColorProducto"],
+                        (string)dr["MaterialProducto"],
+                        (int)dr["GarantiaMesesProducto"],
+                        (long)dr["ValorUnitarioProducto"],
+                        (int)dr["IdImagenProducto"],
+                        (int)dr["IdModeloProducto"],
+                        (int)dr["IdCategoriaProducto"],
+                        (DateTime)dr["FechaCreacionProducto"],
+                        (string)dr["UsuarioCreacionProducto"],
+                        (DateTime)dr["FechaModificacionProducto"],
+                        (string)dr["UsuarioModificacionProducto"],
+                        (int)dr["EstadoProducto"]);
+                        lista.Add(producto);
+                    }
+                }
+            }
+            return lista;
+        }
 
     }
 }

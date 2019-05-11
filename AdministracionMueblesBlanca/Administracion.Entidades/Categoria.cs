@@ -69,49 +69,57 @@ namespace Administracion.Entidades
             string pUsuarioModificacionCaetogria,
             int pEstadoCategoria)
         {
-            this.IdCategoria = pIdCategoria;
-            this.NombreCategoria = pNombreCategoria;
-            this.FechaCreacionCategoria = pFechaCreacionCategoria;
-            this.UsuarioCreacionCategoria = pUsuarioCreacionCategoria;
-            this.FechaModificacionCategoria = pFechaModificacionCategoria;
-            this.UsuarioModificacionCategoria = pUsuarioModificacionCaetogria;
-            this.EstadoCategoria = pEstadoCategoria;
+            this._idCategoria = pIdCategoria;
+            this._nombreCategoria = pNombreCategoria;
+            this._fechaCreacionCategoria = pFechaCreacionCategoria;
+            this._usuarioCreacionCategoria = pUsuarioCreacionCategoria;
+            this._fechaModificacionCategoria = pFechaModificacionCategoria;
+            this._usuarioModificacionCategoria = pUsuarioModificacionCaetogria;
+            this._estadoCategoria = pEstadoCategoria;
 
         }
-
 
         //Constructor para insertar nueva Categoria
 
-        public Categoria(
-            string pNombreCategoria,
-            DateTime pFechaCreacionCategoria,
-            string pUsuarioCreacionCategoria,
-            int pEstadoCategoria)
-        {
-            this.NombreCategoria = pNombreCategoria;
-            this.FechaCreacionCategoria = pFechaCreacionCategoria;
-            this.UsuarioCreacionCategoria = pUsuarioCreacionCategoria;
-            this.EstadoCategoria = pEstadoCategoria;
+        //public Categoria(
+        //    string pNombreCategoria,
+        //    DateTime pFechaCreacionCategoria,
+        //    string pUsuarioCreacionCategoria,
+        //    int pEstadoCategoria)
+        //{
+        //    this.NombreCategoria = pNombreCategoria;
+        //    this.FechaCreacionCategoria = pFechaCreacionCategoria;
+        //    this.UsuarioCreacionCategoria = pUsuarioCreacionCategoria;
+        //    this.EstadoCategoria = pEstadoCategoria;
 
-        }
+        //}
 
         //Constructor para actualizar Categoria 
-        public Categoria(
-            int pIdCategoria,
-            string pNombreCategoria,
-            DateTime pFechaModificacionCategoria,
-            string pUsuarioModificacionCategoria,
-            int pEstadoCategoria)
+        //public Categoria(
+        //    int pIdCategoria,
+        //    string pNombreCategoria,
+        //    DateTime pFechaModificacionCategoria,
+        //    string pUsuarioModificacionCategoria,
+        //    int pEstadoCategoria)
+        //{
+        //    this.IdCategoria = pIdCategoria;
+        //    this.NombreCategoria = pNombreCategoria;
+        //    this.FechaModificacionCategoria = pFechaModificacionCategoria;
+        //    this.UsuarioModificacionCategoria = pUsuarioModificacionCategoria;
+        //    this.EstadoCategoria = pEstadoCategoria;
+
+        //}
+
+
+        public Categoria(int IdCategoria, string pNombreCategoria, DateTime pFechaModificacionCategoria, int pEstadoCategoria)
         {
-            this.IdCategoria = pIdCategoria;
-            this.NombreCategoria = pNombreCategoria;
-            this.FechaModificacionCategoria = pFechaModificacionCategoria;
-            this.UsuarioModificacionCategoria = pUsuarioModificacionCategoria;
-            this.EstadoCategoria = pEstadoCategoria;
-
+            this._idCategoria = IdCategoria;
+            this._nombreCategoria = pNombreCategoria;
+            this._fechaModificacionCategoria = pFechaModificacionCategoria;
+            this._estadoCategoria = pEstadoCategoria;
         }
-
         public Categoria()
+           : this(0, "",DateTime.Now,0)
         {
         }
     }

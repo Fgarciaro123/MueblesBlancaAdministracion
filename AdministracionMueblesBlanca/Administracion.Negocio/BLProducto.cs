@@ -8,7 +8,7 @@ using Administracion.Datos;
 
 namespace Administracion.Negocio
 {
-    class BLProducto
+    public class BLProducto
     {
         public List<Producto> Listar()
         {
@@ -38,6 +38,12 @@ namespace Administracion.Negocio
         {
             DAOProducto daProducto = new DAOProducto();
             return daProducto.Eliminar(Id);
+        }
+
+        public List<Producto> BuscarProducto(string campo, string valor)
+        {
+            DAOProducto daProducto = new DAOProducto();
+            return daProducto.BuscarProducto(campo, valor);
         }
     }
 }

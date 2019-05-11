@@ -57,7 +57,7 @@ namespace Administracion.Datos
 
         public Categoria TraerPorId(int Id)
         {
-            Categoria Categoria = new Categoria();
+            Categoria categoria = new Categoria();
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
                 con.Open();
@@ -68,13 +68,13 @@ namespace Administracion.Datos
                 if (dr != null && dr.HasRows)
                 {
                     dr.Read();
-                    Categoria = new Categoria((int)dr["IdCategoria"],
+                    categoria = new Categoria((int)dr["IdCategoria"],
                             (string)dr["NombreCategoria"], (DateTime)dr["FechaCreacionCategoria"],
                             (string)dr["UsuarioCreacionCategoria"], (DateTime)dr["FechaModificacionCategoria"],
                             (string)dr["UsuarioModificacionCategoria"], (int)dr["EstadoCategoria"]);
                 }
             }
-            return Categoria;
+            return categoria;
         }
 
         public int Insertar(Categoria Categoria)
@@ -128,6 +128,37 @@ namespace Administracion.Datos
             }
             return n;
         }
+
+        //public List<Categoria> ComboCategoria()
+        //{
+        //    List<Categoria> lista = new List<Categoria>();
+        //    Categoria c = new Categoria();
+        //    using (SqlConnection con = new SqlConnection(CadenaConexion))
+        //    {
+        //        con.Open();
+        //        SqlCommand cmd = new SqlCommand("ListarCategorias", con);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        if (dr != null && dr.HasRows)
+        //        {
+        //            c = new Categoria(0, "-Seleccionar-",DateTime.Now,0);
+        //            lista.Add(c);
+
+        //            while (dr.Read())
+        //            {
+        //                c = new Categoria((int)dr["pIdCategoria"],
+        //                    (string)dr["pNombreCategoria"],DateTime.Now, 0);
+        //                lista.Add(c);
+        //            }
+
+
+
+        //        }
+        //    }
+        //    return lista;
+        //}
+
+
 
     }
 }

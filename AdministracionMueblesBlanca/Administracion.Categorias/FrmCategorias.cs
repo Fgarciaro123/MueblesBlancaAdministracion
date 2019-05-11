@@ -129,10 +129,9 @@ namespace Administracion.Categorias
                 int n = -1;
                 if (_nuevo)
                 {
-                    c = new Categoria(
+                    c = new Categoria(0,
                         txtNombreCategoria.Text.Trim(),
                         DateTime.Now,
-                        "",
                         cmbEstadoCategoria.SelectedIndex);
                     n = blCategoria.Insertar(c);
                 }
@@ -142,8 +141,7 @@ namespace Administracion.Categorias
                         Convert.ToInt32(txtIdCategoria.Text),
                         txtNombreCategoria.Text.Trim(),
                         DateTime.Now,
-                        "",
-                        cmbEstadoCategoria.SelectedIndex);
+                       cmbEstadoCategoria.SelectedIndex);
 
                     n = blCategoria.Actualizar(c);
                 }

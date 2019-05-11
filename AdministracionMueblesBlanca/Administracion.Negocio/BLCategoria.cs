@@ -39,6 +39,11 @@ namespace Administracion.Negocio
             DAOCategoria daCategoria = new DAOCategoria();
             return daCategoria.Eliminar(Id);
         }
+        //public List<Categoria> ComboCategoria()
+        //{
+        //    DAOCategoria daCategoria = new DAOCategoria();
+        //    return daCategoria.ComboCategoria();
+        //}
 
     }
 }
