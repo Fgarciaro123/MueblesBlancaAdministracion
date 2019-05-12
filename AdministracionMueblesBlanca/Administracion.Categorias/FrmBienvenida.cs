@@ -44,5 +44,12 @@ namespace Administracion.Categorias
             frmTipoDocumento.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCargarImagen frmCargarImagen = new FrmCargarImagen();
+            frmCargarImagen.Show();
+            this.Hide();
+        }
     }
 }
