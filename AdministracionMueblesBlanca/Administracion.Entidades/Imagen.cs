@@ -11,7 +11,7 @@ namespace Administracion.Entidades
         int _idImagen;
         int _idProductoImagen;
         string _TituloImagen;
-        Byte _CodigoImagen;
+        Byte[] _CodigoImagen;
         DateTime _FechaCreacionImagen;
         string _UsuarioCreacionImagen;
         DateTime _FechaModificacionImagen;
@@ -21,7 +21,7 @@ namespace Administracion.Entidades
         public int IdImagen { get => _idImagen; set => _idImagen = value; }
         public int IdProductoImagen { get => _idProductoImagen; set => _idProductoImagen = value; }
         public string TituloImagen { get => _TituloImagen; set => _TituloImagen = value; }
-        public byte CodigoImagen { get => _CodigoImagen; set => _CodigoImagen = value; }
+        public byte[] CodigoImagen { get => _CodigoImagen; set => _CodigoImagen = value; }
         public DateTime FechaCreacionImagen { get => _FechaCreacionImagen; set => _FechaCreacionImagen = value; }
         public string UsuarioCreacionImagen { get => _UsuarioCreacionImagen; set => _UsuarioCreacionImagen = value; }
         public DateTime FechaModificacionImagen { get => _FechaModificacionImagen; set => _FechaModificacionImagen = value; }
@@ -36,7 +36,7 @@ namespace Administracion.Entidades
             int idImagen, 
             int idProductoImagen, 
             string TituloImagen, 
-            byte CodigoImagen, 
+            byte[] CodigoImagen, 
             DateTime FechaCreacionImagen, 
             string UsuarioCreacionImagen, 
             DateTime FechaModificacionImagen, 
@@ -51,6 +51,22 @@ namespace Administracion.Entidades
             this.UsuarioCreacionImagen = UsuarioCreacionImagen;
             this.FechaModificacionImagen = FechaModificacionImagen;
             this.UsuarioModificacionImagen = UsuarioModificacionImagen;
+            this.EstadoImagen = EstadoImagen;
+        }
+
+        public Imagen(
+          int idProductoImagen,
+          string TituloImagen,
+          byte[] CodigoImagen,
+          DateTime FechaCreacionImagen,
+          string UsuarioCreacionImagen,
+          int EstadoImagen)
+        {
+            this.IdProductoImagen = idProductoImagen;
+            this.TituloImagen = TituloImagen;
+            this.CodigoImagen = CodigoImagen;
+            this.FechaCreacionImagen = FechaCreacionImagen;
+            this.UsuarioCreacionImagen = UsuarioCreacionImagen;
             this.EstadoImagen = EstadoImagen;
         }
     }

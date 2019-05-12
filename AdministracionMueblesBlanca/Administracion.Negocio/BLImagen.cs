@@ -8,7 +8,7 @@ using Administracion.Entidades;
 
 namespace Administracion.Negocio
 {
-    class BLImagen
+    public class BLImagen
     {
         public List<Imagen> Listar()
         {
