@@ -192,6 +192,7 @@ namespace Administracion.Categorias
                         CurrentRow.Index].Value);
                     txtIdTipoDocumento.Text = td.IdTipoDocumento.ToString();
                     txtDescripcionTipoDocumento.Text = td.DescripcionTipoDocumento;
+                    cmbEstadoTipoDocumento.SelectedIndex = td.EstadoTipoDocumento;
 
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);

@@ -36,8 +36,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btBuscar = new System.Windows.Forms.Button();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.txtIdProducto = new System.Windows.Forms.TextBox();
+            this.lblIdProducto = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtGarantia = new System.Windows.Forms.TextBox();
@@ -49,8 +50,6 @@
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbModelo = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
@@ -62,8 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.bLCategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,9 +70,9 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bLCategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -154,23 +151,14 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
-            // btBuscar
-            // 
-            this.btBuscar.Location = new System.Drawing.Point(799, 11);
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(60, 25);
-            this.btBuscar.TabIndex = 14;
-            this.btBuscar.Text = "Buscar";
-            this.btBuscar.UseVisualStyleBackColor = true;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.txtIdProducto);
+            this.gbDatos.Controls.Add(this.lblIdProducto);
             this.gbDatos.Controls.Add(this.txtValor);
             this.gbDatos.Controls.Add(this.label12);
             this.gbDatos.Controls.Add(this.txtGarantia);
             this.gbDatos.Controls.Add(this.label11);
-            this.gbDatos.Controls.Add(this.btBuscar);
             this.gbDatos.Controls.Add(this.btLimpiar);
             this.gbDatos.Controls.Add(this.txtAlto);
             this.gbDatos.Controls.Add(this.label10);
@@ -178,8 +166,6 @@
             this.gbDatos.Controls.Add(this.cbEstado);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.label9);
-            this.gbDatos.Controls.Add(this.label8);
-            this.gbDatos.Controls.Add(this.cbModelo);
             this.gbDatos.Controls.Add(this.cbCategoria);
             this.gbDatos.Controls.Add(this.label6);
             this.gbDatos.Controls.Add(this.txtColor);
@@ -196,6 +182,23 @@
             this.gbDatos.TabIndex = 16;
             this.gbDatos.TabStop = false;
             // 
+            // txtIdProducto
+            // 
+            this.txtIdProducto.Location = new System.Drawing.Point(76, 17);
+            this.txtIdProducto.Name = "txtIdProducto";
+            this.txtIdProducto.ReadOnly = true;
+            this.txtIdProducto.Size = new System.Drawing.Size(154, 20);
+            this.txtIdProducto.TabIndex = 29;
+            // 
+            // lblIdProducto
+            // 
+            this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.Location = new System.Drawing.Point(16, 19);
+            this.lblIdProducto.Name = "lblIdProducto";
+            this.lblIdProducto.Size = new System.Drawing.Size(40, 13);
+            this.lblIdProducto.TabIndex = 28;
+            this.lblIdProducto.Text = "Codigo";
+            // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(782, 72);
@@ -206,7 +209,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(731, 78);
+            this.label12.Location = new System.Drawing.Point(731, 75);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 27;
@@ -240,7 +243,7 @@
             // 
             // txtAlto
             // 
-            this.txtAlto.Location = new System.Drawing.Point(76, 70);
+            this.txtAlto.Location = new System.Drawing.Point(76, 71);
             this.txtAlto.Name = "txtAlto";
             this.txtAlto.Size = new System.Drawing.Size(86, 20);
             this.txtAlto.TabIndex = 5;
@@ -248,7 +251,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 77);
+            this.label10.Location = new System.Drawing.Point(16, 75);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(25, 13);
             this.label10.TabIndex = 22;
@@ -256,23 +259,23 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(76, 13);
+            this.txtNombre.Location = new System.Drawing.Point(364, 14);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(207, 20);
+            this.txtNombre.Size = new System.Drawing.Size(351, 20);
             this.txtNombre.TabIndex = 0;
             // 
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(654, 42);
+            this.cbEstado.Location = new System.Drawing.Point(364, 44);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(286, 21);
+            this.cbEstado.Size = new System.Drawing.Size(145, 21);
             this.cbEstado.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(608, 48);
+            this.label1.Location = new System.Drawing.Point(318, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 6;
@@ -281,41 +284,24 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 18);
+            this.label9.Location = new System.Drawing.Point(318, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 20;
             this.label9.Text = "Nombre ";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(295, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Modelo";
-            // 
-            // cbModelo
-            // 
-            this.cbModelo.FormattingEnabled = true;
-            this.cbModelo.Location = new System.Drawing.Point(347, 44);
-            this.cbModelo.Name = "cbModelo";
-            this.cbModelo.Size = new System.Drawing.Size(239, 21);
-            this.cbModelo.TabIndex = 4;
-            // 
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(76, 41);
+            this.cbCategoria.Location = new System.Drawing.Point(629, 46);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(207, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(155, 21);
             this.cbCategoria.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 47);
+            this.label6.Location = new System.Drawing.Point(569, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 16;
@@ -330,7 +316,7 @@
             // 
             // txtAncho
             // 
-            this.txtAncho.Location = new System.Drawing.Point(220, 73);
+            this.txtAncho.Location = new System.Drawing.Point(220, 71);
             this.txtAncho.Name = "txtAncho";
             this.txtAncho.Size = new System.Drawing.Size(91, 20);
             this.txtAncho.TabIndex = 6;
@@ -338,7 +324,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(327, 77);
+            this.label5.Location = new System.Drawing.Point(317, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 13;
@@ -347,7 +333,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(176, 77);
+            this.label4.Location = new System.Drawing.Point(176, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 12;
@@ -363,15 +349,15 @@
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Location = new System.Drawing.Point(347, 14);
+            this.txtMaterial.Location = new System.Drawing.Point(76, 42);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(446, 20);
+            this.txtMaterial.Size = new System.Drawing.Size(212, 20);
             this.txtMaterial.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 99);
+            this.label3.Location = new System.Drawing.Point(16, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 8;
@@ -380,7 +366,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 18);
+            this.label2.Location = new System.Drawing.Point(16, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -388,6 +374,9 @@
             // 
             // dgvDatos
             // 
+            this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToDeleteRows = false;
+            this.dgvDatos.AllowUserToOrderColumns = true;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -399,13 +388,72 @@
             this.Column7,
             this.Column8,
             this.Column9,
-            this.Column10,
-            this.Column11,
             this.Column12});
             this.dgvDatos.Location = new System.Drawing.Point(11, 213);
             this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
             this.dgvDatos.Size = new System.Drawing.Size(1086, 398);
             this.dgvDatos.TabIndex = 15;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre Producto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripción";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Alto";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ancho";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Color";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Material";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Garantía";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Valor";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Categoria";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // bLCategoriaBindingSource
             // 
@@ -422,68 +470,6 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Modulo de Productos";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Idproducto";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre Producto";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripción";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Alto";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ancho";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Color";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Material";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Garantía";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Valor";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Imagen";
-            this.Column10.Name = "Column10";
-            this.Column10.Visible = false;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Modelo";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Categoria";
-            this.Column12.Name = "Column12";
-            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,11 +485,12 @@
             this.MinimizeBox = false;
             this.Name = "FrmProductos";
             this.Text = "Administrador de Productos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             this.gbControl.ResumeLayout(false);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            
+            ((System.ComponentModel.ISupportInitialize)(this.bLCategoriaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,16 +523,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtGarantia;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtIdProducto;
+        private System.Windows.Forms.Label lblIdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -555,8 +541,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }

@@ -45,16 +45,17 @@ namespace Administracion.Datos
                 {
                     while (dr.Read())
                     {
+
                         Producto p = new Producto(
                             (int)dr["IdProducto"],
                             (string)dr["NombreProducto"],
                             (string)dr["DescripcionProducto"],
-                            (string)dr["AnchoProducto"],
                             (string)dr["AltoProducto"],
+                            (string)dr["AnchoProducto"],
                             (string)dr["ColorProducto"],
                             (string)dr["MaterialProducto"],
                             (int)dr["GarantiaMesesProducto"],
-                            (long)dr["ValorUnitarioProducto"],
+                            (Decimal)dr["ValorUnitarioProducto"],
                             (int)dr["IdCategoriaProducto"],
                             (DateTime)dr["FechaCreacionProducto"],
                             (string)dr["UsuarioCreacionProducto"],
@@ -83,22 +84,22 @@ namespace Administracion.Datos
                 if (dr != null && dr.HasRows)
                 {
                     dr.Read();
-                    Producto p = new Producto(
-                        (int)dr["IdProducto"],
-                        (string)dr["NombreProducto"],
-                        (string)dr["DescripcionProducto"],
-                        (string)dr["AnchoProducto"],
-                        (string)dr["AltoProducto"],
-                        (string)dr["ColorProducto"],
-                        (string)dr["MaterialProducto"],
-                        (int)dr["GarantiaMesesProducto"],
-                        (long)dr["ValorUnitarioProducto"],
-                        (int)dr["IdCategoriaProducto"],
-                        (DateTime)dr["FechaCreacionProducto"],
-                        (string)dr["UsuarioCreacionProducto"],
-                        (DateTime)dr["FechaModificacionProducto"],
-                        (string)dr["UsuarioModificacionProducto"],
-                        (int)dr["EstadoProducto"]);
+                    producto = new Producto(
+                         (int)dr["IdProducto"],
+                         (string)dr["NombreProducto"],
+                         (string)dr["DescripcionProducto"],
+                         (string)dr["AnchoProducto"],
+                         (string)dr["AltoProducto"],
+                         (string)dr["ColorProducto"],
+                         (string)dr["MaterialProducto"],
+                         (int)dr["GarantiaMesesProducto"],
+                         (Decimal)dr["ValorUnitarioProducto"],
+                         (int)dr["IdCategoriaProducto"],
+                         (DateTime)dr["FechaCreacionProducto"],
+                         (string)dr["UsuarioCreacionProducto"],
+                         (DateTime)dr["FechaModificacionProducto"],
+                         (string)dr["UsuarioModificacionProducto"],
+                         (int)dr["EstadoProducto"]);
                 }
             }
             return producto;
@@ -149,8 +150,8 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@GarantiaMesesProducto", producto.GarantiaMesesProducto);
                 cmd.Parameters.AddWithValue("@ValorUnitarioProducto", producto.ValorUnitarioProducto);
                 cmd.Parameters.AddWithValue("@IdCategoriaProducto", producto.CategoriaProducto);
-                cmd.Parameters.AddWithValue("@FechaCreacionProducto", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioCreacionProducto", producto.UsuarioCreacionProducto);
+                cmd.Parameters.AddWithValue("@FechaModificacionProducto", DateTime.Now);
+                cmd.Parameters.AddWithValue("@UsuarioModificacionProducto", producto.UsuarioCreacionProducto);
                 cmd.Parameters.AddWithValue("@EstadoProducto", producto.EstadoProducto);
 
 

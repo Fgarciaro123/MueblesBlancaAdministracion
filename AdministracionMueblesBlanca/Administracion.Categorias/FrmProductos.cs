@@ -21,7 +21,7 @@ namespace Administracion.Categorias
         //Declaramos las variables generales
         List<Producto> lista = null;
         List<Categoria> listaCategoria = null;
-      
+
         BLProducto blProducto = new BLProducto();
         BLCategoria blCategoria = new BLCategoria();
         BLModelo blModelo = new BLModelo();
@@ -34,9 +34,9 @@ namespace Administracion.Categorias
             btnSalir.Enabled = true;
             ActivarControlDatos(gbDatos, false);
             CargarDatos();
-           
+
         }
-        
+
         //Creamos un método que permita activar los controles
         private void ActivarControlDatos(Control Contenedor, bool Estado)
         {
@@ -65,11 +65,6 @@ namespace Administracion.Categorias
                 {
                     ((TextBox)item).Clear();
                 }
-
-                if (item.GetType() == typeof(ComboBox))
-                {
-                    ((ComboBox)item).DataSource=null;
-                }
             }
         }
 
@@ -84,6 +79,7 @@ namespace Administracion.Categorias
         //Creamos el método CargarDatos
         private void CargarDatos()
         {
+            Categoria categoria = new Categoria();
             if (lista == null)
             {
                 lista = blProducto.Listar();
@@ -94,65 +90,63 @@ namespace Administracion.Categorias
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dgvDatos.Rows.Add(lista[i].IdProducto, lista[i].DescripcionProducto, lista[i].AnchoProducto,
-                    lista[i].AltoProducto, lista[i].ColorProducto, lista[i].MaterialProducto, lista[i].GarantiaMesesProducto, lista[i].ValorUnitarioProducto
-                    );
+                    categoria = blCategoria.TraerPorId(lista[i].CategoriaProducto);
+                    dgvDatos.Rows.Add(
+                    lista[i].IdProducto,
+                    lista[i].NombreProducto,
+                    lista[i].DescripcionProducto,
+                    lista[i].AltoProducto,
+                    lista[i].AnchoProducto,
+                    lista[i].ColorProducto,
+                    lista[i].MaterialProducto,
+                    lista[i].GarantiaMesesProducto,
+                    lista[i].ValorUnitarioProducto,
+                    categoria.NombreCategoria);
+
                 }
             }
 
-
-           
-
-            //cargaCombos();
         }
-
-        //public void cargaCombos()
-        //{
-        //    listaCategoria = blCategoria.ComboCategoria();
-        //    if (listaCategoria.Count > 0)
-        //    {
-        //        cbCategoria.DataSource = listaCategoria;
-        //        cbCategoria.ValueMember = "pIdCategoria";
-        //        cbCategoria.DisplayMember = "pNombreCategoria";
-        //    }
-        //}
-
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             int n = -1;
 
-            decimal x = 0;
-            if (txtAncho.Text.Length >= 0)
-                x = Convert.ToDecimal(txtAncho.Text);
-            else
-                x = 0;
-
             if (_nuevo)
             {
-               p = new Producto(0,txtNombre.Text, txtDescripcion.Text,txtAlto.Text, txtAncho.Text, txtColor.Text, txtMaterial.Text, int.Parse(txtGarantia.Text), long.Parse(txtValor.Text),
-                   0,int.Parse(cbModelo.SelectedValue.ToString()), int.Parse(cbCategoria.SelectedValue.ToString()), DateTime.Now, "Administrador",DateTime.Now,null,1);
-                    n = blProducto.Insertar(p);
-                
+                p = new Producto(
+                    0,
+                    txtNombre.Text,
+                    txtDescripcion.Text,
+                    txtAlto.Text,
+                    txtAncho.Text,
+                    txtColor.Text,
+                    txtMaterial.Text,
+                    int.Parse(txtGarantia.Text),
+                    long.Parse(txtValor.Text),
+                    cbCategoria.SelectedIndex,
+                    DateTime.Now,
+                    "Administrador",
+                    DateTime.Now,
+                    null,
+                    cbEstado.SelectedIndex);
+                n = blProducto.Insertar(p);
+
             }
             else
             {
-                p.NombreProducto = txtNombre.Text;
-                p.DescripcionProducto = txtDescripcion.Text;
-                p.AltoProducto = txtAlto.Text;
-                p.AnchoProducto = txtAncho.Text;
-                p.ColorProducto = txtColor.Text;
-                p.MaterialProducto = txtMaterial.Text;
-                p.GarantiaMesesProducto = int.Parse(txtGarantia.Text);
-                p.ValorUnitarioProducto = int.Parse(txtValor.Text);
-                //p.IdImagenProducto = 0;
-                //p.IdModeloProducto = int.Parse(cbModelo.SelectedValue.ToString());
-                //p.IdCategoriaProducto = int.Parse(cbCategoria.SelectedValue.ToString());
-                //p.FechaCreacionProducto = txtNombre.Text;
-                //p.UsuarioCreacionProducto = txtNombre.Text;
-                //p.FechaModificacionProducto = txtNombre.Text;
-                //p.UsuarioModificacionProducto = txtNombre.Text;
-                //p.EstadoProducto = txtNombre.Text;
-
+                p.IdProducto = int.Parse(txtIdProducto.Text.Trim());
+                p.NombreProducto = txtNombre.Text.Trim();
+                p.DescripcionProducto = txtDescripcion.Text.Trim();
+                p.AltoProducto = txtAlto.Text.Trim();
+                p.AnchoProducto = txtAncho.Text.Trim();
+                p.ColorProducto = txtColor.Text.Trim();
+                p.MaterialProducto = txtMaterial.Text.Trim();
+                p.GarantiaMesesProducto = int.Parse(txtGarantia.Text.Trim());
+                p.ValorUnitarioProducto = Decimal.Parse(txtValor.Text.Trim());
+                p.CategoriaProducto = int.Parse(cbCategoria.SelectedValue.ToString());
+                p.FechaModificacionProducto = DateTime.Now;
+                p.UsuarioModificacionProducto = "Administrador";
+                p.EstadoProducto = int.Parse(cbEstado.SelectedIndex.ToString());
 
                 n = blProducto.Actualizar(p);
             }
@@ -173,11 +167,12 @@ namespace Administracion.Categorias
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-               
-       private void btnNuevo_Click_1(object sender, EventArgs e)
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             _nuevo = true;
             ActivarControlDatos(gbDatos, true);
+            btnEditar.Text = "Cancelar";
             ActivarButton(false);
             LimpiarControl(gbDatos);
             txtNombre.Focus();
@@ -185,27 +180,40 @@ namespace Administracion.Categorias
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            lista = null;
             _nuevo = false;
-            //cargaCombos();
-
-            if (dgvDatos.RowCount > 0)
+            if (btnEditar.Text == "Cancelar")
             {
-                p = blProducto.TraerPorId((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-                txtNombre.Text = p.NombreProducto;
-                txtMaterial.Text = p.MaterialProducto;
-                cbEstado.SelectedValue = p.EstadoProducto;
-                cbModelo.SelectedValue = p.ModeloProducto;
-                txtAlto.Text = p.AltoProducto;
-                txtAncho.Text = p.AnchoProducto;
-                txtColor.Text = p.ColorProducto;
-                txtDescripcion.Text = p.DescripcionProducto;
-                cbCategoria.SelectedValue = p.CategoriaProducto;
-                ActivarControlDatos(gbDatos, true);
-                ActivarButton(false);
+                LimpiarControl(gbDatos);
+                ActivarControlDatos(gbDatos, false);
+                ActivarButton(true);
                 dgvDatos.Enabled = true;
+                btnEditar.Text = "Editar";
             }
-            
+            else
+            {
+                if (dgvDatos.RowCount > 0)
+                {
+                    p = blProducto.TraerPorId((int)dgvDatos[0, dgvDatos.
+                        CurrentRow.Index].Value);
+                    txtIdProducto.Text = p.IdProducto.ToString();
+                    txtNombre.Text = p.NombreProducto;
+                    txtDescripcion.Text = p.DescripcionProducto;
+                    txtAlto.Text = p.AltoProducto;
+                    txtAncho.Text = p.AnchoProducto;
+                    txtColor.Text = p.ColorProducto;
+                    txtMaterial.Text = p.MaterialProducto;
+                    txtGarantia.Text = p.GarantiaMesesProducto.ToString();
+                    txtValor.Text = p.ValorUnitarioProducto.ToString();
+                    cbCategoria.SelectedIndex = p.CategoriaProducto;
+                    cbEstado.SelectedIndex = p.EstadoProducto;
+
+                    ActivarControlDatos(gbDatos, true);
+                    ActivarButton(false);
+                    dgvDatos.Enabled = false;
+                    btnEditar.Text = "Cancelar";
+                }
+            }
+
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
@@ -246,7 +254,7 @@ namespace Administracion.Categorias
 
         private void btLimpiar_Click(object sender, EventArgs e)
         {
-            
+
             LimpiarControl(gbDatos);
             txtNombre.Focus();
             dgvDatos.Enabled = true;
@@ -255,46 +263,62 @@ namespace Administracion.Categorias
             CargarDatos();
         }
 
-        private void btBuscar_Click(object sender, EventArgs e)
+        //private void btBuscar_Click(object sender, EventArgs e)
+        //{
+        //    lista = null;
+        //    _nuevo = false;
+        //    if (dgvDatos.RowCount > 0)
+        //    {
+        //       if (lista == null)
+        //        {   
+        //            if (txtNombre.Text.Length > 0)
+        //                lista = blProducto.BuscarProducto("Referencia", txtNombre.Text);
+        //            if (txtAlto.Text.Length > 0)
+        //                lista = blProducto.BuscarProducto("Color", txtAlto.Text);
+        //            if (txtMaterial.Text.Length > 0)
+        //                lista = blProducto.BuscarProducto("Nombre", txtNombre.Text);
+        //            if (cbCategoria.SelectedIndex > 0)
+        //                lista = blProducto.BuscarProducto("Categoria", cbCategoria.SelectedValue.ToString());
+        //            if (cbEstado.SelectedIndex > 0)
+        //                lista = blProducto.BuscarProducto("Marca", cbEstado.SelectedValue.ToString());
+        //            if (cbModelo.SelectedIndex > 0)
+        //                lista = blProducto.BuscarProducto("Modelo", cbModelo.SelectedValue.ToString());
+        //        }
+
+        //        if (lista.Count > 0)
+        //        {
+        //            dgvDatos.Rows.Clear();
+        //            for (int i = 0; i < lista.Count; i++)
+        //            {
+        //                dgvDatos.Rows.Add(lista[i].IdProducto, lista[i].DescripcionProducto, lista[i].AnchoProducto,
+        //             lista[i].AltoProducto, lista[i].ColorProducto, lista[i].MaterialProducto, lista[i].GarantiaMesesProducto, lista[i].ValorUnitarioProducto
+        //             );
+        //            }
+        //        }
+
+        //        LimpiarControl(gbDatos);
+        //        dgvDatos.Enabled = true;
+        //        ActivarControlDatos(gbDatos, false);
+        //        ActivarButton(true);
+        //        //cargaCombos();
+
+        //    }
+        //}
+
+        private void FrmProductos_Load(object sender, EventArgs e)
         {
-            lista = null;
-            _nuevo = false;
-            if (dgvDatos.RowCount > 0)
-            {
-               if (lista == null)
-                {   
-                    if (txtNombre.Text.Length > 0)
-                        lista = blProducto.BuscarProducto("Referencia", txtNombre.Text);
-                    if (txtAlto.Text.Length > 0)
-                        lista = blProducto.BuscarProducto("Color", txtAlto.Text);
-                    if (txtMaterial.Text.Length > 0)
-                        lista = blProducto.BuscarProducto("Nombre", txtNombre.Text);
-                    if (cbCategoria.SelectedIndex > 0)
-                        lista = blProducto.BuscarProducto("Categoria", cbCategoria.SelectedValue.ToString());
-                    if (cbEstado.SelectedIndex > 0)
-                        lista = blProducto.BuscarProducto("Marca", cbEstado.SelectedValue.ToString());
-                    if (cbModelo.SelectedIndex > 0)
-                        lista = blProducto.BuscarProducto("Modelo", cbModelo.SelectedValue.ToString());
-                }
+            //Carga Combobox Estado 
+            cbEstado.Items.Clear();
+            cbEstado.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
+            cbEstado.SelectedIndex = 0;
 
-                if (lista.Count > 0)
-                {
-                    dgvDatos.Rows.Clear();
-                    for (int i = 0; i < lista.Count; i++)
-                    {
-                        dgvDatos.Rows.Add(lista[i].IdProducto, lista[i].DescripcionProducto, lista[i].AnchoProducto,
-                     lista[i].AltoProducto, lista[i].ColorProducto, lista[i].MaterialProducto, lista[i].GarantiaMesesProducto, lista[i].ValorUnitarioProducto
-                     );
-                    }
-                }
+            //Carga Combo Categorias
 
-                LimpiarControl(gbDatos);
-                dgvDatos.Enabled = true;
-                ActivarControlDatos(gbDatos, false);
-                ActivarButton(true);
-                //cargaCombos();
+            listaCategoria = blCategoria.ComboCategoria();
+            cbCategoria.DataSource = listaCategoria;
+            cbCategoria.DisplayMember = "NombreCategoria";
+            cbCategoria.ValueMember = "IdCategoria";
 
-            }
         }
 
     }

@@ -17,7 +17,7 @@ namespace Administracion.Entidades
         string _ColorProducto;
         string _MaterialProducto;
         int _GarantiaMesesProducto;
-        long _ValorUnitarioProducto;
+        Decimal _ValorUnitarioProducto;
         int _CategoriaProducto;
         DateTime _FechaCreacionProducto;
         string _UsuarioCreacionProducto;
@@ -33,7 +33,7 @@ namespace Administracion.Entidades
         public string ColorProducto { get => _ColorProducto; set => _ColorProducto = value; }
         public string MaterialProducto { get => _MaterialProducto; set => _MaterialProducto = value; }
         public int GarantiaMesesProducto { get => _GarantiaMesesProducto; set => _GarantiaMesesProducto = value; }
-        public long ValorUnitarioProducto { get => _ValorUnitarioProducto; set => _ValorUnitarioProducto = value; }
+        public Decimal ValorUnitarioProducto { get => _ValorUnitarioProducto; set => _ValorUnitarioProducto = value; }
         public int CategoriaProducto { get => _CategoriaProducto; set => _CategoriaProducto = value; }
         public DateTime FechaCreacionProducto { get => _FechaCreacionProducto; set => _FechaCreacionProducto = value; }
         public string UsuarioCreacionProducto { get => _UsuarioCreacionProducto; set => _UsuarioCreacionProducto = value; }
@@ -54,8 +54,8 @@ namespace Administracion.Entidades
             string AltoProducto, 
             string ColorProducto, 
             string MaterialProducto, 
-            int GarantiaMesesProducto, 
-            long ValorUnitarioProducto,
+            int GarantiaMesesProducto,
+            Decimal ValorUnitarioProducto,
             int CategoriaProducto, 
             DateTime FechaCreacionProducto, 
             string UsuarioCreacionProducto, 
@@ -67,7 +67,7 @@ namespace Administracion.Entidades
             this.NombreProducto = NombreProducto;
             this.DescripcionProducto = DescripcionProducto;
             this.AnchoProducto = AnchoProducto;
-            this.AnchoProducto = AltoProducto;
+            this.AltoProducto = AltoProducto;
             this.ColorProducto = ColorProducto;
             this.MaterialProducto = MaterialProducto;
             this.GarantiaMesesProducto = GarantiaMesesProducto;

@@ -129,36 +129,32 @@ namespace Administracion.Datos
             return n;
         }
 
-        //public List<Categoria> ComboCategoria()
-        //{
-        //    List<Categoria> lista = new List<Categoria>();
-        //    Categoria c = new Categoria();
-        //    using (SqlConnection con = new SqlConnection(CadenaConexion))
-        //    {
-        //        con.Open();
-        //        SqlCommand cmd = new SqlCommand("ListarCategorias", con);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        SqlDataReader dr = cmd.ExecuteReader();
-        //        if (dr != null && dr.HasRows)
-        //        {
-        //            c = new Categoria(0, "-Seleccionar-",DateTime.Now,0);
-        //            lista.Add(c);
+        public List<Categoria> ComboCategoria()
+        {
+            List<Categoria> lista = new List<Categoria>();
+            Categoria c = new Categoria();
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ListarCategoriasCombo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    c = new Categoria(0, "-Seleccionar-");
+                    lista.Add(c);
 
-        //            while (dr.Read())
-        //            {
-        //                c = new Categoria((int)dr["pIdCategoria"],
-        //                    (string)dr["pNombreCategoria"],DateTime.Now, 0);
-        //                lista.Add(c);
-        //            }
+                    while (dr.Read())
+                    {
+                        c = new Categoria((int)dr["IdCategoria"],
+                            (string)dr["NombreCategoria"]);
+                        lista.Add(c);
+                    }
 
-
-
-        //        }
-        //    }
-        //    return lista;
-        //}
-
-
+                }
+            }
+            return lista;
+        }
 
     }
 }

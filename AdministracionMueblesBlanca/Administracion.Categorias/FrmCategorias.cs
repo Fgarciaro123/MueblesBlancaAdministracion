@@ -194,6 +194,7 @@ namespace Administracion.Categorias
                         CurrentRow.Index].Value);
                     txtIdCategoria.Text = c.IdCategoria.ToString();
                     txtNombreCategoria.Text = c.NombreCategoria;
+                    cmbEstadoCategoria.SelectedIndex = c.EstadoCategoria;
 
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);

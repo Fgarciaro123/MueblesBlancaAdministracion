@@ -122,5 +122,11 @@ namespace Administracion.Entidades
            : this(0, "",DateTime.Now,0)
         {
         }
+
+        public Categoria(int pIdCategoria, string pNombreCategoria)
+        {
+            this.IdCategoria = pIdCategoria;
+            this.NombreCategoria = pNombreCategoria;
+        }
     }
 }

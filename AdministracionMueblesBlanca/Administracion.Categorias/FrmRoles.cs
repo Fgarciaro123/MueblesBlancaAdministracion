@@ -33,6 +33,7 @@ namespace Administracion.Categorias
             cmbEstadoRol.Items.Clear();
             cmbEstadoRol.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
             cmbEstadoRol.SelectedIndex = 0;
+            cmbEstadoRol.Enabled = false;
 
             btnGrabar.Enabled = false;
 
@@ -119,6 +120,7 @@ namespace Administracion.Categorias
             ActivarButton(false);
             LimpiarControl(gbDatos);
             txtNombreRol.Focus();
+            cmbEstadoRol.Enabled = true;
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -189,6 +191,7 @@ namespace Administracion.Categorias
                         CurrentRow.Index].Value);
                     txtIdRol.Text = rol.IdRol.ToString();
                     txtNombreRol.Text = rol.NombreRol;
+                    cmbEstadoRol.SelectedIndex = rol.EstadoRol;
 
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);

@@ -16,6 +16,7 @@ namespace Administracion.Negocio
             return daCategoria.Listar();
         }
 
+
         public Categoria TraerPorId(int Id)
         {
             DAOCategoria daCategoria = new DAOCategoria();
@@ -39,11 +40,11 @@ namespace Administracion.Negocio
             DAOCategoria daCategoria = new DAOCategoria();
             return daCategoria.Eliminar(Id);
         }
-        //public List<Categoria> ComboCategoria()
-        //{
-        //    DAOCategoria daCategoria = new DAOCategoria();
-        //    return daCategoria.ComboCategoria();
-        //}
+        public List<Categoria> ComboCategoria()
+        {
+            DAOCategoria daCategoria = new DAOCategoria();
+            return daCategoria.ComboCategoria();
+        }
 
     }
 }
