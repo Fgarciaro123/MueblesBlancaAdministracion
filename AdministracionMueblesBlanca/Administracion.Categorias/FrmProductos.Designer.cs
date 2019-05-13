@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.gbControl = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -71,12 +70,11 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bLCategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
+            this.btnGestionImagenes = new System.Windows.Forms.Button();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bLCategoriaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUsuario
@@ -90,6 +88,7 @@
             // 
             // gbControl
             // 
+            this.gbControl.Controls.Add(this.btnGestionImagenes);
             this.gbControl.Controls.Add(this.btnSalir);
             this.gbControl.Controls.Add(this.btnEliminar);
             this.gbControl.Controls.Add(this.btnEditar);
@@ -97,7 +96,7 @@
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Location = new System.Drawing.Point(965, 51);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Size = new System.Drawing.Size(132, 143);
+            this.gbControl.Size = new System.Drawing.Size(132, 180);
             this.gbControl.TabIndex = 17;
             this.gbControl.TabStop = false;
             // 
@@ -178,7 +177,7 @@
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Location = new System.Drawing.Point(11, 52);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(948, 142);
+            this.gbDatos.Size = new System.Drawing.Size(948, 179);
             this.gbDatos.TabIndex = 16;
             this.gbDatos.TabStop = false;
             // 
@@ -341,10 +340,10 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(111, 99);
+            this.txtDescripcion.Location = new System.Drawing.Point(97, 102);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(830, 34);
+            this.txtDescripcion.Size = new System.Drawing.Size(844, 67);
             this.txtDescripcion.TabIndex = 8;
             // 
             // txtMaterial
@@ -389,10 +388,10 @@
             this.Column8,
             this.Column9,
             this.Column12});
-            this.dgvDatos.Location = new System.Drawing.Point(11, 213);
+            this.dgvDatos.Location = new System.Drawing.Point(11, 237);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.Size = new System.Drawing.Size(1086, 398);
+            this.dgvDatos.Size = new System.Drawing.Size(1086, 374);
             this.dgvDatos.TabIndex = 15;
             // 
             // Column1
@@ -455,10 +454,6 @@
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             // 
-            // bLCategoriaBindingSource
-            // 
-            this.bLCategoriaBindingSource.DataSource = typeof(void);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -469,6 +464,16 @@
             this.label7.Size = new System.Drawing.Size(216, 25);
             this.label7.TabIndex = 19;
             this.label7.Text = "Modulo de Productos";
+            // 
+            // btnGestionImagenes
+            // 
+            this.btnGestionImagenes.Location = new System.Drawing.Point(7, 147);
+            this.btnGestionImagenes.Name = "btnGestionImagenes";
+            this.btnGestionImagenes.Size = new System.Drawing.Size(119, 23);
+            this.btnGestionImagenes.TabIndex = 14;
+            this.btnGestionImagenes.Text = "Gestion Imagenes";
+            this.btnGestionImagenes.UseVisualStyleBackColor = true;
+            this.btnGestionImagenes.Click += new System.EventHandler(this.btnGestionImagenes_Click);
             // 
             // FrmProductos
             // 
@@ -490,7 +495,6 @@
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bLCategoriaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,14 +515,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.TextBox txtAncho;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.BindingSource bLCategoriaBindingSource;
         private System.Windows.Forms.TextBox txtAlto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNombre;
@@ -542,5 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.Button btnGestionImagenes;
+        public System.Windows.Forms.DataGridView dgvDatos;
     }
 }

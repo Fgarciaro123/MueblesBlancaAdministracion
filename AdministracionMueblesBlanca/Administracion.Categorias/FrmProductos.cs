@@ -21,6 +21,7 @@ namespace Administracion.Categorias
         //Declaramos las variables generales
         List<Producto> lista = null;
         List<Categoria> listaCategoria = null;
+        public int idProductoImagen;
 
         BLProducto blProducto = new BLProducto();
         BLCategoria blCategoria = new BLCategoria();
@@ -321,5 +322,13 @@ namespace Administracion.Categorias
 
         }
 
+        private void btnGestionImagenes_Click(object sender, EventArgs e)
+        {
+            FrmImagen frmImagen = new FrmImagen((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
+            ;
+            frmImagen.Show();
+            //this.Hide();
+
+        }
     }
 }

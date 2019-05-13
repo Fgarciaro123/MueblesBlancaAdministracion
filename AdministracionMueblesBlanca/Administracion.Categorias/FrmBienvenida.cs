@@ -51,5 +51,6 @@ namespace Administracion.Categorias
             frmCargarImagen.Show();
             this.Hide();
         }
+
     }
 }

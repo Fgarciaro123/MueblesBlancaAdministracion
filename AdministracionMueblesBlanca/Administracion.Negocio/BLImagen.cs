@@ -10,10 +10,10 @@ namespace Administracion.Negocio
 {
     public class BLImagen
     {
-        public List<Imagen> Listar()
+        public List<Imagen> Listar(int IdProducto)
         {
             DAOImagen daImagen = new DAOImagen();
-            return daImagen.Listar();
+            return daImagen.Listar(IdProducto);
         }
 
         public Imagen TraerPorId(int Id)

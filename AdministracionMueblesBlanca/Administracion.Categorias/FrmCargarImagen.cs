@@ -17,12 +17,9 @@ namespace Administracion.Categorias
     public partial class FrmCargarImagen : Form
     {
         //Declaramos las variables generales
-        List<Imagen> lista = null;
-        List<Imagen> listaImagenes = null;
 
         BLImagen bLImagen = new BLImagen();
         Imagen imagen ;
-        bool _nuevo = false;
 
         public FrmCargarImagen()
         {

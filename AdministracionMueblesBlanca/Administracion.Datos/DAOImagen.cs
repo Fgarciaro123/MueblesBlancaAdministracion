@@ -29,7 +29,7 @@ namespace Administracion.Datos
             set { _cadenaConexion = value; }
         }
 
-        public List<Imagen> Listar()
+        public List<Imagen> Listar(int idProducto)
         {
             List<Imagen> lista = new List<Imagen>();
 
@@ -38,6 +38,7 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ListarImagenes", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdProductoImagen", idProducto);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
