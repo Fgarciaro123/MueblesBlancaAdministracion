@@ -10,16 +10,16 @@ namespace Administracion.Negocio
 {
     public class BLModelo
     {
-        public List<Modelo> Listar()
+        public List<Modelo> Listar(int idProducto)
         {
             DAOModelo daModelo = new DAOModelo();
-            return daModelo.Listar();
+            return daModelo.Listar(idProducto);
         }
 
-        public Modelo TraerPorId(int Id)
+        public Modelo TraerPorId(int IdModelo, int IdProducto)
         {
             DAOModelo daModelo = new DAOModelo();
-            return daModelo.TraerModeloPorId(Id);
+            return daModelo.TraerModeloPorId(IdModelo,IdProducto);
         }
 
         public int Insertar(Modelo Modelo)
@@ -34,10 +34,10 @@ namespace Administracion.Negocio
             return daModelo.Actualizar(Modelo);
         }
 
-        public int Eliminar(int Id)
+        public int Eliminar(int IdModelo , int IdProducto)
         {
             DAOModelo daModelo = new DAOModelo();
-            return daModelo.Eliminar(Id);
+            return daModelo.Eliminar(IdModelo,IdProducto);
         }
     }
 }

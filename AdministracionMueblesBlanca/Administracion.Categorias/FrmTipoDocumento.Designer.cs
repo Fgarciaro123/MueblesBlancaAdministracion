@@ -30,18 +30,18 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.gbControl = new System.Windows.Forms.GroupBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.lblIdTipoDocumento = new System.Windows.Forms.Label();
-            this.lblDescripcionTipoDocumento = new System.Windows.Forms.Label();
-            this.lblEstadoTipoDocumento = new System.Windows.Forms.Label();
-            this.txtIdTipoDocumento = new System.Windows.Forms.TextBox();
-            this.txtDescripcionTipoDocumento = new System.Windows.Forms.TextBox();
             this.cmbEstadoTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.txtDescripcionTipoDocumento = new System.Windows.Forms.TextBox();
+            this.txtIdTipoDocumento = new System.Windows.Forms.TextBox();
+            this.lblEstadoTipoDocumento = new System.Windows.Forms.Label();
+            this.lblDescripcionTipoDocumento = new System.Windows.Forms.Label();
+            this.lblIdTipoDocumento = new System.Windows.Forms.Label();
+            this.gbControl = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvTipoDocumento = new System.Windows.Forms.DataGridView();
             this.dgvIdTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDescripcionTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +80,60 @@
             this.gbDatos.TabIndex = 5;
             this.gbDatos.TabStop = false;
             // 
+            // cmbEstadoTipoDocumento
+            // 
+            this.cmbEstadoTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstadoTipoDocumento.FormattingEnabled = true;
+            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(179, 109);
+            this.cmbEstadoTipoDocumento.Name = "cmbEstadoTipoDocumento";
+            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(183, 21);
+            this.cmbEstadoTipoDocumento.TabIndex = 5;
+            // 
+            // txtDescripcionTipoDocumento
+            // 
+            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(179, 68);
+            this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
+            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(251, 20);
+            this.txtDescripcionTipoDocumento.TabIndex = 4;
+            // 
+            // txtIdTipoDocumento
+            // 
+            this.txtIdTipoDocumento.Location = new System.Drawing.Point(179, 28);
+            this.txtIdTipoDocumento.Name = "txtIdTipoDocumento";
+            this.txtIdTipoDocumento.ReadOnly = true;
+            this.txtIdTipoDocumento.Size = new System.Drawing.Size(183, 20);
+            this.txtIdTipoDocumento.TabIndex = 3;
+            // 
+            // lblEstadoTipoDocumento
+            // 
+            this.lblEstadoTipoDocumento.AutoSize = true;
+            this.lblEstadoTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(37, 109);
+            this.lblEstadoTipoDocumento.Name = "lblEstadoTipoDocumento";
+            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(60, 20);
+            this.lblEstadoTipoDocumento.TabIndex = 2;
+            this.lblEstadoTipoDocumento.Text = "Estado";
+            // 
+            // lblDescripcionTipoDocumento
+            // 
+            this.lblDescripcionTipoDocumento.AutoSize = true;
+            this.lblDescripcionTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(37, 69);
+            this.lblDescripcionTipoDocumento.Name = "lblDescripcionTipoDocumento";
+            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(92, 20);
+            this.lblDescripcionTipoDocumento.TabIndex = 1;
+            this.lblDescripcionTipoDocumento.Text = "Descripcion";
+            // 
+            // lblIdTipoDocumento
+            // 
+            this.lblIdTipoDocumento.AutoSize = true;
+            this.lblIdTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdTipoDocumento.Location = new System.Drawing.Point(37, 29);
+            this.lblIdTipoDocumento.Name = "lblIdTipoDocumento";
+            this.lblIdTipoDocumento.Size = new System.Drawing.Size(59, 20);
+            this.lblIdTipoDocumento.TabIndex = 0;
+            this.lblIdTipoDocumento.Text = "Codigo";
+            // 
             // gbControl
             // 
             this.gbControl.Controls.Add(this.btnSalir);
@@ -93,37 +147,15 @@
             this.gbControl.TabIndex = 6;
             this.gbControl.TabStop = false;
             // 
-            // btnNuevo
+            // btnSalir
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(36, 19);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.Location = new System.Drawing.Point(36, 49);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
-            this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
-
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(36, 79);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 2;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-
+            this.btnSalir.Location = new System.Drawing.Point(36, 139);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -134,71 +166,36 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-
             // 
-            // btnSalir
+            // btnEditar
             // 
-            this.btnSalir.Location = new System.Drawing.Point(36, 139);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-
+            this.btnEditar.Location = new System.Drawing.Point(36, 79);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 2;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // lblIdTipoDocumento
+            // btnGrabar
             // 
-            this.lblIdTipoDocumento.AutoSize = true;
-            this.lblIdTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdTipoDocumento.Location = new System.Drawing.Point(37, 29);
-            this.lblIdTipoDocumento.Name = "lblIdTipoDocumento";
-            this.lblIdTipoDocumento.Size = new System.Drawing.Size(59, 20);
-            this.lblIdTipoDocumento.TabIndex = 0;
-            this.lblIdTipoDocumento.Text = "Codigo";
+            this.btnGrabar.Location = new System.Drawing.Point(36, 49);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.TabIndex = 1;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // lblDescripcionTipoDocumento
+            // btnNuevo
             // 
-            this.lblDescripcionTipoDocumento.AutoSize = true;
-            this.lblDescripcionTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(37, 69);
-            this.lblDescripcionTipoDocumento.Name = "lblDescripcionTipoDocumento";
-            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(92, 20);
-            this.lblDescripcionTipoDocumento.TabIndex = 1;
-            this.lblDescripcionTipoDocumento.Text = "Descripcion";
-            // 
-            // lblEstadoTipoDocumento
-            // 
-            this.lblEstadoTipoDocumento.AutoSize = true;
-            this.lblEstadoTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(37, 109);
-            this.lblEstadoTipoDocumento.Name = "lblEstadoTipoDocumento";
-            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(60, 20);
-            this.lblEstadoTipoDocumento.TabIndex = 2;
-            this.lblEstadoTipoDocumento.Text = "Estado";
-            // 
-            // txtIdTipoDocumento
-            // 
-            this.txtIdTipoDocumento.Location = new System.Drawing.Point(179, 28);
-            this.txtIdTipoDocumento.Name = "txtIdTipoDocumento";
-            this.txtIdTipoDocumento.ReadOnly = true;
-            this.txtIdTipoDocumento.Size = new System.Drawing.Size(183, 20);
-            this.txtIdTipoDocumento.TabIndex = 3;
-            // 
-            // txtDescripcionTipoDocumento
-            // 
-            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(179, 68);
-            this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
-            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(251, 20);
-            this.txtDescripcionTipoDocumento.TabIndex = 4;
-            // 
-            // cmbEstadoTipoDocumento
-            // 
-            this.cmbEstadoTipoDocumento.FormattingEnabled = true;
-            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(179, 109);
-            this.cmbEstadoTipoDocumento.Name = "cmbEstadoTipoDocumento";
-            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(183, 21);
-            this.cmbEstadoTipoDocumento.TabIndex = 5;
+            this.btnNuevo.Location = new System.Drawing.Point(36, 19);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvTipoDocumento
             // 

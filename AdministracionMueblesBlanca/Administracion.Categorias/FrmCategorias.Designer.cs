@@ -74,6 +74,7 @@
             // 
             // cmbEstadoCategoria
             // 
+            this.cmbEstadoCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCategoria.FormattingEnabled = true;
             this.cmbEstadoCategoria.Location = new System.Drawing.Point(178, 91);
             this.cmbEstadoCategoria.Name = "cmbEstadoCategoria";
@@ -86,7 +87,6 @@
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(264, 20);
             this.txtNombreCategoria.TabIndex = 4;
-
             // 
             // txtIdCategoria
             // 

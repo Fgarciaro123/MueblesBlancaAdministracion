@@ -30,6 +30,7 @@
         {
             this.lbUsuario = new System.Windows.Forms.Label();
             this.gbControl = new System.Windows.Forms.GroupBox();
+            this.btnGestionImagenes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnGestionImagenes = new System.Windows.Forms.Button();
+            this.btnModelos = new System.Windows.Forms.Button();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -88,17 +89,28 @@
             // 
             // gbControl
             // 
+            this.gbControl.Controls.Add(this.btnModelos);
             this.gbControl.Controls.Add(this.btnGestionImagenes);
             this.gbControl.Controls.Add(this.btnSalir);
             this.gbControl.Controls.Add(this.btnEliminar);
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
-            this.gbControl.Location = new System.Drawing.Point(965, 51);
+            this.gbControl.Location = new System.Drawing.Point(965, 35);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Size = new System.Drawing.Size(132, 180);
+            this.gbControl.Size = new System.Drawing.Size(132, 196);
             this.gbControl.TabIndex = 17;
             this.gbControl.TabStop = false;
+            // 
+            // btnGestionImagenes
+            // 
+            this.btnGestionImagenes.Location = new System.Drawing.Point(7, 143);
+            this.btnGestionImagenes.Name = "btnGestionImagenes";
+            this.btnGestionImagenes.Size = new System.Drawing.Size(119, 23);
+            this.btnGestionImagenes.TabIndex = 14;
+            this.btnGestionImagenes.Text = "Gestion Imagenes";
+            this.btnGestionImagenes.UseVisualStyleBackColor = true;
+            this.btnGestionImagenes.Click += new System.EventHandler(this.btnGestionImagenes_Click);
             // 
             // btnSalir
             // 
@@ -265,6 +277,7 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(364, 44);
             this.cbEstado.Name = "cbEstado";
@@ -291,6 +304,7 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(629, 46);
             this.cbCategoria.Name = "cbCategoria";
@@ -465,15 +479,15 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Modulo de Productos";
             // 
-            // btnGestionImagenes
+            // btnModelos
             // 
-            this.btnGestionImagenes.Location = new System.Drawing.Point(7, 147);
-            this.btnGestionImagenes.Name = "btnGestionImagenes";
-            this.btnGestionImagenes.Size = new System.Drawing.Size(119, 23);
-            this.btnGestionImagenes.TabIndex = 14;
-            this.btnGestionImagenes.Text = "Gestion Imagenes";
-            this.btnGestionImagenes.UseVisualStyleBackColor = true;
-            this.btnGestionImagenes.Click += new System.EventHandler(this.btnGestionImagenes_Click);
+            this.btnModelos.Location = new System.Drawing.Point(7, 168);
+            this.btnModelos.Name = "btnModelos";
+            this.btnModelos.Size = new System.Drawing.Size(119, 23);
+            this.btnModelos.TabIndex = 15;
+            this.btnModelos.Text = "Gestionar Modelos";
+            this.btnModelos.UseVisualStyleBackColor = true;
+            this.btnModelos.Click += new System.EventHandler(this.btnModelos_Click);
             // 
             // FrmProductos
             // 
@@ -546,5 +560,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Button btnGestionImagenes;
         public System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Button btnModelos;
     }
 }

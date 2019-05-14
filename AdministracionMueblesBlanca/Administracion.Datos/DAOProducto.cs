@@ -167,10 +167,23 @@ namespace Administracion.Datos
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("EliminarProducto", con);
+                //Eliminar Modelos
+                SqlCommand cmd = new SqlCommand("EliminarModeloPorProducto", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdProducto", Id);
                 n = cmd.ExecuteNonQuery();
+
+                //Eliminar Productos
+                SqlCommand cmd1 = new SqlCommand("EliminarImagenPorProducto", con);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.AddWithValue("@IdProducto", Id);
+                n = cmd1.ExecuteNonQuery();
+
+                //Eliminar producto
+                SqlCommand cmd2 = new SqlCommand("EliminarProducto", con);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@IdProducto", Id);
+                n = cmd2.ExecuteNonQuery();
             }
             return n;
         }

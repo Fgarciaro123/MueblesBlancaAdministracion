@@ -29,7 +29,7 @@ namespace Administracion.Datos
         }
 
 
-        public List<Modelo> Listar()
+        public List<Modelo> Listar(int idProducto)
         {
             List<Modelo> lista = new List<Modelo>();
 
@@ -38,6 +38,8 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ListarModelos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdProductoModelo", idProducto);
+
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
@@ -60,7 +62,7 @@ namespace Administracion.Datos
             return lista;
         }
 
-        public Modelo TraerModeloPorId(int Id)
+        public Modelo TraerModeloPorId(int IdModelo, int IdProducto)
         {
             Modelo modelo = new Modelo();
             using (SqlConnection con = new SqlConnection(CadenaConexion))
@@ -68,7 +70,8 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("TraerModeloPorId", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdModelo", Id);
+                cmd.Parameters.AddWithValue("@IdModelo", IdModelo);
+                cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
@@ -128,7 +131,7 @@ namespace Administracion.Datos
             return n;
         }
 
-        public int Eliminar(int Id)
+        public int Eliminar(int IdModelo, int IdProducto)
         {
             int n = -1;
             using (SqlConnection con = new SqlConnection(CadenaConexion))
@@ -136,7 +139,8 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("EliminarModelo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdModelo", Id);
+                cmd.Parameters.AddWithValue("@IdModelo", IdModelo);
+                cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

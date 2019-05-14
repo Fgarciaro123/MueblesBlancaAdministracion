@@ -130,7 +130,7 @@ namespace Administracion.Datos
             return n;
         }
 
-        public int Eliminar(int Id)
+        public int Eliminar(int IdImagen, int IdProducto)
         {
             int n = -1;
             using (SqlConnection con = new SqlConnection(CadenaConexion))
@@ -138,7 +138,8 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("EliminarImagen", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdImagen", Id);
+                cmd.Parameters.AddWithValue("@IdImagen", IdImagen);
+                cmd.Parameters.AddWithValue("@IdProducto", IdProducto);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

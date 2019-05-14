@@ -37,6 +37,7 @@
             this.txtTituloImagen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbEstadoImagen = new System.Windows.Forms.ComboBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             this.txtRuta.Location = new System.Drawing.Point(390, 75);
             this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(341, 20);
+            this.txtRuta.Size = new System.Drawing.Size(392, 20);
             this.txtRuta.TabIndex = 1;
             // 
             // lblRuta
@@ -68,7 +69,7 @@
             // 
             // btnCargarImagen
             // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(428, 121);
+            this.btnCargarImagen.Location = new System.Drawing.Point(392, 115);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(126, 27);
             this.btnCargarImagen.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btnGuardarImagen
             // 
-            this.btnGuardarImagen.Location = new System.Drawing.Point(577, 121);
+            this.btnGuardarImagen.Location = new System.Drawing.Point(524, 115);
             this.btnGuardarImagen.Name = "btnGuardarImagen";
             this.btnGuardarImagen.Size = new System.Drawing.Size(126, 27);
             this.btnGuardarImagen.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             this.txtTituloImagen.Location = new System.Drawing.Point(390, 196);
             this.txtTituloImagen.Name = "txtTituloImagen";
-            this.txtTituloImagen.Size = new System.Drawing.Size(341, 20);
+            this.txtTituloImagen.Size = new System.Drawing.Size(392, 20);
             this.txtTituloImagen.TabIndex = 6;
             // 
             // label2
@@ -115,17 +116,29 @@
             // 
             // cmbEstadoImagen
             // 
+            this.cmbEstadoImagen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoImagen.FormattingEnabled = true;
             this.cmbEstadoImagen.Location = new System.Drawing.Point(390, 275);
             this.cmbEstadoImagen.Name = "cmbEstadoImagen";
             this.cmbEstadoImagen.Size = new System.Drawing.Size(156, 21);
             this.cmbEstadoImagen.TabIndex = 8;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(656, 115);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(126, 27);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FrmCargarImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 379);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.cmbEstadoImagen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTituloImagen);
@@ -157,5 +170,6 @@
         private System.Windows.Forms.TextBox txtTituloImagen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbEstadoImagen;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

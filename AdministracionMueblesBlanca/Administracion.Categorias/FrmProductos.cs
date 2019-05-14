@@ -325,9 +325,16 @@ namespace Administracion.Categorias
         private void btnGestionImagenes_Click(object sender, EventArgs e)
         {
             FrmImagen frmImagen = new FrmImagen((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-            ;
             frmImagen.Show();
-            //this.Hide();
+            this.Hide();
+
+        }
+
+        private void btnModelos_Click(object sender, EventArgs e)
+        {
+            FrmModelos frmModelos = new FrmModelos((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
+            frmModelos.Show();
+            this.Hide();
 
         }
     }

@@ -33,7 +33,6 @@
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnTipoDocumento = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
@@ -84,22 +83,11 @@
             this.btnTipoDocumento.UseVisualStyleBackColor = true;
             this.btnTipoDocumento.Click += new System.EventHandler(this.btnTipoDocumento_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(177, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 468);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTipoDocumento);
             this.Controls.Add(this.btnRoles);
             this.Controls.Add(this.btnProducto);
@@ -118,6 +106,5 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Button btnTipoDocumento;
-        private System.Windows.Forms.Button button1;
     }
 }

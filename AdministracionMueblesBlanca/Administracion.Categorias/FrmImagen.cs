@@ -20,7 +20,6 @@ namespace Administracion.Categorias
         public int idProductoImagen;
 
         BLImagen blImagen = new BLImagen();
-        Imagen image;
 
         public FrmImagen(int idProducto)
         {
@@ -54,6 +53,7 @@ namespace Administracion.Categorias
         //Creamos el método CargarDatos
         private void CargarDatos()
         {
+            string _fechaModificacion;
             Imagen imagen = new Imagen();
             if (lista == null)
             {
@@ -65,6 +65,15 @@ namespace Administracion.Categorias
                 dataGridView1.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
+
+                    if (lista[i].FechaModificacionImagen.Year <= 2000)
+                    {
+                        _fechaModificacion = "";
+                    }
+                    else
+                    {
+                        _fechaModificacion = lista[i].FechaModificacionImagen.ToString();
+                    }
                     dataGridView1.Rows.Add(
                     lista[i].IdImagen,
                     lista[i].TituloImagen,
@@ -72,7 +81,7 @@ namespace Administracion.Categorias
                     (EnumEstados.Estados)lista[i].EstadoImagen,
                     lista[i].FechaCreacionImagen,
                     lista[i].UsuarioCreacionImagen,
-                    lista[i].FechaModificacionImagen,
+                    _fechaModificacion,
                     lista[i].UsuarioModificacionImagen);
 
                 }
@@ -80,15 +89,11 @@ namespace Administracion.Categorias
 
         }
 
-        private void FrmImagen_Load(object sender, EventArgs e)
-        {          
-
-        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FrmBienvenida frmInicio = new FrmBienvenida();
-            frmInicio.Show();
+            FrmProductos frmProductos = new FrmProductos();
+            frmProductos.Show();
             this.Hide();
         }
 
@@ -114,6 +119,40 @@ namespace Administracion.Categorias
 
             return imagen;
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount > 0)
+            {
+                DialogResult rpta =
+                    MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rpta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    int n = blImagen.Eliminar((int)dataGridView1[0, dataGridView1.CurrentRow.Index].Value,idProductoImagen);
+                    if (n > 0)
+                    {
+                        MessageBox.Show("Registro eliminado", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lista = blImagen.Listar(idProductoImagen);
+                        CargarDatos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+        }
+
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            FrmCargarImagen frmCargarImagen = new FrmCargarImagen(idProductoImagen);
+            frmCargarImagen.Show();
+            this.Hide();
         }
 
     }

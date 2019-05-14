@@ -34,10 +34,10 @@ namespace Administracion.Negocio
             return daImagen.Actualizar(Imagen);
         }
 
-        public int Eliminar(int Id)
+        public int Eliminar(int IdImagen, int IdProducto)
         {
             DAOImagen daImagen = new DAOImagen();
-            return daImagen.Eliminar(Id);
+            return daImagen.Eliminar(IdImagen,IdProducto);
         }
     }
 }

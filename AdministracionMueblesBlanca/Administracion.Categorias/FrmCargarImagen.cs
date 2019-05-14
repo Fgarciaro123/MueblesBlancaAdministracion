@@ -20,9 +20,11 @@ namespace Administracion.Categorias
 
         BLImagen bLImagen = new BLImagen();
         Imagen imagen ;
+        int idProductoImagen;
 
-        public FrmCargarImagen()
+        public FrmCargarImagen(int pIdproductoImagen)
         {
+            idProductoImagen = pIdproductoImagen;
             InitializeComponent();
         }
 
@@ -46,7 +48,7 @@ namespace Administracion.Categorias
         {
             int n = -1;
 
-            imagen = new Imagen(1,
+            imagen = new Imagen(idProductoImagen,
                 txtTituloImagen.Text.Trim(),
                 Imagen_A_Bytes(txtRuta.Text),
                 DateTime.Now,
@@ -89,6 +91,14 @@ namespace Administracion.Categorias
             cmbEstadoImagen.Items.Clear();
             cmbEstadoImagen.DataSource = Enum.GetValues(typeof(EnumEstados.Estados));
             cmbEstadoImagen.SelectedIndex = 0;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmImagen frmImagen = new FrmImagen(idProductoImagen);
+            frmImagen.Show();
+            this.Hide();
+
         }
     }
 }
