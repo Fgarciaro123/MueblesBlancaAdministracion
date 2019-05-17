@@ -30,6 +30,7 @@
         {
             this.lbUsuario = new System.Windows.Forms.Label();
             this.gbControl = new System.Windows.Forms.GroupBox();
+            this.btnModelos = new System.Windows.Forms.Button();
             this.btnGestionImagenes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -72,7 +73,6 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnModelos = new System.Windows.Forms.Button();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -101,6 +101,16 @@
             this.gbControl.Size = new System.Drawing.Size(132, 196);
             this.gbControl.TabIndex = 17;
             this.gbControl.TabStop = false;
+            // 
+            // btnModelos
+            // 
+            this.btnModelos.Location = new System.Drawing.Point(7, 168);
+            this.btnModelos.Name = "btnModelos";
+            this.btnModelos.Size = new System.Drawing.Size(119, 23);
+            this.btnModelos.TabIndex = 15;
+            this.btnModelos.Text = "Gestionar Modelos";
+            this.btnModelos.UseVisualStyleBackColor = true;
+            this.btnModelos.Click += new System.EventHandler(this.btnModelos_Click);
             // 
             // btnGestionImagenes
             // 
@@ -216,6 +226,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(158, 20);
             this.txtValor.TabIndex = 26;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label12
             // 
@@ -232,15 +243,16 @@
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(86, 20);
             this.txtGarantia.TabIndex = 24;
+            this.txtGarantia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGarantia_KeyPress);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(574, 75);
+            this.label11.Location = new System.Drawing.Point(526, 74);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
+            this.label11.Size = new System.Drawing.Size(97, 13);
             this.label11.TabIndex = 25;
-            this.label11.Text = "Garantía";
+            this.label11.Text = "Garantía en meses";
             // 
             // btLimpiar
             // 
@@ -314,7 +326,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(569, 49);
+            this.label6.Location = new System.Drawing.Point(526, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 16;
@@ -324,7 +336,7 @@
             // 
             this.txtColor.Location = new System.Drawing.Point(364, 71);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(195, 20);
+            this.txtColor.Size = new System.Drawing.Size(145, 20);
             this.txtColor.TabIndex = 7;
             // 
             // txtAncho
@@ -478,16 +490,6 @@
             this.label7.Size = new System.Drawing.Size(216, 25);
             this.label7.TabIndex = 19;
             this.label7.Text = "Modulo de Productos";
-            // 
-            // btnModelos
-            // 
-            this.btnModelos.Location = new System.Drawing.Point(7, 168);
-            this.btnModelos.Name = "btnModelos";
-            this.btnModelos.Size = new System.Drawing.Size(119, 23);
-            this.btnModelos.TabIndex = 15;
-            this.btnModelos.Text = "Gestionar Modelos";
-            this.btnModelos.UseVisualStyleBackColor = true;
-            this.btnModelos.Click += new System.EventHandler(this.btnModelos_Click);
             // 
             // FrmProductos
             // 

@@ -60,5 +60,19 @@ namespace Administracion.Categorias
                 throw;
             }
         }
+
+        public Boolean CampoVacio(string valor)
+        {
+            if (valor.Trim().Equals(""))
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+
+        }
+
+
     }
 }

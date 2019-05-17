@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administracion", "Administracion\Administracion.csproj", "{1C9D35B2-6199-4145-B693-0D82A173C93F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelos", "Modelos", "{A944292C-9B9E-4E6A-BA55-2972BDBB67F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicaciones", "Aplicaciones", "{364ECF17-7299-4839-95A0-4524B3B5ED29}"
@@ -23,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C9D35B2-6199-4145-B693-0D82A173C93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C9D35B2-6199-4145-B693-0D82A173C93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C9D35B2-6199-4145-B693-0D82A173C93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C9D35B2-6199-4145-B693-0D82A173C93F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D20DEDD1-19A1-424B-AD42-EE07F97CB327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D20DEDD1-19A1-424B-AD42-EE07F97CB327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D20DEDD1-19A1-424B-AD42-EE07F97CB327}.Release|Any CPU.ActiveCfg = Release|Any CPU

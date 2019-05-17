@@ -14,9 +14,8 @@ namespace Administracion.Entidades
         string _Apellidos;
         string _Login;
         string _Clave;
-        string _Estado;
-        string _Observacion;
-        string _Perfil;
+        int _Estado;
+        int _IdRol;
 
         public int IdUsuario
         {
@@ -44,24 +43,19 @@ namespace Administracion.Entidades
             get { return _Clave; }
             set { _Clave = value; }
         }
-        public string Estado
+        public int Estado
         {
             get { return _Estado; }
             set { _Estado = value; }
         }
-        public string Observacion
+        public int IdRol
         {
-            get { return _Observacion; }
-            set { _Observacion = value; }
-        }
-        public string Perfil
-        {
-            get { return _Perfil; }
-            set { _Perfil = value; }
+            get { return _IdRol; }
+            set { _IdRol = value; }
         }
 
         public Usuario()
-                   : this(0, "", "", "", "", "", "","")
+                   : this(0, "", "", "", "", 0, 0)
         {
         }
         public Usuario(int IdUsuario, string Nombres, string Apellidos)
@@ -70,7 +64,7 @@ namespace Administracion.Entidades
             _Nombres = Nombres;
             _Apellidos = Apellidos;
         }
-            public Usuario(int IdUsuario, string Nombres, string Apellidos, string Login, string Clave, string Estado, string Observacion, string Perfil)
+            public Usuario(int IdUsuario, string Nombres, string Apellidos, string Login, string Clave, int Estado, int IdRol)
         {
             _IdUsuario = IdUsuario;
             _Nombres = Nombres;
@@ -78,8 +72,8 @@ namespace Administracion.Entidades
             _Login = Login;
             _Clave = Clave;
             _Estado = Estado;
-            _Observacion = Observacion;
-            _Perfil = Perfil; 
+            _Estado = Estado;
+            _IdRol = IdRol; 
         }
 
       

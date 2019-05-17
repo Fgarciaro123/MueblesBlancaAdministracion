@@ -48,9 +48,8 @@ namespace Administracion.Datos
                             (string)dr["Apellidos"],
                             (string)dr["Login"], 
                             (string)dr["Clave"], 
-                            (string)dr["Estado"],
-                            (string)dr["Observacion"],
-                            (string)dr["Perfil"]);
+                            (int)dr["Estado"],
+                            (int)dr["IdRol"]);
                         lista.Add(c);
                     }
                 }
@@ -70,14 +69,13 @@ namespace Administracion.Datos
                 if (dr != null && dr.HasRows)
                 {
                     dr.Read();
-                    usuario = new Usuario((int)dr["Id"],
-                            (string)dr["Nombres"],
-                            (string)dr["Apellidos"],
-                            (string)dr["Login"],
-                            (string)dr["Clave"],
-                            (string)dr["Estado"],
-                            (string)dr["Observacion"],
-                            (string)dr["Perfil"]);
+                    Usuario c = new Usuario((int)dr["Id"],
+                        (string)dr["Nombres"],
+                        (string)dr["Apellidos"],
+                        (string)dr["Login"],
+                        (string)dr["Clave"],
+                        (int)dr["Estado"],
+                        (int)dr["IdRol"]);
                 }
             }
             return usuario;
@@ -96,8 +94,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@Login", usuario.Login);
                 cmd.Parameters.AddWithValue("@Clave", usuario.Clave);
                 cmd.Parameters.AddWithValue("@Estado", usuario.Estado);
-                cmd.Parameters.AddWithValue("@Observacion", usuario.Observacion);
-                cmd.Parameters.AddWithValue("@Perfil", usuario.Perfil);
+                cmd.Parameters.AddWithValue("@IdRol", usuario.IdRol);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -117,8 +114,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@Login", usuario.Login);
                 cmd.Parameters.AddWithValue("@Clave", usuario.Clave);
                 cmd.Parameters.AddWithValue("@Estado", usuario.Estado);
-                cmd.Parameters.AddWithValue("@Observacion", usuario.Observacion);
-                cmd.Parameters.AddWithValue("@Perfil", usuario.Perfil);
+                cmd.Parameters.AddWithValue("@IdRol", usuario.IdRol);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -157,9 +153,8 @@ namespace Administracion.Datos
                             (string)dr["Apellidos"],
                             (string)dr["Login"],
                             (string)dr["Clave"],
-                            (string)dr["Estado"],
-                            (string)dr["Observacion"],
-                            (string)dr["Perfil"]);
+                            (int)dr["Estado"],
+                            (int)dr["IdRol"]);
                 }
             }
             return usuario;
