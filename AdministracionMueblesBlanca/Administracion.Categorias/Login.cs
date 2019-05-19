@@ -35,7 +35,7 @@ namespace Administracion.Categorias
             }
             else
             {
-                lbError.Text = "Datos de acceso incorrectos";
+                lbError.Text = "Nombre de usuario o contraseña inválida.";
             }
         }
 

@@ -92,10 +92,11 @@
             this.Controls.Add(this.btnRoles);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBienvenida";
-            this.Text = "Bienvenida ";
+            this.Text = "Menu Principal";
             this.ResumeLayout(false);
 
         }

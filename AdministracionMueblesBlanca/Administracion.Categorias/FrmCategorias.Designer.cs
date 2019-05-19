@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategorias));
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.cmbEstadoCategoria = new System.Windows.Forms.ComboBox();
             this.txtNombreCategoria = new System.Windows.Forms.TextBox();
@@ -43,8 +44,6 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.errorProviderCategorias = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvIdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEstadoCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,8 @@
             this.dgvUsuarioCreacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioModificacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProviderCategorias = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
@@ -209,21 +210,6 @@
             this.dgvCategoria.Size = new System.Drawing.Size(794, 225);
             this.dgvCategoria.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(290, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Módulo de Categorias";
-            // 
-            // errorProviderCategorias
-            // 
-            this.errorProviderCategorias.ContainerControl = this;
-            // 
             // dgvIdCategoria
             // 
             this.dgvIdCategoria.HeaderText = "Código";
@@ -268,6 +254,21 @@
             this.dgvUsuarioModificacionCategoria.Name = "dgvUsuarioModificacionCategoria";
             this.dgvUsuarioModificacionCategoria.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(290, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Módulo de Categorias";
+            // 
+            // errorProviderCategorias
+            // 
+            this.errorProviderCategorias.ContainerControl = this;
+            // 
             // FrmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +279,7 @@
             this.Controls.Add(this.dgvCategoria);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCategorias";

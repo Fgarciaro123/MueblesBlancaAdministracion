@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.txtPrimerApellido = new System.Windows.Forms.Label();
@@ -279,6 +280,7 @@
             this.ClientSize = new System.Drawing.Size(869, 419);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUsuario";
             this.Text = "Crear Administrador";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);

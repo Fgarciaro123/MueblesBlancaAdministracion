@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModelos));
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.cmbEstadoModelo = new System.Windows.Forms.ComboBox();
@@ -310,6 +311,7 @@
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gbDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmModelos";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRoles));
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.cmbEstadoRol = new System.Windows.Forms.ComboBox();
             this.txtNombreRol = new System.Windows.Forms.TextBox();
@@ -269,6 +270,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRoles";
