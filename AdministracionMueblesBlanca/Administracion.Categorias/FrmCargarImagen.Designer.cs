@@ -95,7 +95,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Titulo";
+            this.label1.Text = "Título";
             // 
             // txtTituloImagen
             // 

@@ -64,7 +64,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(317, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Modulo de Tipos de Documento";
+            this.label2.Text = "Módulo de Tipos de Documento";
             // 
             // gbDatos
             // 
@@ -122,7 +122,7 @@
             this.lblDescripcionTipoDocumento.Name = "lblDescripcionTipoDocumento";
             this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionTipoDocumento.TabIndex = 1;
-            this.lblDescripcionTipoDocumento.Text = "Descripcion";
+            this.lblDescripcionTipoDocumento.Text = "Descripción";
             // 
             // lblIdTipoDocumento
             // 
@@ -132,7 +132,7 @@
             this.lblIdTipoDocumento.Name = "lblIdTipoDocumento";
             this.lblIdTipoDocumento.Size = new System.Drawing.Size(59, 20);
             this.lblIdTipoDocumento.TabIndex = 0;
-            this.lblIdTipoDocumento.Text = "Codigo";
+            this.lblIdTipoDocumento.Text = "Código";
             // 
             // gbControl
             // 
@@ -219,13 +219,13 @@
             // 
             // dgvIdTipoDocumento
             // 
-            this.dgvIdTipoDocumento.HeaderText = "Codigo";
+            this.dgvIdTipoDocumento.HeaderText = "Código";
             this.dgvIdTipoDocumento.Name = "dgvIdTipoDocumento";
             this.dgvIdTipoDocumento.ReadOnly = true;
             // 
             // dgvDescripcionTipoDocumento
             // 
-            this.dgvDescripcionTipoDocumento.HeaderText = "Descripcion";
+            this.dgvDescripcionTipoDocumento.HeaderText = "Descripción";
             this.dgvDescripcionTipoDocumento.Name = "dgvDescripcionTipoDocumento";
             this.dgvDescripcionTipoDocumento.ReadOnly = true;
             // 
@@ -237,25 +237,25 @@
             // 
             // dgvFechaCreacionTipoDocumento
             // 
-            this.dgvFechaCreacionTipoDocumento.HeaderText = "Fecha Creacion";
+            this.dgvFechaCreacionTipoDocumento.HeaderText = "Fecha Creación";
             this.dgvFechaCreacionTipoDocumento.Name = "dgvFechaCreacionTipoDocumento";
             this.dgvFechaCreacionTipoDocumento.ReadOnly = true;
             // 
             // dgvUsuarioCreacionTipoDocumento
             // 
-            this.dgvUsuarioCreacionTipoDocumento.HeaderText = "Usuario Creacion";
+            this.dgvUsuarioCreacionTipoDocumento.HeaderText = "Usuario Creación";
             this.dgvUsuarioCreacionTipoDocumento.Name = "dgvUsuarioCreacionTipoDocumento";
             this.dgvUsuarioCreacionTipoDocumento.ReadOnly = true;
             // 
             // dgvFechaModificacionTipoDocumento
             // 
-            this.dgvFechaModificacionTipoDocumento.HeaderText = "Fecha Modificacion";
+            this.dgvFechaModificacionTipoDocumento.HeaderText = "Fecha Modificación";
             this.dgvFechaModificacionTipoDocumento.Name = "dgvFechaModificacionTipoDocumento";
             this.dgvFechaModificacionTipoDocumento.ReadOnly = true;
             // 
             // dgvUsuarioModificacionTipoDocumento
             // 
-            this.dgvUsuarioModificacionTipoDocumento.HeaderText = "Usuario Modificacion";
+            this.dgvUsuarioModificacionTipoDocumento.HeaderText = "Usuario Modificación";
             this.dgvUsuarioModificacionTipoDocumento.Name = "dgvUsuarioModificacionTipoDocumento";
             this.dgvUsuarioModificacionTipoDocumento.ReadOnly = true;
             // 

@@ -43,6 +43,8 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProviderCategorias = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvIdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEstadoCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +52,6 @@
             this.dgvUsuarioCreacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioModificacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.errorProviderCategorias = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
@@ -124,7 +124,7 @@
             this.lblIdCategoria.Name = "lblIdCategoria";
             this.lblIdCategoria.Size = new System.Drawing.Size(61, 20);
             this.lblIdCategoria.TabIndex = 0;
-            this.lblIdCategoria.Text = "Codigo";
+            this.lblIdCategoria.Text = "Código";
             // 
             // gbControl
             // 
@@ -209,9 +209,24 @@
             this.dgvCategoria.Size = new System.Drawing.Size(794, 225);
             this.dgvCategoria.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(290, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Módulo de Categorias";
+            // 
+            // errorProviderCategorias
+            // 
+            this.errorProviderCategorias.ContainerControl = this;
+            // 
             // dgvIdCategoria
             // 
-            this.dgvIdCategoria.HeaderText = "Codigo";
+            this.dgvIdCategoria.HeaderText = "Código";
             this.dgvIdCategoria.Name = "dgvIdCategoria";
             this.dgvIdCategoria.ReadOnly = true;
             // 
@@ -231,42 +246,27 @@
             // 
             // dgvFechaCreacionCategoria
             // 
-            this.dgvFechaCreacionCategoria.HeaderText = "Fecha Creacion";
+            this.dgvFechaCreacionCategoria.HeaderText = "Fecha Creación";
             this.dgvFechaCreacionCategoria.Name = "dgvFechaCreacionCategoria";
             this.dgvFechaCreacionCategoria.ReadOnly = true;
             // 
             // dgvUsuarioCreacionCategoria
             // 
-            this.dgvUsuarioCreacionCategoria.HeaderText = "Usuario Creacion";
+            this.dgvUsuarioCreacionCategoria.HeaderText = "Usuario Creación";
             this.dgvUsuarioCreacionCategoria.Name = "dgvUsuarioCreacionCategoria";
             this.dgvUsuarioCreacionCategoria.ReadOnly = true;
             // 
             // dgvFechaModificacionCategoria
             // 
-            this.dgvFechaModificacionCategoria.HeaderText = "Fecha Modificacion";
+            this.dgvFechaModificacionCategoria.HeaderText = "Fecha Modificación";
             this.dgvFechaModificacionCategoria.Name = "dgvFechaModificacionCategoria";
             this.dgvFechaModificacionCategoria.ReadOnly = true;
             // 
             // dgvUsuarioModificacionCategoria
             // 
-            this.dgvUsuarioModificacionCategoria.HeaderText = "Usuario Modificacion";
+            this.dgvUsuarioModificacionCategoria.HeaderText = "Usuario Modificación";
             this.dgvUsuarioModificacionCategoria.Name = "dgvUsuarioModificacionCategoria";
             this.dgvUsuarioModificacionCategoria.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(290, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Modulo de Categorias";
-            // 
-            // errorProviderCategorias
-            // 
-            this.errorProviderCategorias.ContainerControl = this;
             // 
             // FrmCategorias
             // 
@@ -309,6 +309,8 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dgvCategoria;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProviderCategorias;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvIdCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvNombreCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEstadoCategoria;
@@ -316,8 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioCreacionCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaModificacionCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioModificacionCategoria;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ErrorProvider errorProviderCategorias;
     }
 }
 

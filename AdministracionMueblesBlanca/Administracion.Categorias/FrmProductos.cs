@@ -110,6 +110,8 @@ namespace Administracion.Categorias
         }
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+
+
             int n = -1;
 
             if (_nuevo)

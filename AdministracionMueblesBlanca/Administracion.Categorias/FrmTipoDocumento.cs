@@ -165,7 +165,7 @@ namespace Administracion.Categorias
             }
             else
             {
-                MessageBox.Show("Ingrese la descripcion de tipo de documento", "Aviso",
+                MessageBox.Show("Ingrese la descripción de tipo de documento", "Aviso",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 

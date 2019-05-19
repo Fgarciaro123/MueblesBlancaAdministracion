@@ -121,7 +121,7 @@
             this.lblIdRol.Name = "lblIdRol";
             this.lblIdRol.Size = new System.Drawing.Size(59, 20);
             this.lblIdRol.TabIndex = 0;
-            this.lblIdRol.Text = "Codigo";
+            this.lblIdRol.Text = "Código";
             // 
             // groupBox2
             // 
@@ -195,7 +195,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Modulo de Roles";
+            this.label1.Text = "Módulo de Roles";
             // 
             // dgvRol
             // 
@@ -219,7 +219,7 @@
             // 
             // dgvIdRol
             // 
-            this.dgvIdRol.HeaderText = "Codigo";
+            this.dgvIdRol.HeaderText = "Código";
             this.dgvIdRol.Name = "dgvIdRol";
             this.dgvIdRol.ReadOnly = true;
             // 
@@ -238,25 +238,25 @@
             // 
             // dgvFechaCreacionRol
             // 
-            this.dgvFechaCreacionRol.HeaderText = "Fecha Creacion";
+            this.dgvFechaCreacionRol.HeaderText = "Fecha Creación";
             this.dgvFechaCreacionRol.Name = "dgvFechaCreacionRol";
             this.dgvFechaCreacionRol.ReadOnly = true;
             // 
             // dgvUsuarioCreacionRol
             // 
-            this.dgvUsuarioCreacionRol.HeaderText = "Usuario Creacion";
+            this.dgvUsuarioCreacionRol.HeaderText = "Usuario Creación";
             this.dgvUsuarioCreacionRol.Name = "dgvUsuarioCreacionRol";
             this.dgvUsuarioCreacionRol.ReadOnly = true;
             // 
             // dgvFechaModificacionRol
             // 
-            this.dgvFechaModificacionRol.HeaderText = "Fecha Modificacion";
+            this.dgvFechaModificacionRol.HeaderText = "Fecha Modificación";
             this.dgvFechaModificacionRol.Name = "dgvFechaModificacionRol";
             this.dgvFechaModificacionRol.ReadOnly = true;
             // 
             // dgvUsuarioModificacionRol
             // 
-            this.dgvUsuarioModificacionRol.HeaderText = "Usuario Modificacion";
+            this.dgvUsuarioModificacionRol.HeaderText = "Usuario Modificación";
             this.dgvUsuarioModificacionRol.Name = "dgvUsuarioModificacionRol";
             this.dgvUsuarioModificacionRol.ReadOnly = true;
             // 

@@ -47,7 +47,7 @@
     <Compile Include="DAOProducto.cs" />
     <Compile Include="DAORol.cs" />
     <Compile Include="DAOTipoDocumento.cs" />
-    <Compile Include="DAOUsuario.cs" />
+    <Compile Include="DAOPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

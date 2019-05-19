@@ -44,11 +44,11 @@
     <Compile Include="EnumEstados.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="TipoDocumento.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

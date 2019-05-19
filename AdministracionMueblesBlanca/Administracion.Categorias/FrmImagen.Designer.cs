@@ -32,6 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.lblNombreProducto = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.dgvCodigoImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTituloImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCodImagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,10 +44,6 @@
             this.dgvUsuarioCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCargarImagen = new System.Windows.Forms.Button();
-            this.lblNombreProducto = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,9 +71,9 @@
             this.label2.ForeColor = System.Drawing.Color.Coral;
             this.label2.Location = new System.Drawing.Point(340, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 25);
+            this.label2.Size = new System.Drawing.Size(204, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Gestion de Imagenes";
+            this.label2.Text = "Gestionar Imagenes";
             // 
             // dataGridView1
             // 
@@ -96,55 +96,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(845, 162);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // dgvCodigoImagen
-            // 
-            this.dgvCodigoImagen.HeaderText = "Codigo";
-            this.dgvCodigoImagen.Name = "dgvCodigoImagen";
-            this.dgvCodigoImagen.ReadOnly = true;
-            // 
-            // dgvTituloImagen
-            // 
-            this.dgvTituloImagen.HeaderText = "Titulo";
-            this.dgvTituloImagen.Name = "dgvTituloImagen";
-            this.dgvTituloImagen.ReadOnly = true;
-            // 
-            // dgvCodImagen
-            // 
-            this.dgvCodImagen.HeaderText = "Codigo";
-            this.dgvCodImagen.Name = "dgvCodImagen";
-            this.dgvCodImagen.ReadOnly = true;
-            this.dgvCodImagen.Visible = false;
-            // 
-            // dgvEstadoImagen
-            // 
-            this.dgvEstadoImagen.HeaderText = "Estado";
-            this.dgvEstadoImagen.Name = "dgvEstadoImagen";
-            this.dgvEstadoImagen.ReadOnly = true;
-            // 
-            // dgvFechaCreacionImagen
-            // 
-            this.dgvFechaCreacionImagen.HeaderText = "Fecha Creacion";
-            this.dgvFechaCreacionImagen.Name = "dgvFechaCreacionImagen";
-            this.dgvFechaCreacionImagen.ReadOnly = true;
-            // 
-            // dgvUsuarioCreacion
-            // 
-            this.dgvUsuarioCreacion.HeaderText = "Usuario Creacion";
-            this.dgvUsuarioCreacion.Name = "dgvUsuarioCreacion";
-            this.dgvUsuarioCreacion.ReadOnly = true;
-            // 
-            // dgvFechaModificacion
-            // 
-            this.dgvFechaModificacion.HeaderText = "Fecha Modificacion";
-            this.dgvFechaModificacion.Name = "dgvFechaModificacion";
-            this.dgvFechaModificacion.ReadOnly = true;
-            // 
-            // dgvUsuarioModificacion
-            // 
-            this.dgvUsuarioModificacion.HeaderText = "Usuario Modificacion";
-            this.dgvUsuarioModificacion.Name = "dgvUsuarioModificacion";
-            this.dgvUsuarioModificacion.ReadOnly = true;
             // 
             // btnEliminar
             // 
@@ -183,6 +134,55 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // dgvCodigoImagen
+            // 
+            this.dgvCodigoImagen.HeaderText = "Código";
+            this.dgvCodigoImagen.Name = "dgvCodigoImagen";
+            this.dgvCodigoImagen.ReadOnly = true;
+            // 
+            // dgvTituloImagen
+            // 
+            this.dgvTituloImagen.HeaderText = "Titulo";
+            this.dgvTituloImagen.Name = "dgvTituloImagen";
+            this.dgvTituloImagen.ReadOnly = true;
+            // 
+            // dgvCodImagen
+            // 
+            this.dgvCodImagen.HeaderText = "Codigo";
+            this.dgvCodImagen.Name = "dgvCodImagen";
+            this.dgvCodImagen.ReadOnly = true;
+            this.dgvCodImagen.Visible = false;
+            // 
+            // dgvEstadoImagen
+            // 
+            this.dgvEstadoImagen.HeaderText = "Estado";
+            this.dgvEstadoImagen.Name = "dgvEstadoImagen";
+            this.dgvEstadoImagen.ReadOnly = true;
+            // 
+            // dgvFechaCreacionImagen
+            // 
+            this.dgvFechaCreacionImagen.HeaderText = "Fecha Creación";
+            this.dgvFechaCreacionImagen.Name = "dgvFechaCreacionImagen";
+            this.dgvFechaCreacionImagen.ReadOnly = true;
+            // 
+            // dgvUsuarioCreacion
+            // 
+            this.dgvUsuarioCreacion.HeaderText = "Usuario Creación";
+            this.dgvUsuarioCreacion.Name = "dgvUsuarioCreacion";
+            this.dgvUsuarioCreacion.ReadOnly = true;
+            // 
+            // dgvFechaModificacion
+            // 
+            this.dgvFechaModificacion.HeaderText = "Fecha Modificación";
+            this.dgvFechaModificacion.Name = "dgvFechaModificacion";
+            this.dgvFechaModificacion.ReadOnly = true;
+            // 
+            // dgvUsuarioModificacion
+            // 
+            this.dgvUsuarioModificacion.HeaderText = "Usuario Modificación";
+            this.dgvUsuarioModificacion.Name = "dgvUsuarioModificacion";
+            this.dgvUsuarioModificacion.ReadOnly = true;
             // 
             // FrmImagen
             // 

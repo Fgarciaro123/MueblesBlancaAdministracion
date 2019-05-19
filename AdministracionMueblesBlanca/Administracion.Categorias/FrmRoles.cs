@@ -187,16 +187,25 @@ namespace Administracion.Categorias
             {
                 if (dgvRol.RowCount > 0)
                 {
-                    rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
+                    if ((int)dgvRol[0, dgvRol.CurrentRow.Index].Value != 1)
+                    {
+                        rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
                         CurrentRow.Index].Value);
-                    txtIdRol.Text = rol.IdRol.ToString();
-                    txtNombreRol.Text = rol.NombreRol;
-                    cmbEstadoRol.SelectedIndex = rol.EstadoRol;
+                        txtIdRol.Text = rol.IdRol.ToString();
+                        txtNombreRol.Text = rol.NombreRol;
+                        cmbEstadoRol.SelectedIndex = rol.EstadoRol;
 
-                    ActivarControlDatos(gbDatos, true);
-                    ActivarButton(false);
-                    dgvRol.Enabled = false;
-                    btnEditar.Text = "Cancelar";
+                        ActivarControlDatos(gbDatos, true);
+                        ActivarButton(false);
+                        dgvRol.Enabled = false;
+                        btnEditar.Text = "Cancelar";
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Rol administrador no se puede editar", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
             }
         }
@@ -205,26 +214,35 @@ namespace Administracion.Categorias
         {
             if (dgvRol.RowCount > 0)
             {
-                rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
-                    CurrentRow.Index].Value);
-                DialogResult rpta =
-                    MessageBox.Show("Desea eliminar el registro", "Eliminar",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (rpta == System.Windows.Forms.DialogResult.Yes)
+
+                if ((int)dgvRol[0, dgvRol.CurrentRow.Index].Value != 1)
                 {
-                    int n = bLRol.Eliminar(rol.IdRol);
-                    if (n > 0)
+                    rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
+                    CurrentRow.Index].Value);
+                    DialogResult rpta =
+                        MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rpta == System.Windows.Forms.DialogResult.Yes)
                     {
-                        MessageBox.Show("Registro eliminado", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lista = bLRol.Listar();
-                        CargarDatos();
+                        int n = bLRol.Eliminar(rol.IdRol);
+                        if (n > 0)
+                        {
+                            MessageBox.Show("Registro eliminado", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            lista = bLRol.Listar();
+                            CargarDatos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("El Rol administrador no se puede eliminar", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

@@ -46,7 +46,7 @@
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLRol.cs" />
     <Compile Include="BLTipoDocumento.cs" />
-    <Compile Include="BLUsuario.cs" />
+    <Compile Include="BLPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -146,7 +146,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(44, 18);
             this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Titulo";
+            this.lblTitulo.Text = "Título";
             // 
             // lblTituloModelo
             // 
@@ -156,7 +156,7 @@
             this.lblTituloModelo.Name = "lblTituloModelo";
             this.lblTituloModelo.Size = new System.Drawing.Size(56, 18);
             this.lblTituloModelo.TabIndex = 1;
-            this.lblTituloModelo.Text = "Codigo";
+            this.lblTituloModelo.Text = "Código";
             // 
             // label2
             // 
@@ -165,9 +165,9 @@
             this.label2.ForeColor = System.Drawing.Color.Coral;
             this.label2.Location = new System.Drawing.Point(365, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 25);
+            this.label2.Size = new System.Drawing.Size(193, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Gestion de Modelos";
+            this.label2.Text = "Gestionar Modelos";
             // 
             // gbControl
             // 
@@ -255,13 +255,13 @@
             // 
             // dgvCodigo
             // 
-            this.dgvCodigo.HeaderText = "Codigo";
+            this.dgvCodigo.HeaderText = "Código";
             this.dgvCodigo.Name = "dgvCodigo";
             this.dgvCodigo.ReadOnly = true;
             // 
             // dgvTituloModelo
             // 
-            this.dgvTituloModelo.HeaderText = "Titulo";
+            this.dgvTituloModelo.HeaderText = "Título";
             this.dgvTituloModelo.Name = "dgvTituloModelo";
             this.dgvTituloModelo.ReadOnly = true;
             // 
@@ -279,25 +279,25 @@
             // 
             // dgvFechaCreacion
             // 
-            this.dgvFechaCreacion.HeaderText = "Fecha Creacion";
+            this.dgvFechaCreacion.HeaderText = "Fecha Creación";
             this.dgvFechaCreacion.Name = "dgvFechaCreacion";
             this.dgvFechaCreacion.ReadOnly = true;
             // 
             // dgvUsuarioCreacion
             // 
-            this.dgvUsuarioCreacion.HeaderText = "Usuario Creacion";
+            this.dgvUsuarioCreacion.HeaderText = "Usuario Creación";
             this.dgvUsuarioCreacion.Name = "dgvUsuarioCreacion";
             this.dgvUsuarioCreacion.ReadOnly = true;
             // 
             // dgvFechaModificacion
             // 
-            this.dgvFechaModificacion.HeaderText = "Fecha Modificacion";
+            this.dgvFechaModificacion.HeaderText = "Fecha Modificación";
             this.dgvFechaModificacion.Name = "dgvFechaModificacion";
             this.dgvFechaModificacion.ReadOnly = true;
             // 
             // dgvUsuarioModificacion
             // 
-            this.dgvUsuarioModificacion.HeaderText = "Usuario Modificacion";
+            this.dgvUsuarioModificacion.HeaderText = "Usuario Modificación";
             this.dgvUsuarioModificacion.Name = "dgvUsuarioModificacion";
             this.dgvUsuarioModificacion.ReadOnly = true;
             // 

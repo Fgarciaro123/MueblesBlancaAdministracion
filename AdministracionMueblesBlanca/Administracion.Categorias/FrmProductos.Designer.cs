@@ -62,6 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -118,7 +118,7 @@
             this.btnGestionImagenes.Name = "btnGestionImagenes";
             this.btnGestionImagenes.Size = new System.Drawing.Size(119, 23);
             this.btnGestionImagenes.TabIndex = 14;
-            this.btnGestionImagenes.Text = "Gestion Imagenes";
+            this.btnGestionImagenes.Text = "Gestionar Imagenes";
             this.btnGestionImagenes.UseVisualStyleBackColor = true;
             this.btnGestionImagenes.Click += new System.EventHandler(this.btnGestionImagenes_Click);
             // 
@@ -218,7 +218,7 @@
             this.lblIdProducto.Name = "lblIdProducto";
             this.lblIdProducto.Size = new System.Drawing.Size(40, 13);
             this.lblIdProducto.TabIndex = 28;
-            this.lblIdProducto.Text = "Codigo";
+            this.lblIdProducto.Text = "Código";
             // 
             // txtValor
             // 
@@ -420,9 +420,20 @@
             this.dgvDatos.Size = new System.Drawing.Size(1086, 374);
             this.dgvDatos.TabIndex = 15;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label7.ForeColor = System.Drawing.Color.Coral;
+            this.label7.Location = new System.Drawing.Point(12, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(216, 25);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Módulo de Productos";
+            // 
             // Column1
             // 
-            this.Column1.HeaderText = "Codigo";
+            this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -479,17 +490,6 @@
             this.Column12.HeaderText = "Categoria";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label7.ForeColor = System.Drawing.Color.Coral;
-            this.label7.Location = new System.Drawing.Point(12, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 25);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Modulo de Productos";
             // 
             // FrmProductos
             // 
@@ -550,6 +550,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label lblIdProducto;
+        private System.Windows.Forms.Button btnGestionImagenes;
+        public System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Button btnModelos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -560,8 +563,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.Button btnGestionImagenes;
-        public System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.Button btnModelos;
     }
 }

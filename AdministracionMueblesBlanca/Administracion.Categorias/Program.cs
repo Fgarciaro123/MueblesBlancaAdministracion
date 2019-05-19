@@ -13,10 +13,23 @@ namespace Administracion.Categorias
         [STAThread]
         static void Main()
         {
+            BLPersona bLPersona = new BLPersona();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            if (bLPersona.existeAdmin())
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Login());
+            }
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FrmUsuario());
+
+            }
+            
+
         }
     }
 }

@@ -14,8 +14,8 @@ namespace Administracion.Categorias
 {
     public partial class Login : Form
     {
-        BLUsuario blUsuario = new BLUsuario();
-        Usuario u;
+        BLPersona blUsuario = new BLPersona();
+        Boolean existe;
       
         public Login()
         {
@@ -25,8 +25,8 @@ namespace Administracion.Categorias
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            u = blUsuario.TraerPorUsuarioClave((string)txtUsuario.Text, (string)txtClave.Text);
-            if (u.IdUsuario.ToString() != null & u.IdUsuario > 0)
+            existe = blUsuario.TraerPorPersonaClave((string)txtUsuario.Text, (string)txtClave.Text);
+            if (existe)
             {
                 lbError.Text = "";
                 FrmBienvenida frmBienvenida = new FrmBienvenida();
