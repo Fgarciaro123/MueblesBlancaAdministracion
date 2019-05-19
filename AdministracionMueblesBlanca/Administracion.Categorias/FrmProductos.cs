@@ -116,7 +116,15 @@ namespace Administracion.Categorias
 
             if (_nuevo)
             {
-                p = new Producto(                     
+                if (ValidarVacios() is false)
+                {
+                    MessageBox.Show("Diligencie todos los campos", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    p = new Producto(
                     txtNombre.Text.Trim(),
                     txtDescripcion.Text.Trim(),
                     txtAlto.Text.Trim(),
@@ -129,8 +137,8 @@ namespace Administracion.Categorias
                     DateTime.Now,
                     sesion.UsuarioSesion,
                     cbEstado.SelectedIndex);
-                n = blProducto.Insertar(p);
-
+                    n = blProducto.Insertar(p);
+                }   
             }
             else
             {
@@ -169,6 +177,23 @@ namespace Administracion.Categorias
             }
         }
 
+        private Boolean ValidarVacios()
+        {
+            foreach (Control item in gbDatos.Controls)
+            {
+                if (item is TextBox)
+                {
+                    TextBox aux = (TextBox)item;
+                    if (string.IsNullOrEmpty(aux.Text.Trim()))
+                    {
+                        return false;
+                    }
+
+                }
+            }
+            return true;
+
+        }
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             _nuevo = true;
