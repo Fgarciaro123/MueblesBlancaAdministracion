@@ -116,47 +116,45 @@ namespace Administracion.Categorias
 
             if (_nuevo)
             {
-                p = new Producto(
-                    0,
-                    txtNombre.Text,
-                    txtDescripcion.Text,
-                    txtAlto.Text,
-                    txtAncho.Text,
-                    txtColor.Text,
-                    txtMaterial.Text,
-                    int.Parse(txtGarantia.Text),
-                    long.Parse(txtValor.Text),
+                p = new Producto(                     
+                    txtNombre.Text.Trim(),
+                    txtDescripcion.Text.Trim(),
+                    txtAlto.Text.Trim(),
+                    txtAncho.Text.Trim(),
+                    txtColor.Text.Trim(),
+                    txtMaterial.Text.Trim(),
+                    int.Parse(txtGarantia.Text.Trim()),
+                    long.Parse(txtValor.Text.Trim()),
                     cbCategoria.SelectedIndex,
                     DateTime.Now,
-                    "Administrador",
-                    DateTime.Now,
-                    null,
+                    sesion.UsuarioSesion,
                     cbEstado.SelectedIndex);
                 n = blProducto.Insertar(p);
 
             }
             else
             {
-                p.IdProducto = int.Parse(txtIdProducto.Text.Trim());
-                p.NombreProducto = txtNombre.Text.Trim();
-                p.DescripcionProducto = txtDescripcion.Text.Trim();
-                p.AltoProducto = txtAlto.Text.Trim();
-                p.AnchoProducto = txtAncho.Text.Trim();
-                p.ColorProducto = txtColor.Text.Trim();
-                p.MaterialProducto = txtMaterial.Text.Trim();
-                p.GarantiaMesesProducto = int.Parse(txtGarantia.Text.Trim());
-                p.ValorUnitarioProducto = Decimal.Parse(txtValor.Text.Trim());
-                p.CategoriaProducto = int.Parse(cbCategoria.SelectedValue.ToString());
-                p.FechaModificacionProducto = DateTime.Now;
-                p.UsuarioModificacionProducto = "Administrador";
-                p.EstadoProducto = int.Parse(cbEstado.SelectedIndex.ToString());
+                p = new Producto(
+                    Convert.ToInt16(txtIdProducto.Text.Trim()),
+                    txtNombre.Text.Trim(),
+                    txtDescripcion.Text.Trim(),
+                    txtAlto.Text.Trim(),
+                    txtAncho.Text.Trim(),
+                    txtColor.Text.Trim(),
+                    txtMaterial.Text.Trim(),
+                    int.Parse(txtGarantia.Text.Trim()),
+                    long.Parse(txtValor.Text.Trim()),
+                    cbCategoria.SelectedIndex,
+                    DateTime.Now,
+                    sesion.UsuarioSesion,
+                    cbEstado.SelectedIndex);
 
                 n = blProducto.Actualizar(p);
             }
             if (n > 0)
             {
                 MessageBox.Show("Datos grabados correctamente", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ActivarControlDatos(gbDatos, false);
                 ActivarButton(true);
                 dgvDatos.Enabled = true;

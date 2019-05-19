@@ -94,7 +94,7 @@ namespace Administracion.Datos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NombreRol", rol.NombreRol);
                 cmd.Parameters.AddWithValue("@FechaCreacionRol", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioCreacionRol", "PENDIENTE");
+                cmd.Parameters.AddWithValue("@UsuarioCreacionRol", rol.UsuarioCreacionRol);
                 cmd.Parameters.AddWithValue("@EstadoRol", rol.EstadoRol);
 
                 n = cmd.ExecuteNonQuery();
@@ -112,7 +112,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@IdRol", rol.IdRol);
                 cmd.Parameters.AddWithValue("@NombreRol", rol.NombreRol);
                 cmd.Parameters.AddWithValue("@FechaModificacionRol", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionRol", "PENDIENTE");
+                cmd.Parameters.AddWithValue("@UsuarioModificacionRol", rol.UsuarioModificacionRol);
                 cmd.Parameters.AddWithValue("@EstadoRol", rol.EstadoRol);
                 n = cmd.ExecuteNonQuery();
             }

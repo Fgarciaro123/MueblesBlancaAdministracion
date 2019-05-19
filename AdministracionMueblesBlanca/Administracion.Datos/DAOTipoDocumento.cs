@@ -93,7 +93,7 @@ namespace Administracion.Datos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@DescripcionTipoDocumento", tipoDocumento.DescripcionTipoDocumento);
                 cmd.Parameters.AddWithValue("@FechaCreacionTipoDocumento", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioCreacionTipoDocumento", "pendiente");
+                cmd.Parameters.AddWithValue("@UsuarioCreacionTipoDocumento", tipoDocumento.UsuarioCreacionTipoDocumento );
                 cmd.Parameters.AddWithValue("@EstadoTipoDocumento", tipoDocumento.EstadoTipoDocumento);
 
                 n = cmd.ExecuteNonQuery();
@@ -112,7 +112,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@IdTipoDocumento", tipoDocumento.IdTipoDocumento);
                 cmd.Parameters.AddWithValue("@DescripcionTipoDocumento", tipoDocumento.DescripcionTipoDocumento);
                 cmd.Parameters.AddWithValue("@FechaModificacionTipoDocumento", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionTipoDocumento", "pendiente");
+                cmd.Parameters.AddWithValue("@UsuarioModificacionTipoDocumento", tipoDocumento.UsuarioModificacionTipoDocumento);
                 cmd.Parameters.AddWithValue("@EstadoTipoDocumento", tipoDocumento.EstadoTipoDocumento);
 
                 n = cmd.ExecuteNonQuery();

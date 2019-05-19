@@ -46,38 +46,100 @@ namespace Administracion.Entidades
 
         }
 
+        //Constructor crear producto
         public Producto(
-            int IdProducto, 
-            string NombreProducto, 
-            string DescripcionProducto, 
-            string AnchoProducto, 
-            string AltoProducto, 
-            string ColorProducto, 
-            string MaterialProducto, 
-            int GarantiaMesesProducto,
-            Decimal ValorUnitarioProducto,
-            int CategoriaProducto, 
-            DateTime FechaCreacionProducto, 
-            string UsuarioCreacionProducto, 
-            DateTime FechaModificacionProducto, 
-            string UsuarioModificacionProducto, 
-            int EstadoProducto)
+            string pNombreProducto, 
+            string pDescripcionProducto, 
+            string pAnchoProducto, 
+            string pAltoProducto, 
+            string pColorProducto, 
+            string pMaterialProducto, 
+            int pGarantiaMesesProducto,
+            Decimal pValorUnitarioProducto,
+            int pCategoriaProducto, 
+            DateTime pFechaCreacionProducto, 
+            string pUsuarioCreacionProducto, 
+            int pEstadoProducto)
         {
-            this.IdProducto = IdProducto;
-            this.NombreProducto = NombreProducto;
-            this.DescripcionProducto = DescripcionProducto;
-            this.AnchoProducto = AnchoProducto;
-            this.AltoProducto = AltoProducto;
-            this.ColorProducto = ColorProducto;
-            this.MaterialProducto = MaterialProducto;
-            this.GarantiaMesesProducto = GarantiaMesesProducto;
-            this.ValorUnitarioProducto = ValorUnitarioProducto;
-            this.CategoriaProducto = CategoriaProducto;
-            this.FechaCreacionProducto = FechaCreacionProducto;
-            this.UsuarioCreacionProducto = UsuarioCreacionProducto;
-            this.FechaModificacionProducto = FechaModificacionProducto;
-            this.UsuarioModificacionProducto = UsuarioModificacionProducto;
-            this.EstadoProducto = EstadoProducto;
+            this.NombreProducto = pNombreProducto;
+            this.DescripcionProducto = pDescripcionProducto;
+            this.AnchoProducto = pAnchoProducto;
+            this.AltoProducto = pAltoProducto;
+            this.ColorProducto = pColorProducto;
+            this.MaterialProducto = pMaterialProducto;
+            this.GarantiaMesesProducto = pGarantiaMesesProducto;
+            this.ValorUnitarioProducto = pValorUnitarioProducto;
+            this.CategoriaProducto = pCategoriaProducto;
+            this.FechaCreacionProducto = pFechaCreacionProducto;
+            this.UsuarioCreacionProducto = pUsuarioCreacionProducto;
+            this.EstadoProducto = pEstadoProducto;
+        }
+
+
+        //constructor modificar
+        public Producto(
+            int pIdProducto,
+            string pNombreProducto,
+            string pDescripcionProducto,
+            string pAnchoProducto,
+            string pAltoProducto,
+            string pColorProducto,
+            string pMaterialProducto,
+            int pGarantiaMesesProducto,
+            Decimal pValorUnitarioProducto,
+            int pCategoriaProducto,
+            DateTime pFechaModificacionProducto,
+            string pUsuarioModificacionProducto,
+            int pEstadoProducto)
+        {
+            this.IdProducto = pIdProducto;
+            this.NombreProducto = pNombreProducto;
+            this.DescripcionProducto = pDescripcionProducto;
+            this.AnchoProducto = pAnchoProducto;
+            this.AltoProducto = pAltoProducto;
+            this.ColorProducto = pColorProducto;
+            this.MaterialProducto = pMaterialProducto;
+            this.GarantiaMesesProducto = pGarantiaMesesProducto;
+            this.ValorUnitarioProducto = pValorUnitarioProducto;
+            this.CategoriaProducto = pCategoriaProducto;
+            this.FechaModificacionProducto = pFechaModificacionProducto;
+            this.UsuarioModificacionProducto = pUsuarioModificacionProducto;
+            this.EstadoProducto = pEstadoProducto;
+        }
+
+        //constructor listar
+        public Producto(
+            int pIdProducto,
+            string pNombreProducto,
+            string pDescripcionProducto,
+            string pAnchoProducto,
+            string pAltoProducto,
+            string pColorProducto,
+            string pMaterialProducto,
+            int pGarantiaMesesProducto,
+            Decimal pValorUnitarioProducto,
+            int pCategoriaProducto,
+            DateTime pFechaCreacionProducto,
+            string pUsuarioCreacionProducto,
+            DateTime pFechaModificacionProducto,
+            string pUsuarioModificacionProducto,
+            int pEstadoProducto)
+        {
+            this.IdProducto = pIdProducto;
+            this.NombreProducto = pNombreProducto;
+            this.DescripcionProducto = pDescripcionProducto;
+            this.AnchoProducto = pAnchoProducto;
+            this.AltoProducto = pAltoProducto;
+            this.ColorProducto = pColorProducto;
+            this.MaterialProducto = pMaterialProducto;
+            this.GarantiaMesesProducto = pGarantiaMesesProducto;
+            this.ValorUnitarioProducto = pValorUnitarioProducto;
+            this.CategoriaProducto = pCategoriaProducto;
+            this.FechaCreacionProducto = pFechaCreacionProducto;
+            this.UsuarioCreacionProducto = pUsuarioCreacionProducto;
+            this.FechaModificacionProducto = pFechaModificacionProducto;
+            this.UsuarioModificacionProducto = pUsuarioModificacionProducto;
+            this.EstadoProducto = pEstadoProducto;
         }
     }
 }

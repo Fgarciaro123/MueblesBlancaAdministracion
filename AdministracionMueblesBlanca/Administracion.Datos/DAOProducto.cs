@@ -151,7 +151,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@ValorUnitarioProducto", producto.ValorUnitarioProducto);
                 cmd.Parameters.AddWithValue("@IdCategoriaProducto", producto.CategoriaProducto);
                 cmd.Parameters.AddWithValue("@FechaModificacionProducto", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionProducto", producto.UsuarioCreacionProducto);
+                cmd.Parameters.AddWithValue("@UsuarioModificacionProducto", producto.UsuarioModificacionProducto);
                 cmd.Parameters.AddWithValue("@EstadoProducto", producto.EstadoProducto);
 
 

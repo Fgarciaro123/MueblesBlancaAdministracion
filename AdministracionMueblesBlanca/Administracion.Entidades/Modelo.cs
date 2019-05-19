@@ -60,11 +60,27 @@ namespace Administracion.Entidades
             int pIdProductoModelo,
             string pTituloModelo,
             string pRutaModelo,
+            DateTime pFechaModificacionModelo,
+            string pUsuarioModificacionModelo,
+            int pEstadoModelo)
+        {
+            this._IdModelo = pIdModelo;
+            this.IdProductoModelo = pIdProductoModelo;
+            this.TituloModelo = pTituloModelo;
+            this.RutaModelo = pRutaModelo;
+            this.FechaCreacionModelo = pFechaModificacionModelo;
+            this.UsuarioCreacionModelo = pUsuarioModificacionModelo;
+            this.EstadoModelo = pEstadoModelo;
+        }
+
+        public Modelo(
+            int pIdProductoModelo,
+            string pTituloModelo,
+            string pRutaModelo,
             DateTime pFechaCreacionModelo,
             string pUsuarioCreacionModelo,
             int pEstadoModelo)
         {
-            this._IdModelo = pIdModelo;
             this.IdProductoModelo = pIdProductoModelo;
             this.TituloModelo = pTituloModelo;
             this.RutaModelo = pRutaModelo;
@@ -72,7 +88,6 @@ namespace Administracion.Entidades
             this.UsuarioCreacionModelo = pUsuarioCreacionModelo;
             this.EstadoModelo = pEstadoModelo;
         }
-
 
     }
 }

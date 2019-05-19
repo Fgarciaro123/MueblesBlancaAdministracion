@@ -101,7 +101,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@TituloImagen", imagen.TituloImagen);
                 cmd.Parameters.AddWithValue("@CodigoImagen", imagen.CodigoImagen);
                 cmd.Parameters.AddWithValue("@FechaCreacionImagen", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioCreacionImagen", "Pendiente");
+                cmd.Parameters.AddWithValue("@UsuarioCreacionImagen", imagen.UsuarioCreacionImagen);
                 cmd.Parameters.AddWithValue("@EstadoImagen", imagen.EstadoImagen);
 
                 n = cmd.ExecuteNonQuery();
@@ -122,7 +122,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@TituloImagen", imagen.TituloImagen);
                 cmd.Parameters.AddWithValue("@CodigoImagen", imagen.CodigoImagen);
                 cmd.Parameters.AddWithValue("@FechaModificacionImagen", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionImagen", "Pendiente 2");
+                cmd.Parameters.AddWithValue("@UsuarioModificacionImagen", imagen.UsuarioModificacionImagen);
                 cmd.Parameters.AddWithValue("@EstadoImagen", imagen.EstadoImagen);
 
                 n = cmd.ExecuteNonQuery();

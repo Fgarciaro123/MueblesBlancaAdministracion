@@ -131,7 +131,7 @@ namespace Administracion.Categorias
                     td = new TipoDocumento(0,
                         txtDescripcionTipoDocumento.Text.Trim(),
                         DateTime.Now,
-                        "Pendiente",
+                        sesion.UsuarioSesion,
                         cmbEstadoTipoDocumento.SelectedIndex);
                     n = bLTipoDocumento.Insertar(td);
                 }
@@ -140,7 +140,7 @@ namespace Administracion.Categorias
                     td = new TipoDocumento(Convert.ToInt32(txtIdTipoDocumento.Text),
                                             txtDescripcionTipoDocumento.Text.Trim(),
                                             DateTime.Now,
-                                            "Pendiente",
+                                            sesion.UsuarioSesion,
                                             cmbEstadoTipoDocumento.SelectedIndex);
                     n = bLTipoDocumento.Actualizar(td);
                 }

@@ -130,8 +130,9 @@ namespace Administracion.Categorias
                 int n = -1;
                 if (_nuevo)
                 {
-                    rol = new Rol(0,
+                    rol = new Rol(
                         txtNombreRol.Text.Trim(),
+                        sesion.UsuarioSesion,
                         DateTime.Now,
                         cmbEstadoRol.SelectedIndex);
                     n = bLRol.Insertar(rol);
@@ -141,8 +142,9 @@ namespace Administracion.Categorias
                     rol = new Rol(
                         Convert.ToInt32(txtIdRol.Text),
                         txtNombreRol.Text.Trim(),
+                        sesion.UsuarioSesion,
                         DateTime.Now,
-                       cmbEstadoRol.SelectedIndex);
+                        cmbEstadoRol.SelectedIndex);
 
                     n = bLRol.Actualizar(rol);
                 }

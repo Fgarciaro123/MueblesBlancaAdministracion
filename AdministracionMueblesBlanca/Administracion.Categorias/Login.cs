@@ -28,6 +28,7 @@ namespace Administracion.Categorias
             existe = blUsuario.TraerPorPersonaClave((string)txtUsuario.Text, (string)txtClave.Text);
             if (existe)
             {
+                sesion.UsuarioSesion = txtUsuario.Text.Trim();
                 lbError.Text = "";
                 FrmBienvenida frmBienvenida = new FrmBienvenida();
                 frmBienvenida.Show();
@@ -41,6 +42,7 @@ namespace Administracion.Categorias
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
+            sesion.UsuarioSesion = null;
             this.Close();
         }
 

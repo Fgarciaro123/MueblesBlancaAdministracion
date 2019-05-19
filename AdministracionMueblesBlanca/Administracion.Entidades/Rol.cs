@@ -39,14 +39,22 @@ namespace Administracion.Entidades
 
         }
 
-        public Rol(int pIdRol, string pNombreRol, DateTime pFechaModificacionRol, int pEstadoRol)
+        public Rol( string pNombreRol, string pUsuarioCreacion, DateTime pFechaCreacionRol, int pEstadoRol)
         {
-            this.IdRol = pIdRol;
-            this.NombreRol = pNombreRol;
-            this.FechaModificacionRol = pFechaModificacionRol;
+                 this.NombreRol = pNombreRol;
+            this.UsuarioCreacionRol = pUsuarioCreacion;
+            this.FechaCreacionRol = pFechaCreacionRol;
             this.EstadoRol = pEstadoRol;
         }
 
+        public Rol(int pIdrol, string pNombreRol, string pUsuarioModificacion, DateTime pFechaModificacionRol, int pEstadoRol)
+        {
+            this.IdRol = pIdrol;
+            this.NombreRol = pNombreRol;
+            this.UsuarioModificacionRol = pUsuarioModificacion;
+            this.FechaModificacionRol = pFechaModificacionRol;
+            this.EstadoRol = pEstadoRol;
+        }
 
         public int IdRol { get => _idRol; set => _idRol = value; }
         public string NombreRol { get => _nombreRol; set => _nombreRol = value; }

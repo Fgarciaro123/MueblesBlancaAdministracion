@@ -108,7 +108,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Administracion.Categorias.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(62, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(364, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -130,6 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(488, 432);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);

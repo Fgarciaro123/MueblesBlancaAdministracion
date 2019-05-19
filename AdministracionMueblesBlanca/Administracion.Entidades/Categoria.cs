@@ -111,15 +111,36 @@ namespace Administracion.Entidades
         //}
 
 
-        public Categoria(int IdCategoria, string pNombreCategoria, DateTime pFechaModificacionCategoria, int pEstadoCategoria)
+        public Categoria(
+            int IdCategoria, 
+            string pNombreCategoria,
+            DateTime pFechaModificacionCategoria,
+            string pUsuarioModificacion,
+            int pEstadoCategoria)
         {
-            this._idCategoria = IdCategoria;
-            this._nombreCategoria = pNombreCategoria;
-            this._fechaModificacionCategoria = pFechaModificacionCategoria;
-            this._estadoCategoria = pEstadoCategoria;
+            this.IdCategoria = IdCategoria;
+            this.NombreCategoria = pNombreCategoria;
+            this.FechaModificacionCategoria = pFechaModificacionCategoria;
+            this.UsuarioModificacionCategoria = pUsuarioModificacion;
+            this.EstadoCategoria = pEstadoCategoria;
         }
+
+
+        public Categoria(
+            string pNombreCategoria,
+            DateTime pFechaCreacion,
+            string pUsuariocreacion,
+            int pEstadoCategoria)
+        {
+            this.IdCategoria = IdCategoria;
+            this.NombreCategoria = pNombreCategoria;
+            this.FechaCreacionCategoria = pFechaCreacion;
+            this.UsuarioCreacionCategoria = pUsuariocreacion;
+            this.EstadoCategoria = pEstadoCategoria;
+        }
+
+
         public Categoria()
-           : this(0, "",DateTime.Now,0)
         {
         }
 

@@ -136,12 +136,12 @@ namespace Administracion.Categorias
                     int n = -1;
                     if (_nuevo)
                     {
-                        modelo = new Modelo(0,
+                        modelo = new Modelo(
                             idProductoModelo,
                             txtTituloModelo.Text.Trim(),
                             txtRutaModelo.Text.Trim(),
                             DateTime.Now,
-                            "Administrador",
+                            sesion.UsuarioSesion,
                             cmbEstadoModelo.SelectedIndex);
                         n = blModelo.Insertar(modelo);
                     }
@@ -153,7 +153,7 @@ namespace Administracion.Categorias
                             txtTituloModelo.Text.Trim(),
                             txtRutaModelo.Text.Trim(),
                             DateTime.Now,
-                            "Administrador",
+                            sesion.UsuarioSesion,
                             cmbEstadoModelo.SelectedIndex);
 
                         n = blModelo.Actualizar(modelo);

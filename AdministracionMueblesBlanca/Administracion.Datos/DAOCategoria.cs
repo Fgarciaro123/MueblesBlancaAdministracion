@@ -87,7 +87,7 @@ namespace Administracion.Datos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NombreCategoria", Categoria.NombreCategoria);
                 cmd.Parameters.AddWithValue("@FechaCreacionCategoria", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioCreacionCategoria", "");
+                cmd.Parameters.AddWithValue("@UsuarioCreacionCategoria", Categoria.UsuarioCreacionCategoria);
                 cmd.Parameters.AddWithValue("@EstadoCategoria", Categoria.EstadoCategoria);
 
                 n = cmd.ExecuteNonQuery();
@@ -106,7 +106,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@IdCategoria", Categoria.IdCategoria);
                 cmd.Parameters.AddWithValue("@NombreCategoria", Categoria.NombreCategoria);
                 cmd.Parameters.AddWithValue("@FechaModificacionCategoria", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionCategoria", "");
+                cmd.Parameters.AddWithValue("@UsuarioModificacionCategoria", Categoria.UsuarioModificacionCategoria);
                 cmd.Parameters.AddWithValue("@EstadoCategoria", Categoria.EstadoCategoria);
 
                     n = cmd.ExecuteNonQuery();

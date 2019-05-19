@@ -52,7 +52,7 @@ namespace Administracion.Categorias
                 txtTituloImagen.Text.Trim(),
                 Imagen_A_Bytes(txtRuta.Text),
                 DateTime.Now,
-                "Administrador",
+                sesion.UsuarioSesion,
                 cmbEstadoImagen.SelectedIndex
                 );
 
