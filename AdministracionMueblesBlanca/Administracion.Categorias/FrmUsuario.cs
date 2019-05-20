@@ -189,9 +189,9 @@ namespace Administracion.Categorias
             msg.SubjectEncoding = System.Text.Encoding.UTF8;
             msg.Body = "Se ha registrado exitosamente en el sistema muebles blanca " +
                 "sus credenciales son las siguientes: " +
-                "" +
+                " " +
                 "Usuario: " + txtEmail.Text.Trim() +
-                "Contraseña: " + txtContraseña.Text.Trim() +
+                " Contraseña: " + txtContraseña.Text.Trim() +
                 " " +
                 "Gracias ";
 

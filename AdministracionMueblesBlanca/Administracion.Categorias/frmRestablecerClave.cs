@@ -98,9 +98,9 @@ namespace Administracion.Categorias
             msg.SubjectEncoding = System.Text.Encoding.UTF8;
             msg.Body = "Su contraseña del sistema muebles blanca se ha restablecido exitosamente " +
                 "sus credenciales son las siguientes: " +
-                "" +
+                " " +
                 "Usuario: " + txtEmail.Text.Trim() +
-                "Contraseña: " + NuevaClave +
+                " Contraseña: " + NuevaClave +
                 " " +
                 "Gracias ";
 
