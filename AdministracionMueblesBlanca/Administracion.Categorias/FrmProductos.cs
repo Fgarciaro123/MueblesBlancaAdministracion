@@ -133,7 +133,7 @@ namespace Administracion.Categorias
                     txtMaterial.Text.Trim(),
                     int.Parse(txtGarantia.Text.Trim()),
                     long.Parse(txtValor.Text.Trim()),
-                    cbCategoria.SelectedIndex,
+                    Convert.ToInt16(cbCategoria.SelectedValue),
                     DateTime.Now,
                     sesion.UsuarioSesion,
                     cbEstado.SelectedIndex);
@@ -152,7 +152,7 @@ namespace Administracion.Categorias
                         txtMaterial.Text.Trim(),
                         int.Parse(txtGarantia.Text.Trim()),
                         long.Parse(txtValor.Text.Trim()),
-                        cbCategoria.SelectedIndex,
+                        Convert.ToInt16(cbCategoria.SelectedValue),
                         DateTime.Now,
                         sesion.UsuarioSesion,
                         cbEstado.SelectedIndex);
