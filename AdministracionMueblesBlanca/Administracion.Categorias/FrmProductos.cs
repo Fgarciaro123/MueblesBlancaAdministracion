@@ -151,7 +151,7 @@ namespace Administracion.Categorias
                         txtColor.Text.Trim(),
                         txtMaterial.Text.Trim(),
                         int.Parse(txtGarantia.Text.Trim()),
-                        long.Parse(txtValor.Text.Trim()),
+                        decimal.Parse(txtValor.Text.Trim()),
                         Convert.ToInt16(cbCategoria.SelectedValue),
                         DateTime.Now,
                         sesion.UsuarioSesion,
