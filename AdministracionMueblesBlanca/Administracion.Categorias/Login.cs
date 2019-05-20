@@ -48,7 +48,7 @@ namespace Administracion.Categorias
 
         private void txtClave_TextChanged(object sender, EventArgs e)
         {
-            txtClave.MaxLength = 8;
+            txtClave.MaxLength = 1000;
             txtClave.PasswordChar = '*';
         }
 
