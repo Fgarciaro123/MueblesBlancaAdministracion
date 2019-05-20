@@ -44,6 +44,7 @@
     <Compile Include="DAOCategoria.cs" />
     <Compile Include="DAOImagen.cs" />
     <Compile Include="DAOModelo.cs" />
+    <Compile Include="DAOOrdenCompra.cs" />
     <Compile Include="DAOProducto.cs" />
     <Compile Include="DAORol.cs" />
     <Compile Include="DAOTipoDocumento.cs" />

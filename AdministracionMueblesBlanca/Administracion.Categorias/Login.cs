@@ -50,7 +50,6 @@ namespace Administracion.Categorias
         {
             txtClave.MaxLength = 8;
             txtClave.PasswordChar = '*';
-            txtClave.CharacterCasing = CharacterCasing.Lower;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

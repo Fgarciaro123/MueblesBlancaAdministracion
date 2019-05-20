@@ -19,7 +19,7 @@ namespace Administracion.Categorias
         //Declaramos las variables generales
 
         BLImagen bLImagen = new BLImagen();
-        Imagen imagen ;
+        Imagen imagen;
         int idProductoImagen;
 
         public FrmCargarImagen(int pIdproductoImagen)
@@ -46,27 +46,45 @@ namespace Administracion.Categorias
 
         private void btnGuardarImagen_Click(object sender, EventArgs e)
         {
-            int n = -1;
-
-            imagen = new Imagen(idProductoImagen,
-                txtTituloImagen.Text.Trim(),
-                Imagen_A_Bytes(txtRuta.Text),
-                DateTime.Now,
-                sesion.UsuarioSesion,
-                cmbEstadoImagen.SelectedIndex
-                );
-
-            n = bLImagen.Insertar(imagen);
-
-            if (n > 0)
+            if (!txtRuta.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Datos grabados correctamente", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!txtTituloImagen.Text.Trim().Equals(""))
+                {
+
+
+                    int n = -1;
+
+                    imagen = new Imagen(idProductoImagen,
+                        txtTituloImagen.Text.Trim(),
+                        Imagen_A_Bytes(txtRuta.Text),
+                        DateTime.Now,
+                        sesion.UsuarioSesion,
+                        cmbEstadoImagen.SelectedIndex
+                        );
+
+                    n = bLImagen.Insertar(imagen);
+
+                    if (n > 0)
+                    {
+                        MessageBox.Show("Datos grabados correctamente", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al grabar", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Se debe registrar un titulo ", "Aviso",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Error al grabar", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se debe escoger la ruta del archivo", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

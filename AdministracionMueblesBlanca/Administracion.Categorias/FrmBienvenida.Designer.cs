@@ -57,7 +57,7 @@
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(263, 35);
             this.btnProductos.TabIndex = 0;
-            this.btnProductos.Text = "Administracion Categorias";
+            this.btnProductos.Text = "Administración Categorias";
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(263, 35);
             this.btnProducto.TabIndex = 1;
-            this.btnProducto.Text = "Administracion Productos";
+            this.btnProducto.Text = "Administración Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
@@ -91,7 +91,7 @@
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(263, 35);
             this.btnRoles.TabIndex = 2;
-            this.btnRoles.Text = "Administracion Roles";
+            this.btnRoles.Text = "Administración Roles";
             this.btnRoles.UseVisualStyleBackColor = false;
             this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
@@ -108,7 +108,7 @@
             this.btnTipoDocumento.Name = "btnTipoDocumento";
             this.btnTipoDocumento.Size = new System.Drawing.Size(263, 35);
             this.btnTipoDocumento.TabIndex = 3;
-            this.btnTipoDocumento.Text = "Administracion Tipos de Documento";
+            this.btnTipoDocumento.Text = "Administración Tipos de Documento";
             this.btnTipoDocumento.UseVisualStyleBackColor = false;
             this.btnTipoDocumento.Click += new System.EventHandler(this.btnTipoDocumento_Click);
             // 

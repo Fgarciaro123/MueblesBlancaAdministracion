@@ -231,7 +231,7 @@ namespace Administracion.Categorias
                     txtMaterial.Text = p.MaterialProducto;
                     txtGarantia.Text = p.GarantiaMesesProducto.ToString();
                     txtValor.Text = p.ValorUnitarioProducto.ToString();
-                    cbCategoria.SelectedIndex = p.CategoriaProducto;
+                    cbCategoria.SelectedValue = p.CategoriaProducto;
                     cbEstado.SelectedIndex = p.EstadoProducto;
 
                     ActivarControlDatos(gbDatos, true);

@@ -55,6 +55,7 @@
             // 
             this.txtRuta.Location = new System.Drawing.Point(390, 75);
             this.txtRuta.Name = "txtRuta";
+            this.txtRuta.ReadOnly = true;
             this.txtRuta.Size = new System.Drawing.Size(392, 20);
             this.txtRuta.TabIndex = 1;
             // 

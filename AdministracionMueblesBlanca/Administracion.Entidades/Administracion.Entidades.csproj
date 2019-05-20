@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
+    <Compile Include="DetalleOrden.cs" />
     <Compile Include="EnumEstados.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="OrdenCompra.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
