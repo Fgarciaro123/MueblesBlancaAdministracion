@@ -141,9 +141,6 @@ namespace Administracion.Datos
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
-                    c = new Categoria(0, "-Seleccionar-");
-                    lista.Add(c);
-
                     while (dr.Read())
                     {
                         c = new Categoria((int)dr["IdCategoria"],

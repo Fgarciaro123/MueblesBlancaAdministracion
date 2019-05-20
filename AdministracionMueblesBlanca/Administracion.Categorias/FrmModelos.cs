@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Administracion.Entidades;
 using Administracion.Negocio;
+using Microsoft.VisualBasic.Devices;
 
 namespace Administracion.Categorias
 {
     public partial class FrmModelos : Form
     {
+        Computer myCompuet = new Computer();
         List<Modelo> lista = null;
         public int idProductoModelo;
         BLModelo blModelo = new BLModelo();
@@ -26,10 +28,12 @@ namespace Administracion.Categorias
             idProductoModelo = idProducto;
             InitializeComponent();
             btnSalir.Enabled = true;
-            //ActivarControlDatos(gbDatos, false);
+            ActivarControlDatos(gbDatos, false);
             CargarDatos();
 
         }
+
+
 
         private void LimpiarControl(Control Contenedor)
         {
@@ -115,6 +119,7 @@ namespace Administracion.Categorias
             cmbEstadoModelo.SelectedIndex = 0;
 
             btnGrabar.Enabled = false;
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -136,6 +141,7 @@ namespace Administracion.Categorias
                     int n = -1;
                     if (_nuevo)
                     {
+                        //SimpleFileMove();
                         modelo = new Modelo(
                             idProductoModelo,
                             txtTituloModelo.Text.Trim(),
@@ -195,7 +201,7 @@ namespace Administracion.Categorias
                 if (dataGridView1.RowCount > 0)
                 {
                     modelo = blModelo.TraerPorId((int)dataGridView1[0, dataGridView1.
-                        CurrentRow.Index].Value,idProductoModelo);
+                        CurrentRow.Index].Value, idProductoModelo);
                     txtCodigo.Text = modelo.IdModelo.ToString();
                     txtTituloModelo.Text = modelo.TituloModelo;
                     txtRutaModelo.Text = modelo.RutaModelo;
@@ -258,5 +264,19 @@ namespace Administracion.Categorias
                 txtRutaModelo.Text = BuscarImagen.FileName;
             }
         }
+
+        //public void SimpleFileMove()
+        //{
+        //    string sourceFile = txtRutaModelo.Text.Trim();
+        //    string destinationFile = @".\Administracion.Categorias\Resources\" + txtTituloModelo.Text.Trim() + ".html" ;
+
+        //    // To move a file or folder to a new location:
+        //    myCompuet.FileSystem.CopyFile(sourceFile, destinationFile);
+
+        //    // To move an entire directory. To programmatically modify or combine
+        //    // path strings, use the System.IO.Path class.
+        //    //System.IO.Directory.Move(@"C:\Users\Public\public\test\", @"C:\Users\Public\private");
+        //}
+
     }
 }

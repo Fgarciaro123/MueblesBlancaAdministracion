@@ -110,20 +110,20 @@ namespace Administracion.Categorias
         }
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-
-
-            int n = -1;
-
-            if (_nuevo)
+            if (ValidarVacios() is false)
             {
-                if (ValidarVacios() is false)
-                {
-                    MessageBox.Show("Diligencie todos los campos", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Diligencie todos los campos", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-                else
+            }
+            else
+            {
+
+                int n = -1;
+
+                if (_nuevo)
                 {
+
                     p = new Producto(
                     txtNombre.Text.Trim(),
                     txtDescripcion.Text.Trim(),
@@ -138,42 +138,43 @@ namespace Administracion.Categorias
                     sesion.UsuarioSesion,
                     cbEstado.SelectedIndex);
                     n = blProducto.Insertar(p);
-                }   
-            }
-            else
-            {
-                p = new Producto(
-                    Convert.ToInt16(txtIdProducto.Text.Trim()),
-                    txtNombre.Text.Trim(),
-                    txtDescripcion.Text.Trim(),
-                    txtAlto.Text.Trim(),
-                    txtAncho.Text.Trim(),
-                    txtColor.Text.Trim(),
-                    txtMaterial.Text.Trim(),
-                    int.Parse(txtGarantia.Text.Trim()),
-                    long.Parse(txtValor.Text.Trim()),
-                    cbCategoria.SelectedIndex,
-                    DateTime.Now,
-                    sesion.UsuarioSesion,
-                    cbEstado.SelectedIndex);
 
-                n = blProducto.Actualizar(p);
-            }
-            if (n > 0)
-            {
-                MessageBox.Show("Datos grabados correctamente", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ActivarControlDatos(gbDatos, false);
-                ActivarButton(true);
-                dgvDatos.Enabled = true;
-                LimpiarControl(gbDatos);
-                lista = blProducto.Listar();
-                CargarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Error al grabar", "Aviso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    p = new Producto(
+                        Convert.ToInt16(txtIdProducto.Text.Trim()),
+                        txtNombre.Text.Trim(),
+                        txtDescripcion.Text.Trim(),
+                        txtAlto.Text.Trim(),
+                        txtAncho.Text.Trim(),
+                        txtColor.Text.Trim(),
+                        txtMaterial.Text.Trim(),
+                        int.Parse(txtGarantia.Text.Trim()),
+                        long.Parse(txtValor.Text.Trim()),
+                        cbCategoria.SelectedIndex,
+                        DateTime.Now,
+                        sesion.UsuarioSesion,
+                        cbEstado.SelectedIndex);
+
+                    n = blProducto.Actualizar(p);
+                }
+                if (n > 0)
+                {
+                    MessageBox.Show("Datos grabados correctamente", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ActivarControlDatos(gbDatos, false);
+                    ActivarButton(true);
+                    dgvDatos.Enabled = true;
+                    LimpiarControl(gbDatos);
+                    lista = blProducto.Listar();
+                    CargarDatos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al grabar", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -181,7 +182,7 @@ namespace Administracion.Categorias
         {
             foreach (Control item in gbDatos.Controls)
             {
-                if (item is TextBox)
+                if (item is TextBox && item != txtIdProducto)
                 {
                     TextBox aux = (TextBox)item;
                     if (string.IsNullOrEmpty(aux.Text.Trim()))
