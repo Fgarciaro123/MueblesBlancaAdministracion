@@ -44,9 +44,12 @@ namespace Administracion.Datos
                     while (dr.Read())
                     {
                         OrdenCompra c = new OrdenCompra((int)dr["IdOrdenCompra"],
-                            (int)dr["IdPersonaOrdenCompra"],
                             (DateTime)dr["FechaCompra"],
-                            (long)dr["TotalCompra"]);
+                            (DateTime)dr["FechaPago"],
+                            (long)dr["TotalCompra"],
+                            (int)dr["NroIdentificacion"],
+                            (string)dr["NombrePersona"],
+                            (string)dr["NombreProducto"]);
                         lista.Add(c);
                     }
                 }
@@ -68,9 +71,12 @@ namespace Administracion.Datos
                 {
                     dr.Read();
                     OrdenCompra c = new OrdenCompra((int)dr["IdOrdenCompra"],
-                                           (int)dr["IdPersonaOrdenCompra"],
-                                           (DateTime)dr["FechaCompra"],
-                                           (long)dr["TotalCompra"]);
+                        (DateTime)dr["FechaCompra"],
+                        (DateTime)dr["FechaPago"],
+                        (long)dr["TotalCompra"],
+                        (int)dr["NroIdentificacion"],
+                        (string)dr["NombrePersona"],
+                        (string)dr["NombreProducto"]);
                 }
             }
             return ordenCompra;

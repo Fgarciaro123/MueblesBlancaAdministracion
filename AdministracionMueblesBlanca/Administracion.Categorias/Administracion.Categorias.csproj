@@ -66,6 +66,12 @@
     <Compile Include="FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetalleOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleOrden.Designer.cs">
+      <DependentUpon>FrmDetalleOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmImagen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="FrmModelos.Designer.cs">
       <DependentUpon>FrmModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrdenCompra.Designer.cs">
+      <DependentUpon>FrmOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductos.cs">
       <SubType>Form</SubType>
@@ -127,11 +139,17 @@
     <EmbeddedResource Include="FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleOrden.resx">
+      <DependentUpon>FrmDetalleOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmImagen.resx">
       <DependentUpon>FrmImagen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModelos.resx">
       <DependentUpon>FrmModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrdenCompra.resx">
+      <DependentUpon>FrmOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -200,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tipo documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoOrdenCompra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

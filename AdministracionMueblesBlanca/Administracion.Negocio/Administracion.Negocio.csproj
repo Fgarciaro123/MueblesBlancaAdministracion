@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCategoria.cs" />
+    <Compile Include="BLDetalleOrden.cs" />
     <Compile Include="BLImagen.cs" />
     <Compile Include="BLModelo.cs" />
+    <Compile Include="BlOrdenCompra.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLRol.cs" />
     <Compile Include="BLTipoDocumento.cs" />

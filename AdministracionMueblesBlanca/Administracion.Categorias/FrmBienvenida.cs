@@ -63,5 +63,12 @@ namespace Administracion.Categorias
             Login login = new Login();
             login.Show();
         }
+
+        private void btnOrdenes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmOrdenCompra frmOrdenCompra = new FrmOrdenCompra();
+            frmOrdenCompra.Show();
+        }
     }
 }

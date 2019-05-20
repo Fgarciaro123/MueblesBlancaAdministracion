@@ -34,10 +34,13 @@
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnTipoDocumento = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnOrdenes = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,7 +56,7 @@
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Location = new System.Drawing.Point(85, 200);
+            this.btnProductos.Location = new System.Drawing.Point(34, 200);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(263, 35);
             this.btnProductos.TabIndex = 0;
@@ -70,7 +73,7 @@
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.ForeColor = System.Drawing.Color.White;
-            this.btnProducto.Location = new System.Drawing.Point(85, 423);
+            this.btnProducto.Location = new System.Drawing.Point(34, 423);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(263, 35);
             this.btnProducto.TabIndex = 1;
@@ -87,7 +90,7 @@
             this.btnRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoles.ForeColor = System.Drawing.Color.White;
-            this.btnRoles.Location = new System.Drawing.Point(468, 200);
+            this.btnRoles.Location = new System.Drawing.Point(610, 200);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(263, 35);
             this.btnRoles.TabIndex = 2;
@@ -104,7 +107,7 @@
             this.btnTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoDocumento.ForeColor = System.Drawing.Color.White;
-            this.btnTipoDocumento.Location = new System.Drawing.Point(468, 423);
+            this.btnTipoDocumento.Location = new System.Drawing.Point(610, 423);
             this.btnTipoDocumento.Name = "btnTipoDocumento";
             this.btnTipoDocumento.Size = new System.Drawing.Size(263, 35);
             this.btnTipoDocumento.TabIndex = 3;
@@ -121,7 +124,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(326, 471);
+            this.btnSalir.Location = new System.Drawing.Point(397, 495);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(148, 28);
             this.btnSalir.TabIndex = 4;
@@ -129,10 +132,38 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
+            // btnOrdenes
+            // 
+            this.btnOrdenes.BackColor = System.Drawing.Color.Chocolate;
+            this.btnOrdenes.FlatAppearance.BorderSize = 0;
+            this.btnOrdenes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnOrdenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
+            this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenes.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenes.Location = new System.Drawing.Point(338, 311);
+            this.btnOrdenes.Name = "btnOrdenes";
+            this.btnOrdenes.Size = new System.Drawing.Size(263, 35);
+            this.btnOrdenes.TabIndex = 9;
+            this.btnOrdenes.Text = "Administración Ordenes de Compra";
+            this.btnOrdenes.UseVisualStyleBackColor = false;
+            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Image = global::Administracion.Categorias.Properties.Resources.IconoOrdenCompra;
+            this.pictureBox5.Location = new System.Drawing.Point(369, 105);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Administracion.Categorias.Properties.Resources.tipo_documento;
-            this.pictureBox4.Location = new System.Drawing.Point(481, 241);
+            this.pictureBox4.Location = new System.Drawing.Point(621, 241);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(238, 176);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +173,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Administracion.Categorias.Properties.Resources.carrito;
-            this.pictureBox3.Location = new System.Drawing.Point(85, 241);
+            this.pictureBox3.Location = new System.Drawing.Point(34, 241);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(263, 176);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +183,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Administracion.Categorias.Properties.Resources.roles;
-            this.pictureBox2.Location = new System.Drawing.Point(493, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(621, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(211, 182);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +193,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Administracion.Categorias.Properties.Resources.categorias;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(263, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,7 +205,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 509);
+            this.ClientSize = new System.Drawing.Size(904, 535);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.btnOrdenes);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -189,6 +222,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmBienvenida";
             this.Text = "Menu Principal";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -208,5 +242,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnOrdenes;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
