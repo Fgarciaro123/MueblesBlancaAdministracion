@@ -118,6 +118,7 @@
             // txtPrimerNombre
             // 
             this.txtPrimerNombre.Location = new System.Drawing.Point(218, 80);
+            this.txtPrimerNombre.MaxLength = 100;
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(172, 20);
             this.txtPrimerNombre.TabIndex = 10;
@@ -126,6 +127,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(218, 127);
+            this.txtApellidos.MaxLength = 100;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(172, 20);
             this.txtApellidos.TabIndex = 11;
@@ -134,6 +136,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(218, 180);
+            this.txtEmail.MaxLength = 320;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(324, 20);
             this.txtEmail.TabIndex = 12;
@@ -142,6 +145,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(218, 223);
+            this.txtContraseña.MaxLength = 1000;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(172, 20);
@@ -150,6 +154,7 @@
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(581, 225);
+            this.txtContraseña2.MaxLength = 1000;
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.PasswordChar = '*';
             this.txtContraseña2.Size = new System.Drawing.Size(172, 20);
@@ -215,6 +220,7 @@
             // txtSegundoApellido
             // 
             this.txtSegundoApellido.Location = new System.Drawing.Point(578, 127);
+            this.txtSegundoApellido.MaxLength = 100;
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(172, 20);
             this.txtSegundoApellido.TabIndex = 22;
@@ -222,6 +228,7 @@
             // txtSegundoNombre
             // 
             this.txtSegundoNombre.Location = new System.Drawing.Point(578, 80);
+            this.txtSegundoNombre.MaxLength = 100;
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(172, 20);
             this.txtSegundoNombre.TabIndex = 21;
@@ -258,6 +265,7 @@
             // txtNroId
             // 
             this.txtNroId.Location = new System.Drawing.Point(218, 39);
+            this.txtNroId.MaxLength = 20;
             this.txtNroId.Name = "txtNroId";
             this.txtNroId.Size = new System.Drawing.Size(172, 20);
             this.txtNroId.TabIndex = 17;

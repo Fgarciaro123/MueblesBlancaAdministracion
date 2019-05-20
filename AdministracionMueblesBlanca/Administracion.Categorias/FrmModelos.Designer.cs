@@ -99,6 +99,7 @@
             // txtRutaModelo
             // 
             this.txtRutaModelo.Location = new System.Drawing.Point(103, 100);
+            this.txtRutaModelo.MaxLength = 250;
             this.txtRutaModelo.Name = "txtRutaModelo";
             this.txtRutaModelo.ReadOnly = true;
             this.txtRutaModelo.Size = new System.Drawing.Size(337, 20);
@@ -107,6 +108,7 @@
             // txtTituloModelo
             // 
             this.txtTituloModelo.Location = new System.Drawing.Point(103, 65);
+            this.txtTituloModelo.MaxLength = 100;
             this.txtTituloModelo.Name = "txtTituloModelo";
             this.txtTituloModelo.Size = new System.Drawing.Size(337, 20);
             this.txtTituloModelo.TabIndex = 6;
@@ -219,7 +221,7 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 6;
-            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 

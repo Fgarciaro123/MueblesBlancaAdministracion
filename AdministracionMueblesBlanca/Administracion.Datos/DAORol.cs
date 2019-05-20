@@ -133,6 +133,21 @@ namespace Administracion.Datos
             return n;
         }
 
+        public int CantidadRolPorPersona(int pIdRol)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("CantidadPersonasPorRol", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdRol", pIdRol);
+                n = cmd.ExecuteNonQuery();
+            }
+            return n;
+            
+        }
+
 
     }
 }

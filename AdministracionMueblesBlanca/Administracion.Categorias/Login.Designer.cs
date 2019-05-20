@@ -38,6 +38,7 @@
             this.lbError = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(177, 296);
+            this.txtUsuario.MaxLength = 320;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(196, 20);
             this.txtUsuario.TabIndex = 1;
@@ -71,6 +73,7 @@
             // txtClave
             // 
             this.txtClave.Location = new System.Drawing.Point(177, 333);
+            this.txtClave.MaxLength = 1000;
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(196, 20);
             this.txtClave.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(136, 387);
+            this.btAceptar.Location = new System.Drawing.Point(148, 397);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(90, 23);
             this.btAceptar.TabIndex = 4;
@@ -88,7 +91,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(283, 387);
+            this.btCancelar.Location = new System.Drawing.Point(283, 397);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(90, 23);
             this.btCancelar.TabIndex = 5;
@@ -100,7 +103,7 @@
             // 
             this.lbError.AutoSize = true;
             this.lbError.ForeColor = System.Drawing.Color.Red;
-            this.lbError.Location = new System.Drawing.Point(133, 361);
+            this.lbError.Location = new System.Drawing.Point(145, 381);
             this.lbError.Name = "lbError";
             this.lbError.Size = new System.Drawing.Size(0, 13);
             this.lbError.TabIndex = 6;
@@ -120,11 +123,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(100, 262);
+            this.label3.Location = new System.Drawing.Point(100, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(273, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Ingrese sus credencíales de autenticación";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(202, 356);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(130, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Olvidaste la contraseña?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Login
             // 
@@ -132,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(488, 432);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbError);
@@ -163,5 +178,6 @@
         private System.Windows.Forms.Label lbError;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

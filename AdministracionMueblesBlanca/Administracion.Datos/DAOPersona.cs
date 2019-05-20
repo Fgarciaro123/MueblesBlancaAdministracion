@@ -233,8 +233,53 @@ namespace Administracion.Datos
                 }
 
             }
-
         }
 
+
+        public Boolean ValidarExistenciaEmail(string email)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ValidarExistenciaEmail", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Email", email);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+
+        public Boolean ActualizarContraseña(string correo, string clave)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ActualizarContraseña", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Clave", clave);
+                n = cmd.ExecuteNonQuery();
+
+                if (n > -1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           
+        }   
     }
 }

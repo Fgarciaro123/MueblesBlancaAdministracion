@@ -85,6 +85,7 @@
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.Location = new System.Drawing.Point(179, 64);
+            this.txtNombreCategoria.MaxLength = 100;
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(264, 20);
             this.txtNombreCategoria.TabIndex = 4;
@@ -176,7 +177,7 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 

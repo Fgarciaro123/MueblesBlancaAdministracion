@@ -128,7 +128,7 @@ namespace Administracion.Categorias
                 int n = -1;
                 if (_nuevo)
                 {
-                    td = new TipoDocumento(0,
+                    td = new TipoDocumento(
                         txtDescripcionTipoDocumento.Text.Trim(),
                         DateTime.Now,
                         sesion.UsuarioSesion,
@@ -204,30 +204,39 @@ namespace Administracion.Categorias
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvTipoDocumento.RowCount > 0)
+            if (bLTipoDocumento.CantidadPersonasPorTipoDocumento((int)dgvTipoDocumento[0, dgvTipoDocumento.CurrentRow.Index].Value) >= 0)
             {
-                td = bLTipoDocumento.TraerPorId((int)dgvTipoDocumento[0, dgvTipoDocumento.
-                    CurrentRow.Index].Value);
-                DialogResult rpta =
-                    MessageBox.Show("Desea eliminar el registro", "Eliminar",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (rpta == System.Windows.Forms.DialogResult.Yes)
+                if (dgvTipoDocumento.RowCount > 0)
                 {
-                    int n = bLTipoDocumento.Eliminar(td.IdTipoDocumento);
-                    if (n > 0)
+                    td = bLTipoDocumento.TraerPorId((int)dgvTipoDocumento[0, dgvTipoDocumento.
+                        CurrentRow.Index].Value);
+                    DialogResult rpta =
+                        MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rpta == System.Windows.Forms.DialogResult.Yes)
                     {
-                        MessageBox.Show("Registro eliminado", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lista = bLTipoDocumento.Listar();
-                        CargarDatos();
+                        int n = bLTipoDocumento.Eliminar(td.IdTipoDocumento);
+                        if (n > 0)
+                        {
+                            MessageBox.Show("Registro eliminado", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            lista = bLTipoDocumento.Listar();
+                            CargarDatos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Es tipo de documento esta atado a clientes, no se puede eliminar, " +
+                "Debe eliminar primero los clientes atados al tipo de documento", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

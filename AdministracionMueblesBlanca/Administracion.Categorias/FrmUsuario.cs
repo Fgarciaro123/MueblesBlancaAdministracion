@@ -73,6 +73,7 @@ namespace Administracion.Categorias
 
                             if (n > 0)
                             {
+                                enviarMensaje();
                                 MessageBox.Show("Administrador creado correctamente", "Aviso",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Login login = new Login();
@@ -178,6 +179,42 @@ namespace Administracion.Categorias
             {
                 return false;
             }
+        }
+
+        public void enviarMensaje()
+        {
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.To.Add(txtEmail.Text.Trim());
+            msg.Subject = "Registro Exitoso Muebles Blanca";
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body = "Se ha registrado exitosamente en el sistema muebles blanca " +
+                "sus credenciales son las siguientes: " +
+                "" +
+                "Usuario: " + txtEmail.Text.Trim() +
+                "Contraseña: " + txtContraseña.Text.Trim() +
+                " " +
+                "Gracias ";
+
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = false;
+            msg.From = new System.Net.Mail.MailAddress("muebles.blanca.sistema@gmail.com");
+
+
+            System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+            cliente.Credentials = new System.Net.NetworkCredential("muebles.blanca.sistema@gmail.com", "Blanca123");
+
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+            cliente.Host = "smtp.gmail.com";
+            try
+            {
+                cliente.Send(msg);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al enviar");                
+            }
+
         }
     }
 }

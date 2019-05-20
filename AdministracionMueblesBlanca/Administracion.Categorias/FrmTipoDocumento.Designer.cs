@@ -93,6 +93,7 @@
             // txtDescripcionTipoDocumento
             // 
             this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(179, 68);
+            this.txtDescripcionTipoDocumento.MaxLength = 200;
             this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
             this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(251, 20);
             this.txtDescripcionTipoDocumento.TabIndex = 4;
@@ -184,7 +185,7 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 

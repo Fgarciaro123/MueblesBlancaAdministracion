@@ -52,5 +52,12 @@ namespace Administracion.Categorias
             txtClave.PasswordChar = '*';
             txtClave.CharacterCasing = CharacterCasing.Lower;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRestablecerClave frmRestablecer = new frmRestablecerClave();
+            frmRestablecer.Show();
+            this.Hide();
+        }
     }
 }

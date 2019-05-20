@@ -82,6 +82,7 @@
             // txtNombreRol
             // 
             this.txtNombreRol.Location = new System.Drawing.Point(178, 72);
+            this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.Name = "txtNombreRol";
             this.txtNombreRol.Size = new System.Drawing.Size(247, 20);
             this.txtNombreRol.TabIndex = 4;
@@ -173,7 +174,7 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 

@@ -100,13 +100,13 @@ namespace Administracion.Categorias
                     }
 
                     dgvCategoria.Rows.Add(
-                       
+
                         lista[i].IdCategoria,
                         lista[i].NombreCategoria,
                         (EnumEstados.Estados)lista[i].EstadoCategoria,
                         lista[i].FechaCreacionCategoria,
                         lista[i].UsuarioCreacionCategoria,
-                        _fechaModificacion, 
+                        _fechaModificacion,
                         lista[i].UsuarioModificacionCategoria);
                 }
             }
@@ -173,7 +173,7 @@ namespace Administracion.Categorias
             }
 
 
-          
+
         }
 
 
@@ -207,30 +207,42 @@ namespace Administracion.Categorias
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
             if (dgvCategoria.RowCount > 0)
             {
-                c = blCategoria.TraerPorId((int)dgvCategoria[0, dgvCategoria.
-                    CurrentRow.Index].Value);
-                DialogResult rpta =
-                    MessageBox.Show("Desea eliminar el registro", "Eliminar",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (rpta == System.Windows.Forms.DialogResult.Yes)
+                if (blCategoria.CantidadProductosPorCategoria((int)dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value) >= 0)
                 {
-                    int n = blCategoria.Eliminar(c.IdCategoria);
-                    if (n > 0)
-                    {
-                        MessageBox.Show("Registro eliminado", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lista = blCategoria.Listar();
-                        CargarDatos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
 
+
+                    c = blCategoria.TraerPorId((int)dgvCategoria[0, dgvCategoria.
+                        CurrentRow.Index].Value);
+                    DialogResult rpta =
+                        MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rpta == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        int n = blCategoria.Eliminar(c.IdCategoria);
+                        if (n > 0)
+                        {
+                            MessageBox.Show("Registro eliminado", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            lista = blCategoria.Listar();
+                            CargarDatos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("La categoria esta atada a productos, no se puede eliminar, " +
+                    "Debe eliminar primero los productos atados a la categoria", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

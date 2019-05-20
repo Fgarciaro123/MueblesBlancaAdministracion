@@ -153,5 +153,19 @@ namespace Administracion.Datos
             return lista;
         }
 
+        public int CantidadProductosPorCategoria(int IdCategoria)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("CantidadProductosPorCategoria", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
+                n = cmd.ExecuteNonQuery();
+            }
+            return n;
+        }
+
     }
 }

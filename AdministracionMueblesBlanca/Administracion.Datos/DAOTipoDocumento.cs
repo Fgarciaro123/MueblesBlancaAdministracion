@@ -135,6 +135,20 @@ namespace Administracion.Datos
             return n;
         }
 
+        public int CantidadPersonasPorTipoDocumento(int Id)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("CantidadPersonasPorTipoDocumento", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdTipoDocumento", Id);
+                n = cmd.ExecuteNonQuery();
+            }
+            return n;
+        }   
+
     }
 }
 

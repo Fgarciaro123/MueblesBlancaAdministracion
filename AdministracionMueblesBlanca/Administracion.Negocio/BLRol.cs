@@ -40,5 +40,11 @@ namespace Administracion.Negocio
             return daRol.Eliminar(Id);
         }
 
+        public int CantidadRolPorPersona(int pIdRol)
+        {
+            DAORol daRol = new DAORol();
+            return daRol.CantidadRolPorPersona(pIdRol);
+        }
+
     }
 }

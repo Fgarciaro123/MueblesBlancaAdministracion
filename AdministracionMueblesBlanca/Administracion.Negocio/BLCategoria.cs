@@ -46,5 +46,11 @@ namespace Administracion.Negocio
             return daCategoria.ComboCategoria();
         }
 
+
+        public int CantidadProductosPorCategoria(int idCategoria)
+        {
+            DAOCategoria dAOCategoria = new DAOCategoria();
+            return dAOCategoria.CantidadProductosPorCategoria(idCategoria);
+        }
     }
 }

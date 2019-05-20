@@ -58,5 +58,17 @@ namespace Administracion.Negocio
             DAOPersona dAOPersona = new DAOPersona();
             return dAOPersona.existeAdmin();
         }
+
+        public Boolean ValidarExistenciaEmail(string pEmail)
+        {
+            DAOPersona dAOPersona = new DAOPersona();
+            return dAOPersona.ValidarExistenciaEmail(pEmail);
+        }
+
+        public Boolean ActualizarContraseña(string pEmail, string pClave)
+        {
+            DAOPersona dAOPersona = new DAOPersona();
+            return dAOPersona.ActualizarContraseña(pEmail, pClave);
+        }
     }
 }

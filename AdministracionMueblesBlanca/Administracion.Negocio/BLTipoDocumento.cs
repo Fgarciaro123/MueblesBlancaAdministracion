@@ -40,5 +40,11 @@ namespace Administracion.Negocio
             DAOTipoDocumento daTipoDocumento = new DAOTipoDocumento();
             return daTipoDocumento.Eliminar(Id);
         }
+
+        public int CantidadPersonasPorTipoDocumento(int idTipoDoc)
+        {
+            DAOTipoDocumento dAOTipoDocumento = new DAOTipoDocumento();
+            return dAOTipoDocumento.CantidadPersonasPorTipoDocumento(idTipoDoc);
+        }
     }
 }

@@ -101,6 +101,7 @@
             // txtTituloImagen
             // 
             this.txtTituloImagen.Location = new System.Drawing.Point(390, 196);
+            this.txtTituloImagen.MaxLength = 100;
             this.txtTituloImagen.Name = "txtTituloImagen";
             this.txtTituloImagen.Size = new System.Drawing.Size(392, 20);
             this.txtTituloImagen.TabIndex = 6;

@@ -219,26 +219,38 @@ namespace Administracion.Categorias
 
                 if ((int)dgvRol[0, dgvRol.CurrentRow.Index].Value != 1)
                 {
-                    rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
-                    CurrentRow.Index].Value);
-                    DialogResult rpta =
-                        MessageBox.Show("Desea eliminar el registro", "Eliminar",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (rpta == System.Windows.Forms.DialogResult.Yes)
+
+                    if (bLRol.CantidadRolPorPersona((int)dgvRol[0, dgvRol.CurrentRow.Index].Value) <= 0)
                     {
-                        int n = bLRol.Eliminar(rol.IdRol);
-                        if (n > 0)
+
+                        rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
+                        CurrentRow.Index].Value);
+                        DialogResult rpta =
+                            MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (rpta == System.Windows.Forms.DialogResult.Yes)
                         {
-                            MessageBox.Show("Registro eliminado", "Aviso",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            lista = bLRol.Listar();
-                            CargarDatos();
+                            int n = bLRol.Eliminar(rol.IdRol);
+                            if (n > 0)
+                            {
+                                MessageBox.Show("Registro eliminado", "Aviso",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                lista = bLRol.Listar();
+                                CargarDatos();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al eliminar", "Aviso",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Error al eliminar", "Aviso",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                    }
+                    else
+                    {
+                            MessageBox.Show("Es rol esta atado a clientes, no se puede eliminar, " +
+                                "Debe eliminar primero los clientes atados al rol", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                 }
                 else
