@@ -44,5 +44,24 @@ namespace Administracion.Categorias
             frmTipoDocumento.Show();
             this.Hide();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btnProductos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

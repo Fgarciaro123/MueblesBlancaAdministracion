@@ -643,6 +643,7 @@
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.dgvDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProductos";
