@@ -53,8 +53,9 @@ namespace Administracion.Categorias
                     txtDireccion.Text = lista[i].DireccionPersona.ToString();
                     txtEmail.Text = lista[i].EmailPersona.ToString();
                     txtCelular.Text = lista[i].CelularPersona.ToString();
-                    txtFechaPago.Text = lista[i].NroIdPersona.ToString();
-                    txtFechaCompra.Text = lista[i].NroIdPersona.ToString();
+                    txtFechaPago.Text = _FechaPago;
+                    txtFechaCompra.Text = lista[i].FechaCompraOrden.ToString();
+                    txtTotalOrden.Text = lista[i].TotalOrdenCompra.ToString();
 
                     dgvDetalleOrden.Rows.Add(
 
@@ -75,5 +76,6 @@ namespace Administracion.Categorias
             FrmOrdenCompra frmOrdenCompra = new FrmOrdenCompra();
             frmOrdenCompra.Show();
         }
+
     }
 }

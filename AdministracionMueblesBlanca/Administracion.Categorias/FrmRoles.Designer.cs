@@ -64,9 +64,11 @@
             this.gbDatos.Controls.Add(this.lblEstadoRol);
             this.gbDatos.Controls.Add(this.lblNombreRol);
             this.gbDatos.Controls.Add(this.lblIdRol);
-            this.gbDatos.Location = new System.Drawing.Point(72, 61);
+            this.gbDatos.Location = new System.Drawing.Point(96, 75);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(476, 147);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Size = new System.Drawing.Size(635, 181);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             // 
@@ -74,34 +76,38 @@
             // 
             this.cmbEstadoRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoRol.FormattingEnabled = true;
-            this.cmbEstadoRol.Location = new System.Drawing.Point(178, 103);
+            this.cmbEstadoRol.Location = new System.Drawing.Point(237, 127);
+            this.cmbEstadoRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstadoRol.Name = "cmbEstadoRol";
-            this.cmbEstadoRol.Size = new System.Drawing.Size(188, 21);
+            this.cmbEstadoRol.Size = new System.Drawing.Size(249, 24);
             this.cmbEstadoRol.TabIndex = 5;
             // 
             // txtNombreRol
             // 
-            this.txtNombreRol.Location = new System.Drawing.Point(178, 72);
+            this.txtNombreRol.Location = new System.Drawing.Point(237, 89);
+            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(247, 20);
+            this.txtNombreRol.Size = new System.Drawing.Size(328, 22);
             this.txtNombreRol.TabIndex = 4;
             // 
             // txtIdRol
             // 
-            this.txtIdRol.Location = new System.Drawing.Point(178, 36);
+            this.txtIdRol.Location = new System.Drawing.Point(237, 44);
+            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdRol.Name = "txtIdRol";
             this.txtIdRol.ReadOnly = true;
-            this.txtIdRol.Size = new System.Drawing.Size(188, 20);
+            this.txtIdRol.Size = new System.Drawing.Size(249, 22);
             this.txtIdRol.TabIndex = 3;
             // 
             // lblEstadoRol
             // 
             this.lblEstadoRol.AutoSize = true;
             this.lblEstadoRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoRol.Location = new System.Drawing.Point(40, 101);
+            this.lblEstadoRol.Location = new System.Drawing.Point(53, 124);
+            this.lblEstadoRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstadoRol.Name = "lblEstadoRol";
-            this.lblEstadoRol.Size = new System.Drawing.Size(60, 20);
+            this.lblEstadoRol.Size = new System.Drawing.Size(73, 25);
             this.lblEstadoRol.TabIndex = 2;
             this.lblEstadoRol.Text = "Estado";
             // 
@@ -109,9 +115,10 @@
             // 
             this.lblNombreRol.AutoSize = true;
             this.lblNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreRol.Location = new System.Drawing.Point(40, 70);
+            this.lblNombreRol.Location = new System.Drawing.Point(53, 86);
+            this.lblNombreRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreRol.Name = "lblNombreRol";
-            this.lblNombreRol.Size = new System.Drawing.Size(65, 20);
+            this.lblNombreRol.Size = new System.Drawing.Size(81, 25);
             this.lblNombreRol.TabIndex = 1;
             this.lblNombreRol.Text = "Nombre";
             // 
@@ -119,9 +126,10 @@
             // 
             this.lblIdRol.AutoSize = true;
             this.lblIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdRol.Location = new System.Drawing.Point(40, 36);
+            this.lblIdRol.Location = new System.Drawing.Point(53, 44);
+            this.lblIdRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdRol.Name = "lblIdRol";
-            this.lblIdRol.Size = new System.Drawing.Size(59, 20);
+            this.lblIdRol.Size = new System.Drawing.Size(75, 25);
             this.lblIdRol.TabIndex = 0;
             this.lblIdRol.Text = "Código";
             // 
@@ -132,17 +140,20 @@
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnGrabar);
             this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Location = new System.Drawing.Point(586, 41);
+            this.groupBox2.Location = new System.Drawing.Point(781, 50);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(135, 179);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(180, 220);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(32, 138);
+            this.btnSalir.Location = new System.Drawing.Point(43, 170);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -150,9 +161,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(32, 108);
+            this.btnEliminar.Location = new System.Drawing.Point(43, 133);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -160,9 +172,10 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(32, 78);
+            this.btnEditar.Location = new System.Drawing.Point(43, 96);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -170,9 +183,10 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(32, 49);
+            this.btnGrabar.Location = new System.Drawing.Point(43, 60);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(100, 28);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -180,9 +194,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(32, 20);
+            this.btnNuevo.Location = new System.Drawing.Point(43, 25);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -193,9 +208,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(303, 22);
+            this.label1.Location = new System.Drawing.Point(404, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 25);
+            this.label1.Size = new System.Drawing.Size(205, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "Módulo de Roles";
             // 
@@ -213,10 +229,11 @@
             this.dgvUsuarioCreacionRol,
             this.dgvFechaModificacionRol,
             this.dgvUsuarioModificacionRol});
-            this.dgvRol.Location = new System.Drawing.Point(39, 242);
+            this.dgvRol.Location = new System.Drawing.Point(52, 298);
+            this.dgvRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRol.Name = "dgvRol";
             this.dgvRol.ReadOnly = true;
-            this.dgvRol.Size = new System.Drawing.Size(761, 176);
+            this.dgvRol.Size = new System.Drawing.Size(1015, 217);
             this.dgvRol.TabIndex = 3;
             // 
             // dgvIdRol
@@ -264,15 +281,17 @@
             // 
             // FrmRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(821, 450);
+            this.ClientSize = new System.Drawing.Size(1095, 554);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvRol);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRoles";

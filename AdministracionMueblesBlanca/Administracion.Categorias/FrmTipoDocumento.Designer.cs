@@ -61,9 +61,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label2.ForeColor = System.Drawing.Color.Coral;
-            this.label2.Location = new System.Drawing.Point(238, 27);
+            this.label2.Location = new System.Drawing.Point(317, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 25);
+            this.label2.Size = new System.Drawing.Size(375, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Módulo de Tipos de Documento";
             // 
@@ -75,9 +76,11 @@
             this.gbDatos.Controls.Add(this.lblEstadoTipoDocumento);
             this.gbDatos.Controls.Add(this.lblDescripcionTipoDocumento);
             this.gbDatos.Controls.Add(this.lblIdTipoDocumento);
-            this.gbDatos.Location = new System.Drawing.Point(55, 77);
+            this.gbDatos.Location = new System.Drawing.Point(73, 95);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(500, 157);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Size = new System.Drawing.Size(667, 193);
             this.gbDatos.TabIndex = 5;
             this.gbDatos.TabStop = false;
             // 
@@ -85,34 +88,38 @@
             // 
             this.cmbEstadoTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoTipoDocumento.FormattingEnabled = true;
-            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(179, 109);
+            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(239, 134);
+            this.cmbEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstadoTipoDocumento.Name = "cmbEstadoTipoDocumento";
-            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(183, 21);
+            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(243, 24);
             this.cmbEstadoTipoDocumento.TabIndex = 5;
             // 
             // txtDescripcionTipoDocumento
             // 
-            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(179, 68);
+            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(239, 84);
+            this.txtDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcionTipoDocumento.MaxLength = 200;
             this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
-            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(251, 20);
+            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(333, 22);
             this.txtDescripcionTipoDocumento.TabIndex = 4;
             // 
             // txtIdTipoDocumento
             // 
-            this.txtIdTipoDocumento.Location = new System.Drawing.Point(179, 28);
+            this.txtIdTipoDocumento.Location = new System.Drawing.Point(239, 34);
+            this.txtIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdTipoDocumento.Name = "txtIdTipoDocumento";
             this.txtIdTipoDocumento.ReadOnly = true;
-            this.txtIdTipoDocumento.Size = new System.Drawing.Size(183, 20);
+            this.txtIdTipoDocumento.Size = new System.Drawing.Size(243, 22);
             this.txtIdTipoDocumento.TabIndex = 3;
             // 
             // lblEstadoTipoDocumento
             // 
             this.lblEstadoTipoDocumento.AutoSize = true;
             this.lblEstadoTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(37, 109);
+            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(49, 134);
+            this.lblEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstadoTipoDocumento.Name = "lblEstadoTipoDocumento";
-            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(60, 20);
+            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(73, 25);
             this.lblEstadoTipoDocumento.TabIndex = 2;
             this.lblEstadoTipoDocumento.Text = "Estado";
             // 
@@ -120,9 +127,10 @@
             // 
             this.lblDescripcionTipoDocumento.AutoSize = true;
             this.lblDescripcionTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(37, 69);
+            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(49, 85);
+            this.lblDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcionTipoDocumento.Name = "lblDescripcionTipoDocumento";
-            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(92, 20);
+            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(114, 25);
             this.lblDescripcionTipoDocumento.TabIndex = 1;
             this.lblDescripcionTipoDocumento.Text = "Descripción";
             // 
@@ -130,9 +138,10 @@
             // 
             this.lblIdTipoDocumento.AutoSize = true;
             this.lblIdTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdTipoDocumento.Location = new System.Drawing.Point(37, 29);
+            this.lblIdTipoDocumento.Location = new System.Drawing.Point(49, 36);
+            this.lblIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdTipoDocumento.Name = "lblIdTipoDocumento";
-            this.lblIdTipoDocumento.Size = new System.Drawing.Size(59, 20);
+            this.lblIdTipoDocumento.Size = new System.Drawing.Size(75, 25);
             this.lblIdTipoDocumento.TabIndex = 0;
             this.lblIdTipoDocumento.Text = "Código";
             // 
@@ -143,17 +152,20 @@
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
-            this.gbControl.Location = new System.Drawing.Point(598, 67);
+            this.gbControl.Location = new System.Drawing.Point(797, 82);
+            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Size = new System.Drawing.Size(141, 180);
+            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Size = new System.Drawing.Size(188, 222);
             this.gbControl.TabIndex = 6;
             this.gbControl.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(36, 139);
+            this.btnSalir.Location = new System.Drawing.Point(48, 171);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -161,9 +173,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(36, 109);
+            this.btnEliminar.Location = new System.Drawing.Point(48, 134);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -171,9 +184,10 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(36, 79);
+            this.btnEditar.Location = new System.Drawing.Point(48, 97);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -181,9 +195,10 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(36, 49);
+            this.btnGrabar.Location = new System.Drawing.Point(48, 60);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(100, 28);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -191,9 +206,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(36, 19);
+            this.btnNuevo.Location = new System.Drawing.Point(48, 23);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -213,10 +229,11 @@
             this.dgvUsuarioCreacionTipoDocumento,
             this.dgvFechaModificacionTipoDocumento,
             this.dgvUsuarioModificacionTipoDocumento});
-            this.dgvTipoDocumento.Location = new System.Drawing.Point(30, 252);
+            this.dgvTipoDocumento.Location = new System.Drawing.Point(40, 310);
+            this.dgvTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTipoDocumento.Name = "dgvTipoDocumento";
             this.dgvTipoDocumento.ReadOnly = true;
-            this.dgvTipoDocumento.Size = new System.Drawing.Size(748, 186);
+            this.dgvTipoDocumento.Size = new System.Drawing.Size(997, 229);
             this.dgvTipoDocumento.TabIndex = 7;
             // 
             // dgvIdTipoDocumento
@@ -263,15 +280,17 @@
             // 
             // FrmTipoDocumento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvTipoDocumento);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmTipoDocumento";

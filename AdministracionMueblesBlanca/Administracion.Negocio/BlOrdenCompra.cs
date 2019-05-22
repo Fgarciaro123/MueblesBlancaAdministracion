@@ -22,5 +22,11 @@ namespace Administracion.Negocio
             return dAOOrdenCompra.TraerOrdenCompraPorId(Id);
         }
 
+        public int ConfirmarPago(int IdOrden)
+        {
+            DAOOrdenCompra dAOOrdenCompra = new DAOOrdenCompra();
+            return dAOOrdenCompra.ConfirmarPago(IdOrden);
+        }
+
     }
 }

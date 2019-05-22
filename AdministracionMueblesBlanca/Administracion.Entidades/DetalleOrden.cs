@@ -12,7 +12,7 @@ namespace Administracion.Entidades
         long _totalOrdenCompra;
         DateTime _fechaCompraOrden;
         DateTime _fechaPagoOrden;
-        int _nroIdPersona;
+        long _nroIdPersona;
         string _nombrePersona;
         string _direccionPersona;
         long _celularPersona;
@@ -31,7 +31,21 @@ namespace Administracion.Entidades
         }
 
 
-        public DetalleOrden(int idOrdenCompra, long totalOrdenCompra, DateTime fechaCompraOrden,DateTime fechaPagoOrden, int nroIdPersona, string nombrePersona, string direccionPersona, long celularPersona, string emailPersona, int idDetalleCompra, decimal valorProducto, long subtotalDetalle, int cantidadDetalle, string pNombreProducto)
+        public DetalleOrden(
+            int idOrdenCompra,
+            long totalOrdenCompra,
+            DateTime fechaCompraOrden,
+            DateTime fechaPagoOrden, 
+            long nroIdPersona, 
+            string nombrePersona,
+            string direccionPersona, 
+            long celularPersona,
+            string emailPersona,
+            int idDetalleCompra, 
+            decimal valorProducto,
+            long subtotalDetalle, 
+            int cantidadDetalle,
+            string pNombreProducto)
         {
             this.IdOrdenCompra = idOrdenCompra;
             this.TotalOrdenCompra = totalOrdenCompra;
@@ -46,13 +60,13 @@ namespace Administracion.Entidades
             this.ValorProducto = valorProducto;
             this.SubtotalDetalle = subtotalDetalle;
             this.CantidadDetalle = cantidadDetalle;
-            this.NombrePersona = pNombreProducto;
+            this.NombreProducto = pNombreProducto;
         }
 
         public int IdOrdenCompra { get => _idOrdenCompra; set => _idOrdenCompra = value; }
         public long TotalOrdenCompra { get => _totalOrdenCompra; set => _totalOrdenCompra = value; }
         public DateTime FechaCompraOrden { get => _fechaCompraOrden; set => _fechaCompraOrden = value; }
-        public int NroIdPersona { get => _nroIdPersona; set => _nroIdPersona = value; }
+        public long NroIdPersona { get => _nroIdPersona; set => _nroIdPersona = value; }
         public string NombrePersona { get => _nombrePersona; set => _nombrePersona = value; }
         public string DireccionPersona { get => _direccionPersona; set => _direccionPersona = value; }
         public long CelularPersona { get => _celularPersona; set => _celularPersona = value; }

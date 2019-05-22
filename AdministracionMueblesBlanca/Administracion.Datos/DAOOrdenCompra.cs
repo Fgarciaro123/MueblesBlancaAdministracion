@@ -43,13 +43,13 @@ namespace Administracion.Datos
                 {
                     while (dr.Read())
                     {
-                        OrdenCompra c = new OrdenCompra((int)dr["IdOrdenCompra"],
-                            (DateTime)dr["FechaCompra"],
-                            (DateTime)dr["FechaPago"],
-                            (long)dr["TotalCompra"],
-                            (int)dr["NroIdentificacion"],
-                            (string)dr["NombrePersona"],
-                            (string)dr["NombreProducto"]);
+                        OrdenCompra c = new OrdenCompra(
+                            (int)dr["IdOrdenCompra"],
+                            (long)dr["TotalOrdenCompra"],
+                            (DateTime)dr["FechaCompraOrdenCompra"],
+                            (DateTime)dr["FechaPagoOrdenCompra"],
+                            (long)dr["NumeroIdentificacionPersona"],
+                            (string)dr["NombrePersona"]);
                         lista.Add(c);
                     }
                 }
@@ -70,20 +70,32 @@ namespace Administracion.Datos
                 if (dr != null && dr.HasRows)
                 {
                     dr.Read();
-                    OrdenCompra c = new OrdenCompra((int)dr["IdOrdenCompra"],
-                        (DateTime)dr["FechaCompra"],
-                        (DateTime)dr["FechaPago"],
-                        (long)dr["TotalCompra"],
-                        (int)dr["NroIdentificacion"],
-                        (string)dr["NombrePersona"],
-                        (string)dr["NombreProducto"]);
+                    OrdenCompra c = new OrdenCompra(
+                        (int)dr["IdOrdenCompra"],
+                        (long)dr["TotalOrdenCompra"],
+                        (DateTime)dr["FechaCompraOrdenCompra"],
+                        (DateTime)dr["FechaPagoOrdenCompra"],
+                        (long)dr["NumeroIdentificacionPersona"],
+                        (string)dr["NombrePersona"]);
                 }
             }
             return ordenCompra;
         }
 
+        public int ConfirmarPago(int idOrden)
+        {
+            int n = -1;
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ConfirmarPago", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdOrden", idOrden);
 
-
+                n = cmd.ExecuteNonQuery();
+            }
+            return n;
+        }
 
     }
 }

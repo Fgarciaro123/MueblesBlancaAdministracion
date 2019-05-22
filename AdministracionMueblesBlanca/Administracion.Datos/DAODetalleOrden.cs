@@ -47,17 +47,17 @@ namespace Administracion.Datos
                         DetalleOrden c = new DetalleOrden(
                                     (int)dr["idOrdenCompra"],
                                     (long)dr["totalOrdenCompra"],
-                                    (DateTime)dr["fechaCompraOrden"],
-                                    (DateTime)dr["fechaPagoOrden"],
-                                    (int)dr["nroIdPersona"],
-                                    (string)dr["nombrePersona"],
-                                    (string)dr["direccionPersona"],
-                                    (long)dr["celularPersona"],
-                                    (string)dr["emailPersona"],
-                                    (int)dr["idDetalleCompra"],
-                                    (decimal)dr["valorProducto"],                                    
-                                    (long)dr["subtotalDetalle"],
-                                    (int)dr["cantidadDetalle"],
+                                    (DateTime)dr["FechaCompraOrdenCompra"],
+                                    (DateTime)dr["FechaPagoOrdenCompra"],
+                                    (long)dr["NumeroIdentificacionPersona"],
+                                    (string)dr["NombrePersona"],
+                                    (string)dr["DireccionPersona"],
+                                    (long)dr["CelularPersona"],
+                                    (string)dr["EmailPersona"],
+                                    (int)dr["IdDetalleOrden"],
+                                    (decimal)dr["ValorUnitarioProducto"],                                    
+                                    (long)dr["Subtotal"],
+                                    (int)dr["CantidadDetalleOrden"],
                                     (string)dr["NombreProducto"]);
 
                         lista.Add(c);

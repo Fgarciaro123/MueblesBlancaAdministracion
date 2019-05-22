@@ -290,48 +290,6 @@ namespace Administracion.Categorias
             CargarDatos();
         }
 
-        //private void btBuscar_Click(object sender, EventArgs e)
-        //{
-        //    lista = null;
-        //    _nuevo = false;
-        //    if (dgvDatos.RowCount > 0)
-        //    {
-        //       if (lista == null)
-        //        {   
-        //            if (txtNombre.Text.Length > 0)
-        //                lista = blProducto.BuscarProducto("Referencia", txtNombre.Text);
-        //            if (txtAlto.Text.Length > 0)
-        //                lista = blProducto.BuscarProducto("Color", txtAlto.Text);
-        //            if (txtMaterial.Text.Length > 0)
-        //                lista = blProducto.BuscarProducto("Nombre", txtNombre.Text);
-        //            if (cbCategoria.SelectedIndex > 0)
-        //                lista = blProducto.BuscarProducto("Categoria", cbCategoria.SelectedValue.ToString());
-        //            if (cbEstado.SelectedIndex > 0)
-        //                lista = blProducto.BuscarProducto("Marca", cbEstado.SelectedValue.ToString());
-        //            if (cbModelo.SelectedIndex > 0)
-        //                lista = blProducto.BuscarProducto("Modelo", cbModelo.SelectedValue.ToString());
-        //        }
-
-        //        if (lista.Count > 0)
-        //        {
-        //            dgvDatos.Rows.Clear();
-        //            for (int i = 0; i < lista.Count; i++)
-        //            {
-        //                dgvDatos.Rows.Add(lista[i].IdProducto, lista[i].DescripcionProducto, lista[i].AnchoProducto,
-        //             lista[i].AltoProducto, lista[i].ColorProducto, lista[i].MaterialProducto, lista[i].GarantiaMesesProducto, lista[i].ValorUnitarioProducto
-        //             );
-        //            }
-        //        }
-
-        //        LimpiarControl(gbDatos);
-        //        dgvDatos.Enabled = true;
-        //        ActivarControlDatos(gbDatos, false);
-        //        ActivarButton(true);
-        //        //cargaCombos();
-
-        //    }
-        //}
-
         private void FrmProductos_Load(object sender, EventArgs e)
         {
             //Carga Combobox Estado 

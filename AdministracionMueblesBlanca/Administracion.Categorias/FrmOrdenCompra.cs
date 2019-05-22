@@ -52,7 +52,6 @@ namespace Administracion.Categorias
                         lista[i].IdCompra,
                         lista[i].NroIdentificacion,
                         lista[i].NombrePersona,
-                        lista[i].NombreProducto,
                         lista[i].TotalCompra,                  
                         lista[i].FechaCompra,
                         _FechaPago);
@@ -78,6 +77,42 @@ namespace Administracion.Categorias
             FrmDetalleOrden frmDetalleOrden = new FrmDetalleOrden((int)dgvOrdenCompra[0, dgvOrdenCompra.CurrentRow.Index].Value);
             frmDetalleOrden.Show();
             this.Hide();
+        }
+
+        private void btnConfirmarPago_Click(object sender, EventArgs e)
+        {
+            int n = blOrdenCompra.ConfirmarPago((int)dgvOrdenCompra[0, dgvOrdenCompra.CurrentRow.Index].Value);
+            if (n >= 0)
+            {
+                MessageBox.Show("Pago realizado exitosamente", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lista = null;
+                CargarDatos();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo realizar el pago", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+
+        private void dgvOrdenCompra_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvOrdenCompra.Rows)
+            {
+                if (row.Cells[5].Value.ToString() == "")
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                    row.DefaultCellStyle.ForeColor = Color.White;
+                }
+
+            }
         }
     }
 }

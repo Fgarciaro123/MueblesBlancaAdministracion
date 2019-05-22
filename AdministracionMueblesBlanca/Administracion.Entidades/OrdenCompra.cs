@@ -12,24 +12,22 @@ namespace Administracion.Entidades
         DateTime _fechaCompra;
         DateTime _fechaPago;        
         long _totalCompra;
-        int _nroIdentificacion;
+        long _nroIdentificacion;
         string _nombrePersona;
-        string _nombreProducto;
 
         public int IdCompra { get => _idCompra; set => _idCompra = value; }       
         public DateTime FechaCompra { get => _fechaCompra; set => _fechaCompra = value; }
         public long TotalCompra { get => _totalCompra; set => _totalCompra = value; }
         public DateTime FechaPago { get => _fechaPago; set => _fechaPago = value; }
-        public int NroIdentificacion { get => _nroIdentificacion; set => _nroIdentificacion = value; }
+        public long NroIdentificacion { get => _nroIdentificacion; set => _nroIdentificacion = value; }
         public string NombrePersona { get => _nombrePersona; set => _nombrePersona = value; }
-        public string NombreProducto { get => _nombreProducto; set => _nombreProducto = value; }
 
         public OrdenCompra()
         {
 
         }
 
-        public OrdenCompra(int pIdCompra,DateTime pFechaCompra, DateTime pFechaPago, long pTotalCompra, int pNroIdentificacion, string pNombrePersona, string pNombreProducto)
+        public OrdenCompra(int pIdCompra, long pTotalCompra, DateTime pFechaCompra, DateTime pFechaPago, long pNroIdentificacion, string pNombrePersona)
         {
             this.IdCompra = pIdCompra;
             this.FechaCompra = pFechaCompra;
@@ -37,7 +35,6 @@ namespace Administracion.Entidades
             this.TotalCompra = pTotalCompra;
             this.NroIdentificacion = pNroIdentificacion;
             this.NombrePersona = pNombrePersona;
-            this.NombreProducto = pNombreProducto;
         }
 
     }
