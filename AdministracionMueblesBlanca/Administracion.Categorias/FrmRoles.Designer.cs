@@ -51,9 +51,20 @@
             this.dgvUsuarioCreacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioModificacionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRol)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -64,11 +75,9 @@
             this.gbDatos.Controls.Add(this.lblEstadoRol);
             this.gbDatos.Controls.Add(this.lblNombreRol);
             this.gbDatos.Controls.Add(this.lblIdRol);
-            this.gbDatos.Location = new System.Drawing.Point(96, 75);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Location = new System.Drawing.Point(72, 61);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbDatos.Size = new System.Drawing.Size(635, 181);
+            this.gbDatos.Size = new System.Drawing.Size(476, 147);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             // 
@@ -76,38 +85,34 @@
             // 
             this.cmbEstadoRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoRol.FormattingEnabled = true;
-            this.cmbEstadoRol.Location = new System.Drawing.Point(237, 127);
-            this.cmbEstadoRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoRol.Location = new System.Drawing.Point(178, 103);
             this.cmbEstadoRol.Name = "cmbEstadoRol";
-            this.cmbEstadoRol.Size = new System.Drawing.Size(249, 24);
+            this.cmbEstadoRol.Size = new System.Drawing.Size(188, 21);
             this.cmbEstadoRol.TabIndex = 5;
             // 
             // txtNombreRol
             // 
-            this.txtNombreRol.Location = new System.Drawing.Point(237, 89);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreRol.Location = new System.Drawing.Point(178, 72);
             this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(328, 22);
+            this.txtNombreRol.Size = new System.Drawing.Size(247, 20);
             this.txtNombreRol.TabIndex = 4;
             // 
             // txtIdRol
             // 
-            this.txtIdRol.Location = new System.Drawing.Point(237, 44);
-            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdRol.Location = new System.Drawing.Point(178, 36);
             this.txtIdRol.Name = "txtIdRol";
             this.txtIdRol.ReadOnly = true;
-            this.txtIdRol.Size = new System.Drawing.Size(249, 22);
+            this.txtIdRol.Size = new System.Drawing.Size(188, 20);
             this.txtIdRol.TabIndex = 3;
             // 
             // lblEstadoRol
             // 
             this.lblEstadoRol.AutoSize = true;
             this.lblEstadoRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoRol.Location = new System.Drawing.Point(53, 124);
-            this.lblEstadoRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoRol.Location = new System.Drawing.Point(40, 101);
             this.lblEstadoRol.Name = "lblEstadoRol";
-            this.lblEstadoRol.Size = new System.Drawing.Size(73, 25);
+            this.lblEstadoRol.Size = new System.Drawing.Size(60, 20);
             this.lblEstadoRol.TabIndex = 2;
             this.lblEstadoRol.Text = "Estado";
             // 
@@ -115,10 +120,9 @@
             // 
             this.lblNombreRol.AutoSize = true;
             this.lblNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreRol.Location = new System.Drawing.Point(53, 86);
-            this.lblNombreRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreRol.Location = new System.Drawing.Point(40, 70);
             this.lblNombreRol.Name = "lblNombreRol";
-            this.lblNombreRol.Size = new System.Drawing.Size(81, 25);
+            this.lblNombreRol.Size = new System.Drawing.Size(65, 20);
             this.lblNombreRol.TabIndex = 1;
             this.lblNombreRol.Text = "Nombre";
             // 
@@ -126,10 +130,9 @@
             // 
             this.lblIdRol.AutoSize = true;
             this.lblIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdRol.Location = new System.Drawing.Point(53, 44);
-            this.lblIdRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdRol.Location = new System.Drawing.Point(40, 36);
             this.lblIdRol.Name = "lblIdRol";
-            this.lblIdRol.Size = new System.Drawing.Size(75, 25);
+            this.lblIdRol.Size = new System.Drawing.Size(59, 20);
             this.lblIdRol.TabIndex = 0;
             this.lblIdRol.Text = "Código";
             // 
@@ -140,20 +143,17 @@
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnGrabar);
             this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Location = new System.Drawing.Point(781, 50);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(586, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(180, 220);
+            this.groupBox2.Size = new System.Drawing.Size(135, 179);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(43, 170);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(32, 138);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -161,10 +161,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(43, 133);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(32, 108);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -172,10 +171,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(43, 96);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(32, 78);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 28);
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -183,10 +181,9 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(43, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Location = new System.Drawing.Point(32, 49);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(100, 28);
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -194,10 +191,9 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(43, 25);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Location = new System.Drawing.Point(32, 20);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -208,10 +204,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(404, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(305, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 30);
+            this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Módulo de Roles";
             // 
@@ -229,11 +224,10 @@
             this.dgvUsuarioCreacionRol,
             this.dgvFechaModificacionRol,
             this.dgvUsuarioModificacionRol});
-            this.dgvRol.Location = new System.Drawing.Point(52, 298);
-            this.dgvRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRol.Location = new System.Drawing.Point(39, 242);
             this.dgvRol.Name = "dgvRol";
             this.dgvRol.ReadOnly = true;
-            this.dgvRol.Size = new System.Drawing.Size(1015, 217);
+            this.dgvRol.Size = new System.Drawing.Size(761, 176);
             this.dgvRol.TabIndex = 3;
             // 
             // dgvIdRol
@@ -279,19 +273,100 @@
             this.dgvUsuarioModificacionRol.Name = "dgvUsuarioModificacionRol";
             this.dgvUsuarioModificacionRol.ReadOnly = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem,
+            this.administracionToolStripMenuItem,
+            this.cambioDeClaveToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(821, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.cambiarClaveToolStripMenuItem.Text = "Inicio";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // administracionToolStripMenuItem
+            // 
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.tiposDeDocumentoToolStripMenuItem,
+            this.administracionOrdenesDeCompraToolStripMenuItem});
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentoToolStripMenuItem
+            // 
+            this.tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
+            this.tiposDeDocumentoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
+            this.tiposDeDocumentoToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocumentoToolStripMenuItem_Click);
+            // 
+            // administracionOrdenesDeCompraToolStripMenuItem
+            // 
+            this.administracionOrdenesDeCompraToolStripMenuItem.Name = "administracionOrdenesDeCompraToolStripMenuItem";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.administracionOrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.administracionOrdenesDeCompraToolStripMenuItem_Click);
+            // 
+            // cambioDeClaveToolStripMenuItem
+            // 
+            this.cambioDeClaveToolStripMenuItem.Name = "cambioDeClaveToolStripMenuItem";
+            this.cambioDeClaveToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.cambioDeClaveToolStripMenuItem.Text = "Cambio de Clave";
+            this.cambioDeClaveToolStripMenuItem.Click += new System.EventHandler(this.cambioDeClaveToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // FrmRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1095, 554);
+            this.ClientSize = new System.Drawing.Size(821, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvRol);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRoles";
@@ -301,6 +376,8 @@
             this.gbDatos.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRol)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +407,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioCreacionRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaModificacionRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioModificacionRol;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionOrdenesDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

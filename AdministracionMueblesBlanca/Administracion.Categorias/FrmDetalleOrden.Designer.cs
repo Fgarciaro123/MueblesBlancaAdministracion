@@ -55,7 +55,18 @@
             this.txtFechaCompra = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrden)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -63,10 +74,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(307, 26);
+            this.label1.Location = new System.Drawing.Point(311, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 30);
+            this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Detalle de Orden";
             // 
@@ -131,7 +142,7 @@
             this.label2.Location = new System.Drawing.Point(444, 486);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 24);
+            this.label2.Size = new System.Drawing.Size(97, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Total Orden";
             // 
@@ -141,7 +152,7 @@
             this.txtTotalOrden.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalOrden.Name = "txtTotalOrden";
             this.txtTotalOrden.ReadOnly = true;
-            this.txtTotalOrden.Size = new System.Drawing.Size(221, 26);
+            this.txtTotalOrden.Size = new System.Drawing.Size(221, 22);
             this.txtTotalOrden.TabIndex = 7;
             // 
             // label3
@@ -151,7 +162,7 @@
             this.label3.Location = new System.Drawing.Point(36, 84);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.Size = new System.Drawing.Size(130, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Numero de Orden";
             // 
@@ -162,7 +173,7 @@
             this.label4.Location = new System.Drawing.Point(36, 113);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 20);
+            this.label4.Size = new System.Drawing.Size(180, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Número de Identificacíon";
             // 
@@ -173,7 +184,7 @@
             this.label5.Location = new System.Drawing.Point(36, 144);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 20);
+            this.label5.Size = new System.Drawing.Size(141, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Nombre del Cliente";
             // 
@@ -184,7 +195,7 @@
             this.label6.Location = new System.Drawing.Point(36, 173);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 20);
+            this.label6.Size = new System.Drawing.Size(126, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Direccion Cliente";
             // 
@@ -195,7 +206,7 @@
             this.label7.Location = new System.Drawing.Point(419, 84);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 20);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "Email Cliente";
             // 
@@ -206,7 +217,7 @@
             this.label8.Location = new System.Drawing.Point(418, 113);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 20);
+            this.label8.Size = new System.Drawing.Size(109, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Celular Cliente";
             // 
@@ -217,7 +228,7 @@
             this.label9.Location = new System.Drawing.Point(419, 146);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 20);
+            this.label9.Size = new System.Drawing.Size(131, 16);
             this.label9.TabIndex = 14;
             this.label9.Text = "Fecha de Compra";
             // 
@@ -228,7 +239,7 @@
             this.label10.Location = new System.Drawing.Point(419, 175);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 20);
+            this.label10.Size = new System.Drawing.Size(114, 16);
             this.label10.TabIndex = 15;
             this.label10.Text = "Fecha de Pago";
             // 
@@ -237,7 +248,7 @@
             this.txtNroOrden.Location = new System.Drawing.Point(257, 84);
             this.txtNroOrden.Name = "txtNroOrden";
             this.txtNroOrden.ReadOnly = true;
-            this.txtNroOrden.Size = new System.Drawing.Size(152, 26);
+            this.txtNroOrden.Size = new System.Drawing.Size(152, 22);
             this.txtNroOrden.TabIndex = 16;
             // 
             // txtNroId
@@ -245,7 +256,7 @@
             this.txtNroId.Location = new System.Drawing.Point(257, 113);
             this.txtNroId.Name = "txtNroId";
             this.txtNroId.ReadOnly = true;
-            this.txtNroId.Size = new System.Drawing.Size(152, 26);
+            this.txtNroId.Size = new System.Drawing.Size(152, 22);
             this.txtNroId.TabIndex = 17;
             // 
             // txtEmail
@@ -253,7 +264,7 @@
             this.txtEmail.Location = new System.Drawing.Point(578, 81);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(180, 26);
+            this.txtEmail.Size = new System.Drawing.Size(180, 22);
             this.txtEmail.TabIndex = 18;
             // 
             // txtDireccion
@@ -261,7 +272,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(257, 169);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ReadOnly = true;
-            this.txtDireccion.Size = new System.Drawing.Size(152, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(152, 22);
             this.txtDireccion.TabIndex = 19;
             // 
             // txtNombrePersona
@@ -269,7 +280,7 @@
             this.txtNombrePersona.Location = new System.Drawing.Point(257, 141);
             this.txtNombrePersona.Name = "txtNombrePersona";
             this.txtNombrePersona.ReadOnly = true;
-            this.txtNombrePersona.Size = new System.Drawing.Size(152, 26);
+            this.txtNombrePersona.Size = new System.Drawing.Size(152, 22);
             this.txtNombrePersona.TabIndex = 20;
             // 
             // txtFechaPago
@@ -277,7 +288,7 @@
             this.txtFechaPago.Location = new System.Drawing.Point(578, 173);
             this.txtFechaPago.Name = "txtFechaPago";
             this.txtFechaPago.ReadOnly = true;
-            this.txtFechaPago.Size = new System.Drawing.Size(180, 26);
+            this.txtFechaPago.Size = new System.Drawing.Size(180, 22);
             this.txtFechaPago.TabIndex = 21;
             // 
             // txtFechaCompra
@@ -285,7 +296,7 @@
             this.txtFechaCompra.Location = new System.Drawing.Point(578, 144);
             this.txtFechaCompra.Name = "txtFechaCompra";
             this.txtFechaCompra.ReadOnly = true;
-            this.txtFechaCompra.Size = new System.Drawing.Size(180, 26);
+            this.txtFechaCompra.Size = new System.Drawing.Size(180, 22);
             this.txtFechaCompra.TabIndex = 22;
             // 
             // txtCelular
@@ -293,7 +304,7 @@
             this.txtCelular.Location = new System.Drawing.Point(578, 113);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.ReadOnly = true;
-            this.txtCelular.Size = new System.Drawing.Size(180, 26);
+            this.txtCelular.Size = new System.Drawing.Size(180, 22);
             this.txtCelular.TabIndex = 23;
             // 
             // btnSalir
@@ -307,13 +318,95 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem,
+            this.administracionToolStripMenuItem,
+            this.cambioDeClaveToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(801, 24);
+            this.menuStrip1.TabIndex = 25;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.cambiarClaveToolStripMenuItem.Text = "Inicio";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // administracionToolStripMenuItem
+            // 
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.tiposDeDocumentoToolStripMenuItem,
+            this.administracionOrdenesDeCompraToolStripMenuItem});
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentoToolStripMenuItem
+            // 
+            this.tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
+            this.tiposDeDocumentoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
+            this.tiposDeDocumentoToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocumentoToolStripMenuItem_Click);
+            // 
+            // administracionOrdenesDeCompraToolStripMenuItem
+            // 
+            this.administracionOrdenesDeCompraToolStripMenuItem.Name = "administracionOrdenesDeCompraToolStripMenuItem";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.administracionOrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.administracionOrdenesDeCompraToolStripMenuItem_Click);
+            // 
+            // cambioDeClaveToolStripMenuItem
+            // 
+            this.cambioDeClaveToolStripMenuItem.Name = "cambioDeClaveToolStripMenuItem";
+            this.cambioDeClaveToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.cambioDeClaveToolStripMenuItem.Text = "Cambio de Clave";
+            this.cambioDeClaveToolStripMenuItem.Click += new System.EventHandler(this.cambioDeClaveToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // FrmDetalleOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(801, 524);
             this.ControlBox = false;
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtFechaCompra);
@@ -343,6 +436,8 @@
             this.Name = "FrmDetalleOrden";
             this.Text = "Detalle de orden";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrden)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +471,15 @@
         private System.Windows.Forms.TextBox txtFechaCompra;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionOrdenesDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

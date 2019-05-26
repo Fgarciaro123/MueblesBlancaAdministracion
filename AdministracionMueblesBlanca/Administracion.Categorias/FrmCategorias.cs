@@ -253,5 +253,63 @@ namespace Administracion.Categorias
             frmInicio.Show();
             this.Hide();
         }
+
+        private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBienvenida frmBienvenida = new FrmBienvenida();
+            frmBienvenida.Show();
+            this.Close();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos();
+            frmProductos.Show();
+            this.Close();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.Show();
+            this.Close();
+        }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRoles frmRoles = new FrmRoles();
+            frmRoles.Show();
+            this.Close();
+        }
+
+        private void tiposDeDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoDocumento frmTipoDocumento = new FrmTipoDocumento();
+            frmTipoDocumento.Show();
+            this.Close();
+        }
+
+        private void administracionOrdenesDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOrdenCompra frmOrdenCompra = new FrmOrdenCompra();
+            frmOrdenCompra.Show();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void cambioDeClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FrmCambioClave frmCambioClave = new FrmCambioClave();
+            frmCambioClave.Show();
+            this.Close();
+
+        }
     }
 }

@@ -53,10 +53,21 @@
             this.dgvUsuarioModificacionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProviderCategorias = new System.Windows.Forms.ErrorProvider(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCategorias)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -67,11 +78,9 @@
             this.gbDatos.Controls.Add(this.lblEstadoCategoria);
             this.gbDatos.Controls.Add(this.lblNombreCategoria);
             this.gbDatos.Controls.Add(this.lblIdCategoria);
-            this.gbDatos.Location = new System.Drawing.Point(111, 46);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Location = new System.Drawing.Point(109, 58);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbDatos.Size = new System.Drawing.Size(716, 191);
+            this.gbDatos.Size = new System.Drawing.Size(537, 143);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             // 
@@ -79,38 +88,34 @@
             // 
             this.cmbEstadoCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCategoria.FormattingEnabled = true;
-            this.cmbEstadoCategoria.Location = new System.Drawing.Point(237, 112);
-            this.cmbEstadoCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoCategoria.Location = new System.Drawing.Point(178, 91);
             this.cmbEstadoCategoria.Name = "cmbEstadoCategoria";
-            this.cmbEstadoCategoria.Size = new System.Drawing.Size(187, 24);
+            this.cmbEstadoCategoria.Size = new System.Drawing.Size(141, 21);
             this.cmbEstadoCategoria.TabIndex = 5;
             // 
             // txtNombreCategoria
             // 
-            this.txtNombreCategoria.Location = new System.Drawing.Point(239, 79);
-            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCategoria.Location = new System.Drawing.Point(179, 64);
             this.txtNombreCategoria.MaxLength = 100;
             this.txtNombreCategoria.Name = "txtNombreCategoria";
-            this.txtNombreCategoria.Size = new System.Drawing.Size(351, 22);
+            this.txtNombreCategoria.Size = new System.Drawing.Size(264, 20);
             this.txtNombreCategoria.TabIndex = 4;
             // 
             // txtIdCategoria
             // 
-            this.txtIdCategoria.Location = new System.Drawing.Point(237, 39);
-            this.txtIdCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdCategoria.Location = new System.Drawing.Point(178, 32);
             this.txtIdCategoria.Name = "txtIdCategoria";
             this.txtIdCategoria.ReadOnly = true;
-            this.txtIdCategoria.Size = new System.Drawing.Size(187, 22);
+            this.txtIdCategoria.Size = new System.Drawing.Size(141, 20);
             this.txtIdCategoria.TabIndex = 3;
             // 
             // lblEstadoCategoria
             // 
             this.lblEstadoCategoria.AutoSize = true;
             this.lblEstadoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCategoria.Location = new System.Drawing.Point(51, 114);
-            this.lblEstadoCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoCategoria.Location = new System.Drawing.Point(38, 93);
             this.lblEstadoCategoria.Name = "lblEstadoCategoria";
-            this.lblEstadoCategoria.Size = new System.Drawing.Size(73, 25);
+            this.lblEstadoCategoria.Size = new System.Drawing.Size(60, 20);
             this.lblEstadoCategoria.TabIndex = 2;
             this.lblEstadoCategoria.Text = "Estado";
             // 
@@ -118,10 +123,9 @@
             // 
             this.lblNombreCategoria.AutoSize = true;
             this.lblNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblNombreCategoria.Location = new System.Drawing.Point(51, 76);
-            this.lblNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreCategoria.Location = new System.Drawing.Point(38, 62);
             this.lblNombreCategoria.Name = "lblNombreCategoria";
-            this.lblNombreCategoria.Size = new System.Drawing.Size(87, 25);
+            this.lblNombreCategoria.Size = new System.Drawing.Size(68, 20);
             this.lblNombreCategoria.TabIndex = 1;
             this.lblNombreCategoria.Text = "Nombre";
             // 
@@ -129,10 +133,9 @@
             // 
             this.lblIdCategoria.AutoSize = true;
             this.lblIdCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblIdCategoria.Location = new System.Drawing.Point(51, 37);
-            this.lblIdCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdCategoria.Location = new System.Drawing.Point(38, 30);
             this.lblIdCategoria.Name = "lblIdCategoria";
-            this.lblIdCategoria.Size = new System.Drawing.Size(80, 25);
+            this.lblIdCategoria.Size = new System.Drawing.Size(61, 20);
             this.lblIdCategoria.TabIndex = 0;
             this.lblIdCategoria.Text = "Código";
             // 
@@ -143,20 +146,17 @@
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
-            this.gbControl.Location = new System.Drawing.Point(883, 37);
-            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Location = new System.Drawing.Point(662, 30);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbControl.Size = new System.Drawing.Size(141, 218);
+            this.gbControl.Size = new System.Drawing.Size(106, 177);
             this.gbControl.TabIndex = 1;
             this.gbControl.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(21, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(16, 139);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -164,10 +164,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(21, 134);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(16, 109);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -175,10 +174,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(21, 97);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(16, 79);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 28);
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -186,10 +184,9 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(21, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Location = new System.Drawing.Point(16, 49);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(100, 28);
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -197,10 +194,9 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(21, 23);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Location = new System.Drawing.Point(16, 19);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -220,11 +216,10 @@
             this.dgvUsuarioCreacionCategoria,
             this.dgvFechaModificacionCategoria,
             this.dgvUsuarioModificacionCategoria});
-            this.dgvCategoria.Location = new System.Drawing.Point(28, 262);
-            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategoria.Location = new System.Drawing.Point(21, 213);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
-            this.dgvCategoria.Size = new System.Drawing.Size(1059, 277);
+            this.dgvCategoria.Size = new System.Drawing.Size(794, 225);
             this.dgvCategoria.TabIndex = 2;
             // 
             // dgvIdCategoria
@@ -276,10 +271,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(387, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(289, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 30);
+            this.label1.Size = new System.Drawing.Size(223, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Módulo de Categorias";
             // 
@@ -287,19 +281,100 @@
             // 
             this.errorProviderCategorias.ContainerControl = this;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem,
+            this.administracionToolStripMenuItem,
+            this.cambioDeClaveToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(827, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.cambiarClaveToolStripMenuItem.Text = "Inicio";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // administracionToolStripMenuItem
+            // 
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.tiposDeDocumentoToolStripMenuItem,
+            this.administracionOrdenesDeCompraToolStripMenuItem});
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentoToolStripMenuItem
+            // 
+            this.tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
+            this.tiposDeDocumentoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
+            this.tiposDeDocumentoToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocumentoToolStripMenuItem_Click);
+            // 
+            // administracionOrdenesDeCompraToolStripMenuItem
+            // 
+            this.administracionOrdenesDeCompraToolStripMenuItem.Name = "administracionOrdenesDeCompraToolStripMenuItem";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.administracionOrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.administracionOrdenesDeCompraToolStripMenuItem_Click);
+            // 
+            // cambioDeClaveToolStripMenuItem
+            // 
+            this.cambioDeClaveToolStripMenuItem.Name = "cambioDeClaveToolStripMenuItem";
+            this.cambioDeClaveToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.cambioDeClaveToolStripMenuItem.Text = "Cambio de Clave";
+            this.cambioDeClaveToolStripMenuItem.Click += new System.EventHandler(this.cambioDeClaveToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // FrmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1103, 553);
+            this.ClientSize = new System.Drawing.Size(827, 449);
             this.ControlBox = false;
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvCategoria);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCategorias";
@@ -310,6 +385,8 @@
             this.gbControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCategorias)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,6 +417,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioCreacionCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaModificacionCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioModificacionCategoria;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionOrdenesDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 

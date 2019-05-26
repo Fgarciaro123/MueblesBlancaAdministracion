@@ -51,9 +51,20 @@
             this.dgvUsuarioCreacionTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaModificacionTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUsuarioModificacionTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDocumento)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -61,10 +72,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label2.ForeColor = System.Drawing.Color.Coral;
-            this.label2.Location = new System.Drawing.Point(317, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(238, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 30);
+            this.label2.Size = new System.Drawing.Size(317, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Módulo de Tipos de Documento";
             // 
@@ -76,11 +86,9 @@
             this.gbDatos.Controls.Add(this.lblEstadoTipoDocumento);
             this.gbDatos.Controls.Add(this.lblDescripcionTipoDocumento);
             this.gbDatos.Controls.Add(this.lblIdTipoDocumento);
-            this.gbDatos.Location = new System.Drawing.Point(73, 95);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Location = new System.Drawing.Point(55, 77);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbDatos.Size = new System.Drawing.Size(667, 193);
+            this.gbDatos.Size = new System.Drawing.Size(500, 157);
             this.gbDatos.TabIndex = 5;
             this.gbDatos.TabStop = false;
             // 
@@ -88,38 +96,34 @@
             // 
             this.cmbEstadoTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoTipoDocumento.FormattingEnabled = true;
-            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(239, 134);
-            this.cmbEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(179, 109);
             this.cmbEstadoTipoDocumento.Name = "cmbEstadoTipoDocumento";
-            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(243, 24);
+            this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(183, 21);
             this.cmbEstadoTipoDocumento.TabIndex = 5;
             // 
             // txtDescripcionTipoDocumento
             // 
-            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(239, 84);
-            this.txtDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(179, 68);
             this.txtDescripcionTipoDocumento.MaxLength = 200;
             this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
-            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(333, 22);
+            this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(251, 20);
             this.txtDescripcionTipoDocumento.TabIndex = 4;
             // 
             // txtIdTipoDocumento
             // 
-            this.txtIdTipoDocumento.Location = new System.Drawing.Point(239, 34);
-            this.txtIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdTipoDocumento.Location = new System.Drawing.Point(179, 28);
             this.txtIdTipoDocumento.Name = "txtIdTipoDocumento";
             this.txtIdTipoDocumento.ReadOnly = true;
-            this.txtIdTipoDocumento.Size = new System.Drawing.Size(243, 22);
+            this.txtIdTipoDocumento.Size = new System.Drawing.Size(183, 20);
             this.txtIdTipoDocumento.TabIndex = 3;
             // 
             // lblEstadoTipoDocumento
             // 
             this.lblEstadoTipoDocumento.AutoSize = true;
             this.lblEstadoTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(49, 134);
-            this.lblEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoTipoDocumento.Location = new System.Drawing.Point(37, 109);
             this.lblEstadoTipoDocumento.Name = "lblEstadoTipoDocumento";
-            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(73, 25);
+            this.lblEstadoTipoDocumento.Size = new System.Drawing.Size(60, 20);
             this.lblEstadoTipoDocumento.TabIndex = 2;
             this.lblEstadoTipoDocumento.Text = "Estado";
             // 
@@ -127,10 +131,9 @@
             // 
             this.lblDescripcionTipoDocumento.AutoSize = true;
             this.lblDescripcionTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(49, 85);
-            this.lblDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcionTipoDocumento.Location = new System.Drawing.Point(37, 69);
             this.lblDescripcionTipoDocumento.Name = "lblDescripcionTipoDocumento";
-            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(114, 25);
+            this.lblDescripcionTipoDocumento.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionTipoDocumento.TabIndex = 1;
             this.lblDescripcionTipoDocumento.Text = "Descripción";
             // 
@@ -138,10 +141,9 @@
             // 
             this.lblIdTipoDocumento.AutoSize = true;
             this.lblIdTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdTipoDocumento.Location = new System.Drawing.Point(49, 36);
-            this.lblIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdTipoDocumento.Location = new System.Drawing.Point(37, 29);
             this.lblIdTipoDocumento.Name = "lblIdTipoDocumento";
-            this.lblIdTipoDocumento.Size = new System.Drawing.Size(75, 25);
+            this.lblIdTipoDocumento.Size = new System.Drawing.Size(59, 20);
             this.lblIdTipoDocumento.TabIndex = 0;
             this.lblIdTipoDocumento.Text = "Código";
             // 
@@ -152,20 +154,17 @@
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
-            this.gbControl.Location = new System.Drawing.Point(797, 82);
-            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Location = new System.Drawing.Point(598, 67);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbControl.Size = new System.Drawing.Size(188, 222);
+            this.gbControl.Size = new System.Drawing.Size(141, 180);
             this.gbControl.TabIndex = 6;
             this.gbControl.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(48, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(36, 139);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -173,10 +172,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(48, 134);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(36, 109);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -184,10 +182,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(48, 97);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(36, 79);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 28);
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -195,10 +192,9 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(48, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Location = new System.Drawing.Point(36, 49);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(100, 28);
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -206,10 +202,9 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(48, 23);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Location = new System.Drawing.Point(36, 19);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -229,11 +224,10 @@
             this.dgvUsuarioCreacionTipoDocumento,
             this.dgvFechaModificacionTipoDocumento,
             this.dgvUsuarioModificacionTipoDocumento});
-            this.dgvTipoDocumento.Location = new System.Drawing.Point(40, 310);
-            this.dgvTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTipoDocumento.Location = new System.Drawing.Point(30, 252);
             this.dgvTipoDocumento.Name = "dgvTipoDocumento";
             this.dgvTipoDocumento.ReadOnly = true;
-            this.dgvTipoDocumento.Size = new System.Drawing.Size(997, 229);
+            this.dgvTipoDocumento.Size = new System.Drawing.Size(748, 186);
             this.dgvTipoDocumento.TabIndex = 7;
             // 
             // dgvIdTipoDocumento
@@ -278,19 +272,100 @@
             this.dgvUsuarioModificacionTipoDocumento.Name = "dgvUsuarioModificacionTipoDocumento";
             this.dgvUsuarioModificacionTipoDocumento.ReadOnly = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem,
+            this.administracionToolStripMenuItem,
+            this.cambioDeClaveToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.cambiarClaveToolStripMenuItem.Text = "Inicio";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // administracionToolStripMenuItem
+            // 
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.tiposDeDocumentoToolStripMenuItem,
+            this.administracionOrdenesDeCompraToolStripMenuItem});
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentoToolStripMenuItem
+            // 
+            this.tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
+            this.tiposDeDocumentoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
+            this.tiposDeDocumentoToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocumentoToolStripMenuItem_Click);
+            // 
+            // administracionOrdenesDeCompraToolStripMenuItem
+            // 
+            this.administracionOrdenesDeCompraToolStripMenuItem.Name = "administracionOrdenesDeCompraToolStripMenuItem";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.administracionOrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra";
+            this.administracionOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.administracionOrdenesDeCompraToolStripMenuItem_Click);
+            // 
+            // cambioDeClaveToolStripMenuItem
+            // 
+            this.cambioDeClaveToolStripMenuItem.Name = "cambioDeClaveToolStripMenuItem";
+            this.cambioDeClaveToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.cambioDeClaveToolStripMenuItem.Text = "Cambio de Clave";
+            this.cambioDeClaveToolStripMenuItem.Click += new System.EventHandler(this.cambioDeClaveToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // FrmTipoDocumento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvTipoDocumento);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmTipoDocumento";
@@ -300,6 +375,8 @@
             this.gbDatos.PerformLayout();
             this.gbControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDocumento)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +406,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioCreacionTipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFechaModificacionTipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarioModificacionTipoDocumento;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administracionOrdenesDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
