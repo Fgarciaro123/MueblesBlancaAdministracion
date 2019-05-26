@@ -70,5 +70,12 @@ namespace Administracion.Categorias
             FrmOrdenCompra frmOrdenCompra = new FrmOrdenCompra();
             frmOrdenCompra.Show();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias fcategorias = new FrmCategorias();
+            fcategorias.Show();
+            this.Hide();
+        }
     }
 }

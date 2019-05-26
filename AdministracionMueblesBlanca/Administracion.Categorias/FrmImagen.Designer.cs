@@ -51,18 +51,20 @@
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(229, 64);
+            this.pbImagen.Location = new System.Drawing.Point(305, 79);
+            this.pbImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(445, 259);
+            this.pbImagen.Size = new System.Drawing.Size(593, 319);
             this.pbImagen.TabIndex = 0;
             this.pbImagen.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(226, 23);
+            this.label1.Location = new System.Drawing.Point(301, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 1;
             // 
             // label2
@@ -70,9 +72,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label2.ForeColor = System.Drawing.Color.Coral;
-            this.label2.Location = new System.Drawing.Point(340, 14);
+            this.label2.Location = new System.Drawing.Point(453, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 25);
+            this.label2.Size = new System.Drawing.Size(242, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Gestionar Imagenes";
             // 
@@ -91,10 +94,11 @@
             this.dgvUsuarioCreacion,
             this.dgvFechaModificacion,
             this.dgvUsuarioModificacion});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 339);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 417);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(845, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(1127, 199);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -149,9 +153,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(720, 104);
+            this.btnEliminar.Location = new System.Drawing.Point(960, 128);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(93, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(124, 28);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -159,9 +164,10 @@
             // 
             // btnCargarImagen
             // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(720, 163);
+            this.btnCargarImagen.Location = new System.Drawing.Point(960, 201);
+            this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(93, 23);
+            this.btnCargarImagen.Size = new System.Drawing.Size(124, 28);
             this.btnCargarImagen.TabIndex = 7;
             this.btnCargarImagen.Text = "Cargar Imagen";
             this.btnCargarImagen.UseVisualStyleBackColor = true;
@@ -170,16 +176,18 @@
             // lblNombreProducto
             // 
             this.lblNombreProducto.AutoSize = true;
-            this.lblNombreProducto.Location = new System.Drawing.Point(342, 64);
+            this.lblNombreProducto.Location = new System.Drawing.Point(456, 79);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(0, 13);
+            this.lblNombreProducto.Size = new System.Drawing.Size(0, 17);
             this.lblNombreProducto.TabIndex = 8;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(720, 215);
+            this.btnSalir.Location = new System.Drawing.Point(960, 265);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(93, 23);
+            this.btnSalir.Size = new System.Drawing.Size(124, 28);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -187,10 +195,11 @@
             // 
             // FrmImagen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(869, 517);
+            this.ClientSize = new System.Drawing.Size(1159, 636);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblNombreProducto);
             this.Controls.Add(this.btnCargarImagen);
@@ -200,6 +209,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbImagen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmImagen";

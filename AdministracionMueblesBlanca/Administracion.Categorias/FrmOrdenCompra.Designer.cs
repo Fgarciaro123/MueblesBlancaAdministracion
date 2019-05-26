@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOrdenCompra));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvOrdenCompra = new System.Windows.Forms.DataGridView();
-            this.btnVerDetalle = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnConfirmarPago = new System.Windows.Forms.Button();
             this.dgvCodigoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNroId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTotalOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerDetalle = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnConfirmarPago = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenCompra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,38 +75,6 @@
             this.dgvOrdenCompra.Size = new System.Drawing.Size(1035, 341);
             this.dgvOrdenCompra.TabIndex = 5;
             this.dgvOrdenCompra.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenCompra_CellFormatting);
-            // 
-            // btnVerDetalle
-            // 
-            this.btnVerDetalle.Location = new System.Drawing.Point(507, 483);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(100, 28);
-            this.btnVerDetalle.TabIndex = 6;
-            this.btnVerDetalle.Text = "Ver Detalle";
-            this.btnVerDetalle.UseVisualStyleBackColor = true;
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(357, 483);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 28);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnConfirmarPago
-            // 
-            this.btnConfirmarPago.Location = new System.Drawing.Point(650, 483);
-            this.btnConfirmarPago.Name = "btnConfirmarPago";
-            this.btnConfirmarPago.Size = new System.Drawing.Size(133, 27);
-            this.btnConfirmarPago.TabIndex = 8;
-            this.btnConfirmarPago.Text = "Confirmar pago";
-            this.btnConfirmarPago.UseVisualStyleBackColor = true;
-            this.btnConfirmarPago.Click += new System.EventHandler(this.btnConfirmarPago_Click);
             // 
             // dgvCodigoOrden
             // 
@@ -150,6 +118,38 @@
             this.dgvFechaPago.ReadOnly = true;
             this.dgvFechaPago.Width = 150;
             // 
+            // btnVerDetalle
+            // 
+            this.btnVerDetalle.Location = new System.Drawing.Point(507, 483);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerDetalle.Name = "btnVerDetalle";
+            this.btnVerDetalle.Size = new System.Drawing.Size(100, 28);
+            this.btnVerDetalle.TabIndex = 6;
+            this.btnVerDetalle.Text = "Ver Detalle";
+            this.btnVerDetalle.UseVisualStyleBackColor = true;
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(357, 483);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnConfirmarPago
+            // 
+            this.btnConfirmarPago.Location = new System.Drawing.Point(650, 483);
+            this.btnConfirmarPago.Name = "btnConfirmarPago";
+            this.btnConfirmarPago.Size = new System.Drawing.Size(133, 27);
+            this.btnConfirmarPago.TabIndex = 8;
+            this.btnConfirmarPago.Text = "Confirmar pago";
+            this.btnConfirmarPago.UseVisualStyleBackColor = true;
+            this.btnConfirmarPago.Click += new System.EventHandler(this.btnConfirmarPago_Click);
+            // 
             // FrmOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,7 +168,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmOrdenCompra";
-            this.Text = "FrmOrdenCompra";
+            this.Text = "Órdenes de compra";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
