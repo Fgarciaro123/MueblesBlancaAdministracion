@@ -168,7 +168,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmOrdenCompra";
-            this.Text = "Órdenes de compra";
+            this.Text = "Administración Órdenes de compra";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

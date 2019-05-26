@@ -68,9 +68,9 @@
             this.gbDatos.Controls.Add(this.lblNombreCategoria);
             this.gbDatos.Controls.Add(this.lblIdCategoria);
             this.gbDatos.Location = new System.Drawing.Point(111, 46);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatos.Size = new System.Drawing.Size(716, 191);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
@@ -80,7 +80,7 @@
             this.cmbEstadoCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCategoria.FormattingEnabled = true;
             this.cmbEstadoCategoria.Location = new System.Drawing.Point(237, 112);
-            this.cmbEstadoCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoCategoria.Name = "cmbEstadoCategoria";
             this.cmbEstadoCategoria.Size = new System.Drawing.Size(187, 24);
             this.cmbEstadoCategoria.TabIndex = 5;
@@ -88,7 +88,7 @@
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.Location = new System.Drawing.Point(239, 79);
-            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCategoria.MaxLength = 100;
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(351, 22);
@@ -97,7 +97,7 @@
             // txtIdCategoria
             // 
             this.txtIdCategoria.Location = new System.Drawing.Point(237, 39);
-            this.txtIdCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdCategoria.Name = "txtIdCategoria";
             this.txtIdCategoria.ReadOnly = true;
             this.txtIdCategoria.Size = new System.Drawing.Size(187, 22);
@@ -144,9 +144,9 @@
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Location = new System.Drawing.Point(883, 37);
-            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Margin = new System.Windows.Forms.Padding(4);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Padding = new System.Windows.Forms.Padding(4);
             this.gbControl.Size = new System.Drawing.Size(141, 218);
             this.gbControl.TabIndex = 1;
             this.gbControl.TabStop = false;
@@ -154,7 +154,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(21, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
@@ -165,7 +165,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(21, 134);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 3;
@@ -176,7 +176,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(21, 97);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 2;
@@ -187,7 +187,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(21, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(100, 28);
             this.btnGrabar.TabIndex = 1;
@@ -198,7 +198,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(21, 23);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 28);
             this.btnNuevo.TabIndex = 0;
@@ -221,7 +221,7 @@
             this.dgvFechaModificacionCategoria,
             this.dgvUsuarioModificacionCategoria});
             this.dgvCategoria.Location = new System.Drawing.Point(28, 262);
-            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
             this.dgvCategoria.Size = new System.Drawing.Size(1059, 277);
@@ -299,11 +299,11 @@
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCategorias";
-            this.Text = "Categorias";
+            this.Text = "Administración de Categorias";
             this.Load += new System.EventHandler(this.FrmCategorias_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

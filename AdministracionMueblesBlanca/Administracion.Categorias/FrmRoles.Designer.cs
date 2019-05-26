@@ -65,9 +65,9 @@
             this.gbDatos.Controls.Add(this.lblNombreRol);
             this.gbDatos.Controls.Add(this.lblIdRol);
             this.gbDatos.Location = new System.Drawing.Point(96, 75);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatos.Size = new System.Drawing.Size(635, 181);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
@@ -77,7 +77,7 @@
             this.cmbEstadoRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoRol.FormattingEnabled = true;
             this.cmbEstadoRol.Location = new System.Drawing.Point(237, 127);
-            this.cmbEstadoRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoRol.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoRol.Name = "cmbEstadoRol";
             this.cmbEstadoRol.Size = new System.Drawing.Size(249, 24);
             this.cmbEstadoRol.TabIndex = 5;
@@ -85,7 +85,7 @@
             // txtNombreRol
             // 
             this.txtNombreRol.Location = new System.Drawing.Point(237, 89);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.Name = "txtNombreRol";
             this.txtNombreRol.Size = new System.Drawing.Size(328, 22);
@@ -94,7 +94,7 @@
             // txtIdRol
             // 
             this.txtIdRol.Location = new System.Drawing.Point(237, 44);
-            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdRol.Name = "txtIdRol";
             this.txtIdRol.ReadOnly = true;
             this.txtIdRol.Size = new System.Drawing.Size(249, 22);
@@ -141,9 +141,9 @@
             this.groupBox2.Controls.Add(this.btnGrabar);
             this.groupBox2.Controls.Add(this.btnNuevo);
             this.groupBox2.Location = new System.Drawing.Point(781, 50);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(180, 220);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -151,7 +151,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(43, 170);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
@@ -162,7 +162,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(43, 133);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 3;
@@ -173,7 +173,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(43, 96);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 2;
@@ -184,7 +184,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(43, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(100, 28);
             this.btnGrabar.TabIndex = 1;
@@ -195,7 +195,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(43, 25);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 28);
             this.btnNuevo.TabIndex = 0;
@@ -230,7 +230,7 @@
             this.dgvFechaModificacionRol,
             this.dgvUsuarioModificacionRol});
             this.dgvRol.Location = new System.Drawing.Point(52, 298);
-            this.dgvRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRol.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRol.Name = "dgvRol";
             this.dgvRol.ReadOnly = true;
             this.dgvRol.Size = new System.Drawing.Size(1015, 217);
@@ -291,11 +291,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRoles";
-            this.Text = "Roles";
+            this.Text = "Administración de Roles";
             this.Load += new System.EventHandler(this.FrmRoles_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

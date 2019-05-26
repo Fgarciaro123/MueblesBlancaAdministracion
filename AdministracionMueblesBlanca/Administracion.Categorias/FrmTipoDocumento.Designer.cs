@@ -77,9 +77,9 @@
             this.gbDatos.Controls.Add(this.lblDescripcionTipoDocumento);
             this.gbDatos.Controls.Add(this.lblIdTipoDocumento);
             this.gbDatos.Location = new System.Drawing.Point(73, 95);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatos.Size = new System.Drawing.Size(667, 193);
             this.gbDatos.TabIndex = 5;
             this.gbDatos.TabStop = false;
@@ -89,7 +89,7 @@
             this.cmbEstadoTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoTipoDocumento.FormattingEnabled = true;
             this.cmbEstadoTipoDocumento.Location = new System.Drawing.Point(239, 134);
-            this.cmbEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoTipoDocumento.Name = "cmbEstadoTipoDocumento";
             this.cmbEstadoTipoDocumento.Size = new System.Drawing.Size(243, 24);
             this.cmbEstadoTipoDocumento.TabIndex = 5;
@@ -97,7 +97,7 @@
             // txtDescripcionTipoDocumento
             // 
             this.txtDescripcionTipoDocumento.Location = new System.Drawing.Point(239, 84);
-            this.txtDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionTipoDocumento.MaxLength = 200;
             this.txtDescripcionTipoDocumento.Name = "txtDescripcionTipoDocumento";
             this.txtDescripcionTipoDocumento.Size = new System.Drawing.Size(333, 22);
@@ -106,7 +106,7 @@
             // txtIdTipoDocumento
             // 
             this.txtIdTipoDocumento.Location = new System.Drawing.Point(239, 34);
-            this.txtIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdTipoDocumento.Name = "txtIdTipoDocumento";
             this.txtIdTipoDocumento.ReadOnly = true;
             this.txtIdTipoDocumento.Size = new System.Drawing.Size(243, 22);
@@ -153,9 +153,9 @@
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Location = new System.Drawing.Point(797, 82);
-            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Margin = new System.Windows.Forms.Padding(4);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Padding = new System.Windows.Forms.Padding(4);
             this.gbControl.Size = new System.Drawing.Size(188, 222);
             this.gbControl.TabIndex = 6;
             this.gbControl.TabStop = false;
@@ -163,7 +163,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(48, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
@@ -174,7 +174,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(48, 134);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 3;
@@ -185,7 +185,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(48, 97);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
             this.btnEditar.TabIndex = 2;
@@ -196,7 +196,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(48, 60);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(100, 28);
             this.btnGrabar.TabIndex = 1;
@@ -207,7 +207,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(48, 23);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 28);
             this.btnNuevo.TabIndex = 0;
@@ -230,7 +230,7 @@
             this.dgvFechaModificacionTipoDocumento,
             this.dgvUsuarioModificacionTipoDocumento});
             this.dgvTipoDocumento.Location = new System.Drawing.Point(40, 310);
-            this.dgvTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTipoDocumento.Name = "dgvTipoDocumento";
             this.dgvTipoDocumento.ReadOnly = true;
             this.dgvTipoDocumento.Size = new System.Drawing.Size(997, 229);
@@ -290,11 +290,11 @@
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmTipoDocumento";
-            this.Text = "Tipo de Documento";
+            this.Text = "Administración Tipos de Documento";
             this.Load += new System.EventHandler(this.FrmTipoDocumento_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
