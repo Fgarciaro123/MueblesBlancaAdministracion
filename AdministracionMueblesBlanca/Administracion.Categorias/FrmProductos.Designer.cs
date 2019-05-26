@@ -109,9 +109,9 @@
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Location = new System.Drawing.Point(1287, 43);
-            this.gbControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Margin = new System.Windows.Forms.Padding(4);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbControl.Padding = new System.Windows.Forms.Padding(4);
             this.gbControl.Size = new System.Drawing.Size(176, 241);
             this.gbControl.TabIndex = 17;
             this.gbControl.TabStop = false;
@@ -119,7 +119,7 @@
             // btnModelos
             // 
             this.btnModelos.Location = new System.Drawing.Point(9, 207);
-            this.btnModelos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModelos.Margin = new System.Windows.Forms.Padding(4);
             this.btnModelos.Name = "btnModelos";
             this.btnModelos.Size = new System.Drawing.Size(159, 28);
             this.btnModelos.TabIndex = 15;
@@ -130,7 +130,7 @@
             // btnGestionImagenes
             // 
             this.btnGestionImagenes.Location = new System.Drawing.Point(9, 176);
-            this.btnGestionImagenes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGestionImagenes.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionImagenes.Name = "btnGestionImagenes";
             this.btnGestionImagenes.Size = new System.Drawing.Size(159, 28);
             this.btnGestionImagenes.TabIndex = 14;
@@ -141,7 +141,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(8, 143);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(160, 30);
             this.btnSalir.TabIndex = 13;
@@ -152,7 +152,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(8, 110);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(160, 30);
             this.btnEliminar.TabIndex = 12;
@@ -163,7 +163,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(8, 76);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(160, 30);
             this.btnEditar.TabIndex = 11;
@@ -174,7 +174,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(8, 43);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(160, 30);
             this.btnGrabar.TabIndex = 9;
@@ -185,7 +185,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(8, 11);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(160, 30);
             this.btnNuevo.TabIndex = 10;
@@ -229,9 +229,9 @@
             this.gbDatos.Controls.Add(this.label3);
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Location = new System.Drawing.Point(15, 64);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatos.Size = new System.Drawing.Size(1264, 220);
             this.gbDatos.TabIndex = 16;
             this.gbDatos.TabStop = false;
@@ -359,7 +359,7 @@
             // txtIdProducto
             // 
             this.txtIdProducto.Location = new System.Drawing.Point(101, 21);
-            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.ReadOnly = true;
             this.txtIdProducto.Size = new System.Drawing.Size(204, 22);
@@ -378,7 +378,7 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(1043, 89);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.MaxLength = 18;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(187, 22);
@@ -398,7 +398,7 @@
             // txtGarantia
             // 
             this.txtGarantia.Location = new System.Drawing.Point(852, 87);
-            this.txtGarantia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGarantia.Margin = new System.Windows.Forms.Padding(4);
             this.txtGarantia.MaxLength = 10;
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(85, 22);
@@ -418,7 +418,7 @@
             // btLimpiar
             // 
             this.btLimpiar.Location = new System.Drawing.Point(1153, 14);
-            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(100, 31);
             this.btLimpiar.TabIndex = 23;
@@ -429,7 +429,7 @@
             // txtAlto
             // 
             this.txtAlto.Location = new System.Drawing.Point(101, 87);
-            this.txtAlto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlto.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlto.MaxLength = 50;
             this.txtAlto.Name = "txtAlto";
             this.txtAlto.Size = new System.Drawing.Size(93, 22);
@@ -448,7 +448,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(485, 17);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 250;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(467, 22);
@@ -459,7 +459,7 @@
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(485, 54);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(192, 24);
             this.cbEstado.TabIndex = 3;
@@ -489,7 +489,7 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(852, 57);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(205, 24);
             this.cbCategoria.TabIndex = 2;
@@ -507,7 +507,7 @@
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(485, 87);
-            this.txtColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(4);
             this.txtColor.MaxLength = 250;
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(192, 22);
@@ -516,7 +516,7 @@
             // txtAncho
             // 
             this.txtAncho.Location = new System.Drawing.Point(293, 87);
-            this.txtAncho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAncho.Margin = new System.Windows.Forms.Padding(4);
             this.txtAncho.MaxLength = 50;
             this.txtAncho.Name = "txtAncho";
             this.txtAncho.Size = new System.Drawing.Size(89, 22);
@@ -545,7 +545,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(129, 126);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.MaxLength = 1000;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -555,7 +555,7 @@
             // txtMaterial
             // 
             this.txtMaterial.Location = new System.Drawing.Point(101, 52);
-            this.txtMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaterial.MaxLength = 150;
             this.txtMaterial.Name = "txtMaterial";
             this.txtMaterial.Size = new System.Drawing.Size(281, 22);
@@ -599,7 +599,7 @@
             this.Column9,
             this.Column12});
             this.dgvDatos.Location = new System.Drawing.Point(15, 292);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.Size = new System.Drawing.Size(1448, 460);
@@ -691,11 +691,11 @@
             this.Controls.Add(this.dgvDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProductos";
-            this.Text = "Administrador de Productos";
+            this.Text = "Administración de Productos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             this.gbControl.ResumeLayout(false);
             this.gbDatos.ResumeLayout(false);

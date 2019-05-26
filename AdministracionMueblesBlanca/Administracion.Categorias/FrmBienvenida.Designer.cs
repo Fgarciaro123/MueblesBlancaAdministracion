@@ -61,7 +61,7 @@
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(351, 43);
             this.btnProductos.TabIndex = 0;
-            this.btnProductos.Text = "Administración Categorias";
+            this.btnProductos.Text = "Administración Categorías";
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
