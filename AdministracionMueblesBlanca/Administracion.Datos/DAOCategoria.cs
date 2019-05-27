@@ -160,7 +160,7 @@ namespace Administracion.Datos
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("CantidadProductosPorCategoria", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
                 n = cmd.ExecuteNonQuery();
             }

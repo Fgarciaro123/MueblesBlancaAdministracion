@@ -118,12 +118,12 @@ namespace Administracion.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarModelo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdModelo", modelo.IdProductoModelo);
+                cmd.Parameters.AddWithValue("@IdModelo", modelo.IdModelo);
                 cmd.Parameters.AddWithValue("@IdProductoModelo", modelo.IdProductoModelo);
                 cmd.Parameters.AddWithValue("@TituloModelo", modelo.TituloModelo);
                 cmd.Parameters.AddWithValue("@RutaModelo", modelo.RutaModelo);
                 cmd.Parameters.AddWithValue("@FechaModificacionModelo", DateTime.Now);
-                cmd.Parameters.AddWithValue("@UsuarioModificacionModelo", modelo.UsuarioCreacionModelo);
+                cmd.Parameters.AddWithValue("@UsuarioModificacionModelo", sesion.UsuarioSesion);
                 cmd.Parameters.AddWithValue("@EstadoModelo", modelo.EstadoModelo);
 
                 n = cmd.ExecuteNonQuery();

@@ -167,6 +167,7 @@ namespace Administracion.Categorias
                     ActivarButton(true);
                     dgvDatos.Enabled = true;
                     LimpiarControl(gbDatos);
+                    btnEditar.Text = "Editar";
                     lista = blProducto.Listar();
                     CargarDatos();
                 }
@@ -260,6 +261,7 @@ namespace Administracion.Categorias
                         MessageBox.Show("Registro eliminado", "Aviso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         lista = blProducto.Listar();
+                        LimpiarControl(dgvDatos);
                         CargarDatos();
                     }
                     else
@@ -304,6 +306,7 @@ namespace Administracion.Categorias
             cbCategoria.DisplayMember = "NombreCategoria";
             cbCategoria.ValueMember = "IdCategoria";
 
+            btnGrabar.Enabled = false;
         }
 
         private void btnGestionImagenes_Click(object sender, EventArgs e)

@@ -210,7 +210,7 @@ namespace Administracion.Categorias
 
             if (dgvCategoria.RowCount > 0)
             {
-                if (blCategoria.CantidadProductosPorCategoria((int)dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value) >= 0)
+                if (blCategoria.CantidadProductosPorCategoria((int)dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value) < 1)
                 {
 
 

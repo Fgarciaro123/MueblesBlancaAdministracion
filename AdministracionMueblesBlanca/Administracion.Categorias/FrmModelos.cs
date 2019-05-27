@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,14 @@ namespace Administracion.Categorias
 {
     public partial class FrmModelos : Form
     {
-        Computer myCompuet = new Computer();
         List<Modelo> lista = null;
         public int idProductoModelo;
         BLModelo blModelo = new BLModelo();
         Validaciones validacion = new Validaciones();
         Modelo modelo;
         bool _nuevo = false;
+        string sourceFile;
+        string destinationFile;
 
         public FrmModelos(int idProducto)
         {
@@ -30,10 +32,8 @@ namespace Administracion.Categorias
             btnSalir.Enabled = true;
             ActivarControlDatos(gbDatos, false);
             CargarDatos();
-
+            btnExaminar.Enabled = false;
         }
-
-
 
         private void LimpiarControl(Control Contenedor)
         {
@@ -130,6 +130,7 @@ namespace Administracion.Categorias
             ActivarButton(false);
             LimpiarControl(gbDatos);
             txtTituloModelo.Focus();
+            btnExaminar.Enabled = true;
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -141,6 +142,7 @@ namespace Administracion.Categorias
                     int n = -1;
                     if (_nuevo)
                     {
+                        
                         //SimpleFileMove();
                         modelo = new Modelo(
                             idProductoModelo,
@@ -195,6 +197,7 @@ namespace Administracion.Categorias
                 ActivarButton(true);
                 dataGridView1.Enabled = true;
                 btnEditar.Text = "Editar";
+                btnExaminar.Enabled = false;
             }
             else
             {
@@ -232,6 +235,7 @@ namespace Administracion.Categorias
                         MessageBox.Show("Registro eliminado", "Aviso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         lista = blModelo.Listar(idProductoModelo);
+                        LimpiarControl(dataGridView1);
                         CargarDatos();
                     }
                     else
@@ -323,15 +327,28 @@ namespace Administracion.Categorias
 
         //public void SimpleFileMove()
         //{
-        //    string sourceFile = txtRutaModelo.Text.Trim();
-        //    string destinationFile = @".\Administracion.Categorias\Resources\" + txtTituloModelo.Text.Trim() + ".html" ;
+        //    sourceFile = txtRutaModelo.Text.Trim();
+        //    destinationFile = @"..\Resources/" + txtTituloModelo.Text.Trim() + ".html";
 
         //    // To move a file or folder to a new location:
-        //    myCompuet.FileSystem.CopyFile(sourceFile, destinationFile);
+        //    //myCompuet.FileSystem.CopyFile(sourceFile, destinationFile);
 
         //    // To move an entire directory. To programmatically modify or combine
         //    // path strings, use the System.IO.Path class.
         //    //System.IO.Directory.Move(@"C:\Users\Public\public\test\", @"C:\Users\Public\private");
+
+        //    FileStream fsOut = new FileStream(destinationFile, FileMode.Create);
+        //    FileStream fsIn = new FileStream(sourceFile, FileMode.Open);
+        //    byte[] bt = new byte[1048756];
+        //    int readByte;
+
+        //    while ((readByte = fsIn.Read(bt ,0,bt.Length))> 0)
+        //    {
+        //        fsOut.Write(bt, 0, readByte);
+        //        worker.ReportProgress((int)(fsIn.Position * 100 / fsIn.Length));
+        //    }
+        //    fsIn.Close();
+        //    fsOut.Close();
         //}
 
     }
