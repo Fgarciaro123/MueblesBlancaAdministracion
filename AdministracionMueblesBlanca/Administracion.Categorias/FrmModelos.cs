@@ -142,12 +142,15 @@ namespace Administracion.Categorias
                     int n = -1;
                     if (_nuevo)
                     {
+                        string palabra = "resources";
+                        int pos = txtRutaModelo.Text.IndexOf(palabra);
+                        
                         
                         //SimpleFileMove();
                         modelo = new Modelo(
                             idProductoModelo,
                             txtTituloModelo.Text.Trim(),
-                            txtRutaModelo.Text.Trim(),
+                            txtRutaModelo.Text.Trim().Substring(pos),
                             DateTime.Now,
                             sesion.UsuarioSesion,
                             cmbEstadoModelo.SelectedIndex);
