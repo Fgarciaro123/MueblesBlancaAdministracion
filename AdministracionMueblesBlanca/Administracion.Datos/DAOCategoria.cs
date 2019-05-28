@@ -109,7 +109,7 @@ namespace Administracion.Datos
                 cmd.Parameters.AddWithValue("@UsuarioModificacionCategoria", Categoria.UsuarioModificacionCategoria);
                 cmd.Parameters.AddWithValue("@EstadoCategoria", Categoria.EstadoCategoria);
 
-                    n = cmd.ExecuteNonQuery();
+                n = cmd.ExecuteNonQuery();
             }
             return n;
         }
@@ -155,16 +155,14 @@ namespace Administracion.Datos
 
         public int CantidadProductosPorCategoria(int IdCategoria)
         {
-            int n = -1;
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("CantidadProductosPorCategoria", con);
-                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdCategoria", IdCategoria);
-                n = cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("SELECT count(*) FROM Producto WHERE IdCategoriaProducto = " + IdCategoria.ToString(), con);
+                int count = (int)cmd.ExecuteScalar();
+
+                return count;
             }
-            return n;
         }
 
     }

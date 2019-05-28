@@ -141,12 +141,11 @@ namespace Administracion.Datos
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("CantidadPersonasPorTipoDocumento", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdTipoDocumento", Id);
-                n = cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("SELECT count(*) FROM Persona WHERE IdTipoDocumentoPersona = " + Id.ToString(), con);
+                int count = (int)cmd.ExecuteScalar();
+
+                return count;
             }
-            return n;
         }   
 
     }

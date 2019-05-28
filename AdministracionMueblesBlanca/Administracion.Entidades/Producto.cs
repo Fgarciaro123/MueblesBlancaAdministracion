@@ -50,8 +50,8 @@ namespace Administracion.Entidades
         public Producto(
             string pNombreProducto, 
             string pDescripcionProducto, 
-            string pAnchoProducto, 
             string pAltoProducto, 
+            string pAnchoProducto, 
             string pColorProducto, 
             string pMaterialProducto, 
             int pGarantiaMesesProducto,
@@ -63,8 +63,8 @@ namespace Administracion.Entidades
         {
             this.NombreProducto = pNombreProducto;
             this.DescripcionProducto = pDescripcionProducto;
-            this.AnchoProducto = pAnchoProducto;
             this.AltoProducto = pAltoProducto;
+            this.AnchoProducto = pAnchoProducto;
             this.ColorProducto = pColorProducto;
             this.MaterialProducto = pMaterialProducto;
             this.GarantiaMesesProducto = pGarantiaMesesProducto;
@@ -81,8 +81,8 @@ namespace Administracion.Entidades
             int pIdProducto,
             string pNombreProducto,
             string pDescripcionProducto,
-            string pAnchoProducto,
             string pAltoProducto,
+            string pAnchoProducto,
             string pColorProducto,
             string pMaterialProducto,
             int pGarantiaMesesProducto,
@@ -95,8 +95,8 @@ namespace Administracion.Entidades
             this.IdProducto = pIdProducto;
             this.NombreProducto = pNombreProducto;
             this.DescripcionProducto = pDescripcionProducto;
-            this.AnchoProducto = pAnchoProducto;
             this.AltoProducto = pAltoProducto;
+            this.AnchoProducto = pAnchoProducto;
             this.ColorProducto = pColorProducto;
             this.MaterialProducto = pMaterialProducto;
             this.GarantiaMesesProducto = pGarantiaMesesProducto;
@@ -112,8 +112,8 @@ namespace Administracion.Entidades
             int pIdProducto,
             string pNombreProducto,
             string pDescripcionProducto,
-            string pAnchoProducto,
             string pAltoProducto,
+            string pAnchoProducto,
             string pColorProducto,
             string pMaterialProducto,
             int pGarantiaMesesProducto,
@@ -128,8 +128,8 @@ namespace Administracion.Entidades
             this.IdProducto = pIdProducto;
             this.NombreProducto = pNombreProducto;
             this.DescripcionProducto = pDescripcionProducto;
-            this.AnchoProducto = pAnchoProducto;
             this.AltoProducto = pAltoProducto;
+            this.AnchoProducto = pAnchoProducto;
             this.ColorProducto = pColorProducto;
             this.MaterialProducto = pMaterialProducto;
             this.GarantiaMesesProducto = pGarantiaMesesProducto;

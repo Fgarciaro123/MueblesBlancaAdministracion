@@ -365,7 +365,7 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(782, 72);
-            this.txtValor.MaxLength = 18;
+            this.txtValor.MaxLength = 16;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(141, 20);
             this.txtValor.TabIndex = 26;
@@ -383,7 +383,7 @@
             // txtGarantia
             // 
             this.txtGarantia.Location = new System.Drawing.Point(639, 71);
-            this.txtGarantia.MaxLength = 10;
+            this.txtGarantia.MaxLength = 5;
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(65, 20);
             this.txtGarantia.TabIndex = 24;

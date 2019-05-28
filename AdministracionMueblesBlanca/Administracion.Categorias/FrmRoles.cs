@@ -220,7 +220,7 @@ namespace Administracion.Categorias
                 if ((int)dgvRol[0, dgvRol.CurrentRow.Index].Value != 1)
                 {
 
-                    if (bLRol.CantidadRolPorPersona((int)dgvRol[0, dgvRol.CurrentRow.Index].Value) <= 0)
+                    if (bLRol.CantidadRolPorPersona((int)dgvRol[0, dgvRol.CurrentRow.Index].Value) < 1)
                     {
 
                         rol = bLRol.TraerPorId((int)dgvRol[0, dgvRol.
@@ -235,6 +235,7 @@ namespace Administracion.Categorias
                             {
                                 MessageBox.Show("Registro eliminado", "Aviso",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                dgvRol.Rows.Clear();
                                 lista = bLRol.Listar();
                                 CargarDatos();
                             }

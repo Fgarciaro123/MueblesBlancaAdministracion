@@ -88,6 +88,7 @@ namespace Administracion.Categorias
 
             if (lista.Count > 0)
             {
+                dgvDatos.DataSource = null;
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
@@ -259,9 +260,10 @@ namespace Administracion.Categorias
                     if (n > 0)
                     {
                         MessageBox.Show("Registro eliminado", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                         lista = blProducto.Listar();
                         LimpiarControl(dgvDatos);
+                        dgvDatos.Rows.Clear();
                         CargarDatos();
                     }
                     else
@@ -311,17 +313,25 @@ namespace Administracion.Categorias
 
         private void btnGestionImagenes_Click(object sender, EventArgs e)
         {
-            FrmImagen frmImagen = new FrmImagen((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-            frmImagen.Show();
-            this.Hide();
+            if (dgvDatos.Rows.Count > 0)
+            {
+                FrmImagen frmImagen = new FrmImagen((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
+                frmImagen.Show();
+                this.Hide();
+
+            }
 
         }
 
         private void btnModelos_Click(object sender, EventArgs e)
         {
-            FrmModelos frmModelos = new FrmModelos((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-            frmModelos.Show();
-            this.Hide();
+            if (dgvDatos.Rows.Count > 0)
+            {
+                FrmModelos frmModelos = new FrmModelos((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
+                frmModelos.Show();
+                this.Hide();
+
+            }
 
         }
 
@@ -332,7 +342,7 @@ namespace Administracion.Categorias
                 e.Handled = false;
             }
             else
-                 if (Char.IsControl(e.KeyChar)) 
+                 if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }

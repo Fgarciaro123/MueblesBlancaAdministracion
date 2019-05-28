@@ -234,6 +234,7 @@ namespace Administracion.Categorias
                     {
                         MessageBox.Show("Registro eliminado", "Aviso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView1.Rows.Clear();
                         lista = blModelo.Listar(idProductoModelo);
                         LimpiarControl(dataGridView1);
                         CargarDatos();

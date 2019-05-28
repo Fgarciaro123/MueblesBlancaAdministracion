@@ -135,6 +135,7 @@ namespace Administracion.Categorias
                     {
                         MessageBox.Show("Registro eliminado", "Aviso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView1.Rows.Clear();
                         lista = blImagen.Listar(idProductoImagen);
                         CargarDatos();
                     }

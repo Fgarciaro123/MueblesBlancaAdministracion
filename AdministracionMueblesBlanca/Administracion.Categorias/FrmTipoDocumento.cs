@@ -204,7 +204,7 @@ namespace Administracion.Categorias
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (bLTipoDocumento.CantidadPersonasPorTipoDocumento((int)dgvTipoDocumento[0, dgvTipoDocumento.CurrentRow.Index].Value) < 0)
+            if (bLTipoDocumento.CantidadPersonasPorTipoDocumento((int)dgvTipoDocumento[0, dgvTipoDocumento.CurrentRow.Index].Value) < 1)
             {
                 if (dgvTipoDocumento.RowCount > 0)
                 {
@@ -220,6 +220,7 @@ namespace Administracion.Categorias
                         {
                             MessageBox.Show("Registro eliminado", "Aviso",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvTipoDocumento.Rows.Clear();
                             lista = bLTipoDocumento.Listar();
                             CargarDatos();
                         }

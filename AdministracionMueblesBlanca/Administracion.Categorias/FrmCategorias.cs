@@ -226,6 +226,7 @@ namespace Administracion.Categorias
                         {
                             MessageBox.Show("Registro eliminado", "Aviso",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvCategoria.Rows.Clear();
                             lista = blCategoria.Listar();
                             CargarDatos();
                         }
